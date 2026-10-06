@@ -1,0 +1,700 @@
+import { sidebar } from "vuepress-theme-hope";
+
+import { aboutTheAuthor } from "./about-the-author.js";
+import { ai } from "./ai.js";
+import { aiCoding } from "./ai-coding.js";
+import { books } from "./books.js";
+import { csBasics } from "./cs-basics.js";
+import { highQualityTechnicalArticles } from "./high-quality-technical-articles.js";
+import { openSourceProject } from "./open-source-project.js";
+import { roadmap } from "./roadmap.js";
+import { zhuanlan } from "./zhuanlan.js";
+import {
+  ICONS,
+  createImportantSection,
+  createSourceCodeSection,
+} from "./constants.js";
+
+export default sidebar({
+  // 应该把更精确的路径放置在前边
+  "/ai-coding/": aiCoding,
+  "/ai/": ai,
+  "/roadmap/": roadmap,
+  "/cs-basics/": csBasics,
+  "/open-source-project/": openSourceProject,
+  "/books/": books,
+  "/about-the-author/": aboutTheAuthor,
+  "/high-quality-technical-articles/": highQualityTechnicalArticles,
+  "/zhuanlan/": zhuanlan,
+  // 必须放在最后面
+  "/": [
+    {
+      text: "项目介绍",
+      icon: ICONS.STAR,
+      collapsible: true,
+      prefix: "javaguide/",
+      children: ["intro", "use-suggestion", "contribution-guideline", "faq"],
+    },
+    {
+      text: "面试准备（必看）",
+      icon: ICONS.INTERVIEW,
+      collapsible: true,
+      prefix: "interview-preparation/",
+      children: [
+        {
+          text: "面试准备知识体系",
+          link: "/interview-preparation/",
+        },
+        { text: "⭐Java 后端面试通关计划", link: "backend-interview-plan" },
+        {
+          text: "⭐如何高效准备 Java 面试？",
+          link: "teach-you-how-to-prepare-for-the-interview-hand-in-hand",
+        },
+        { text: "⭐程序员简历编写指南", link: "resume-guide" },
+        {
+          text: "⭐Java 后端面试重点总结",
+          link: "key-points-of-interview",
+        },
+        {
+          text: "Java 面试 + 后端面试 PDF 资料",
+          link: "pdf-interview-javaguide",
+        },
+        { text: "Java 学习路线", link: "java-roadmap" },
+        { text: "⭐项目经验指南", link: "project-experience-guide" },
+        {
+          text: "⭐后端项目面试怎么讲？",
+          link: "backend-project-interview-guide",
+        },
+        "how-to-handle-interview-nerves",
+        "internship-experience",
+      ],
+    },
+    {
+      text: "Java",
+      icon: ICONS.JAVA,
+      collapsible: true,
+      prefix: "java/",
+      children: [
+        {
+          text: "Java 知识体系",
+          link: "/java/",
+        },
+        {
+          text: "基础",
+          prefix: "basis/",
+          icon: ICONS.BASIC,
+          children: [
+            {
+              text: "⭐Java 基础常见面试题（上）",
+              link: "java-basic-questions-01",
+            },
+            {
+              text: "⭐Java 基础常见面试题（中）",
+              link: "java-basic-questions-02",
+            },
+            {
+              text: "⭐Java 基础常见面试题（下）",
+              link: "java-basic-questions-03",
+            },
+            createImportantSection([
+              "why-there-only-value-passing-in-java",
+              "serialization",
+              "generics-and-wildcards",
+              "reflection",
+              "proxy",
+              "bigdecimal",
+              {
+                text: "Java 金额类型选择",
+                link: "money-long-vs-bigdecimal",
+              },
+              "unsafe",
+              "spi",
+              "syntactic-sugar",
+            ]),
+          ],
+        },
+        {
+          text: "集合",
+          prefix: "collection/",
+          icon: ICONS.CONTAINER,
+          children: [
+            {
+              text: "⭐Java 集合常见面试题（上）",
+              link: "java-collection-questions-01",
+            },
+            {
+              text: "⭐Java 集合常见面试题（下）",
+              link: "java-collection-questions-02",
+            },
+            "java-collection-precautions-for-use",
+            createSourceCodeSection([
+              "arraylist-source-code",
+              "linkedlist-source-code",
+              "hashmap-source-code",
+              "concurrent-hash-map-source-code",
+              "linkedhashmap-source-code",
+              "copyonwritearraylist-source-code",
+              "arrayblockingqueue-source-code",
+              "priorityqueue-source-code",
+              "delayqueue-source-code",
+            ]),
+          ],
+        },
+        {
+          text: "并发编程",
+          prefix: "concurrent/",
+          icon: ICONS.PERFORMANCE,
+          children: [
+            {
+              text: "⭐Java 并发常见面试题（上）",
+              link: "java-concurrent-questions-01",
+            },
+            {
+              text: "⭐Java 并发常见面试题（中）",
+              link: "java-concurrent-questions-02",
+            },
+            {
+              text: "⭐Java 并发常见面试题（下）",
+              link: "java-concurrent-questions-03",
+            },
+            createImportantSection([
+              { text: "Java 锁详解", link: "java-lock" },
+              "optimistic-lock-and-pessimistic-lock",
+              "cas",
+              "jmm",
+              "java-thread-pool-summary",
+              "java-thread-pool-best-practices",
+              "java-concurrent-collections",
+              "aqs",
+              "atomic-classes",
+              "threadlocal",
+              "completablefuture-intro",
+              "virtual-thread",
+            ]),
+          ],
+        },
+        {
+          text: "IO",
+          prefix: "io/",
+          icon: ICONS.CODE,
+          collapsible: true,
+          children: ["io-basis", "io-design-patterns", "io-model", "nio-basis"],
+        },
+        {
+          text: "JVM",
+          prefix: "jvm/",
+          icon: ICONS.VIRTUAL_MACHINE,
+          collapsible: true,
+          children: [
+            {
+              text: "⭐JVM 常见面试题总结",
+              link: "jvm-interview-questions",
+            },
+            "memory-area",
+            "jvm-garbage-collection",
+            "class-file-structure",
+            "class-loading-process",
+            "classloader",
+            "jvm-parameters-intro",
+            "jdk-monitoring-and-troubleshooting-tools",
+            {
+              text: "Java 后端线上问题排查",
+              link: "jvm-in-action",
+            },
+          ],
+        },
+        {
+          text: "新特性",
+          prefix: "new-features/",
+          icon: ICONS.FEATURED,
+          collapsible: true,
+          children: [
+            "java8-common-new-features",
+            "java8-tutorial-translate",
+            "java9",
+            "java10",
+            "java11",
+            "java12-13",
+            "java14-15",
+            "java16",
+            "java17",
+            "java18",
+            "java19",
+            "java20",
+            "java21",
+            "java22-23",
+            "java24",
+            "java25",
+          ],
+        },
+      ],
+    },
+    {
+      text: "数据库",
+      icon: ICONS.DATABASE,
+      prefix: "database/",
+      collapsible: true,
+      children: [
+        {
+          text: "数据库知识体系",
+          link: "/database/",
+        },
+        {
+          text: "基础",
+          icon: ICONS.BASIC,
+          children: [
+            "basis",
+            "nosql",
+            {
+              text: "字符集详解",
+              link: "character-set",
+            },
+            {
+              text: "SQL",
+              icon: ICONS.SQL,
+              prefix: "sql/",
+              collapsible: true,
+              children: [
+                "sql-syntax-summary",
+                "sql-questions-01",
+                "sql-questions-02",
+                "sql-questions-03",
+                "sql-questions-04",
+                "sql-questions-05",
+              ],
+            },
+          ],
+        },
+        {
+          text: "MySQL",
+          prefix: "mysql/",
+          icon: ICONS.MYSQL,
+          children: [
+            { text: "⭐MySQL 常见面试题总结", link: "mysql-questions-01" },
+            "mysql-high-performance-optimization-specification-recommendations",
+            createImportantSection([
+              "mysql-index",
+              "mysql-index-invalidation",
+              {
+                text: "MySQL三大日志详解",
+                link: "mysql-logs",
+              },
+              {
+                text: "MySQL备份与恢复",
+                link: "mysql-backup-and-restore",
+              },
+              {
+                text: "MySQL同步ES方案",
+                link: "mysql-to-elasticsearch-sync",
+              },
+              "transaction-isolation-level",
+              "innodb-implementation-of-mvcc",
+              "how-sql-executed-in-mysql",
+              "mysql-query-cache",
+              "mysql-query-execution-plan",
+              "mysql-auto-increment-primary-key-continuous",
+              "some-thoughts-on-database-storage-time",
+              "index-invalidation-caused-by-implicit-conversion",
+            ]),
+          ],
+        },
+        {
+          text: "Redis",
+          prefix: "redis/",
+          icon: ICONS.REDIS,
+          children: [
+            "cache-basics",
+            {
+              text: "⭐Redis 常见面试题总结（上）",
+              link: "redis-questions-01",
+            },
+            {
+              text: "⭐Redis 常见面试题总结（下）",
+              link: "redis-questions-02",
+            },
+            createImportantSection([
+              "redis-delayed-task",
+              "redis-stream-mq",
+              "3-commonly-used-cache-read-and-write-strategies",
+              "redis-data-structures-01",
+              "redis-data-structures-02",
+              "redis-skiplist",
+              "redis-persistence",
+              "redis-memory-fragmentation",
+              "redis-common-blocking-problems-summary",
+              "redis-cluster",
+            ]),
+          ],
+        },
+        {
+          text: "Elasticsearch",
+          prefix: "elasticsearch/",
+          icon: ICONS.ELASTICSEARCH,
+          collapsible: true,
+          children: ["elasticsearch-questions-01"],
+        },
+        {
+          text: "MongoDB",
+          prefix: "mongodb/",
+          icon: ICONS.MONGODB,
+          collapsible: true,
+          children: ["mongodb-questions-01", "mongodb-questions-02"],
+        },
+      ],
+    },
+    {
+      text: "开发工具",
+      icon: ICONS.TOOL,
+      prefix: "tools/",
+      collapsible: true,
+      children: [
+        {
+          text: "开发工具知识体系",
+          link: "/tools/",
+        },
+        {
+          text: "Maven",
+          icon: ICONS.MAVEN,
+          prefix: "maven/",
+          children: [
+            { text: "Maven 核心概念总结", link: "maven-core-concepts" },
+            { text: "Maven 最佳实践", link: "maven-best-practices" },
+          ],
+        },
+        {
+          text: "Gradle",
+          icon: ICONS.GRADLE,
+          prefix: "gradle/",
+          children: ["gradle-core-concepts"],
+        },
+        {
+          text: "Git",
+          icon: ICONS.GIT,
+          prefix: "git/",
+          children: ["git-intro", "github-tips"],
+        },
+        {
+          text: "Docker",
+          icon: ICONS.DOCKER,
+          prefix: "docker/",
+          children: ["docker-intro", "docker-in-action"],
+        },
+        {
+          text: "IDEA",
+          icon: ICONS.IDEA,
+          link: "https://gitee.com/SnailClimb/awesome-idea-tutorial",
+        },
+      ],
+    },
+    {
+      text: "常用框架",
+      prefix: "system-design/framework/",
+      icon: ICONS.COMPONENT,
+      collapsible: true,
+      children: [
+        {
+          text: "Spring&Spring Boot",
+          icon: ICONS.SPRING_BOOT,
+          prefix: "spring/",
+          children: [
+            {
+              text: "Spring 常见面试题总结",
+              link: "spring-knowledge-and-questions-summary",
+            },
+            {
+              text: "Spring Boot 常见面试题总结",
+              link: "springboot-knowledge-and-questions-summary",
+            },
+            "spring-common-annotations",
+            "springboot-source-code",
+            createImportantSection([
+              "ioc-and-aop",
+              "spring-transaction",
+              "spring-design-patterns-summary",
+              "spring-boot-auto-assembly-principles",
+              "spring-boot-executable-jar",
+              "async",
+            ]),
+          ],
+        },
+        {
+          text: "MyBatis 常见面试题总结",
+          link: "mybatis/mybatis-interview",
+        },
+        "netty",
+      ],
+    },
+    {
+      text: "系统设计",
+      icon: ICONS.DESIGN,
+      prefix: "system-design/",
+      collapsible: true,
+      children: [
+        {
+          text: "系统设计知识体系",
+          link: "/system-design/",
+        },
+        {
+          text: "基础知识",
+          prefix: "basis/",
+          icon: ICONS.BASIC,
+          collapsible: true,
+          children: [
+            "RESTfulAPI",
+            "software-engineering",
+            "naming",
+            "refactoring",
+            {
+              text: "单元测试指南",
+              link: "unit-test",
+            },
+          ],
+        },
+        {
+          text: "认证授权",
+          prefix: "security/",
+          icon: ICONS.SECURITY,
+          collapsible: true,
+          children: [
+            "basis-of-authority-certification",
+            "jwt-intro",
+            "advantages-and-disadvantages-of-jwt",
+            "sso-intro",
+            "design-of-authority-system",
+          ],
+        },
+        {
+          text: "数据安全",
+          prefix: "security/",
+          icon: ICONS.SECURITY,
+          collapsible: true,
+          children: [
+            "encryption-algorithms",
+            "sentive-words-filter",
+            "data-desensitization",
+            "data-validation",
+            "why-password-reset-instead-of-retrieval",
+          ],
+        },
+        {
+          text: "⭐系统设计常见面试题总结",
+          link: "system-design-questions",
+        },
+        {
+          text: "⭐设计模式常见面试题总结",
+          link: "https://interview.javaguide.cn/system-design/design-pattern.html",
+        },
+        "state-machine-and-workflow",
+        "schedule-task",
+        "web-real-time-message-push",
+      ],
+    },
+    {
+      text: "分布式",
+      icon: ICONS.DISTRIBUTED,
+      prefix: "distributed-system/",
+      collapsible: true,
+      children: [
+        {
+          text: "分布式系统入门",
+          link: "distributed-system-intro",
+        },
+        {
+          text: "⭐分布式高频面试题",
+          link: "distributed-system-interview-questions",
+        },
+        {
+          text: "⭐微服务高频面试题",
+          link: "microservices-interview-questions",
+        },
+        {
+          text: "理论&算法&协议",
+          icon: ICONS.ALGORITHM,
+          prefix: "protocol/",
+          collapsible: true,
+          children: [
+            {
+              text: "理论&算法&协议专题",
+              link: "/distributed-system/protocol/",
+            },
+            { text: "CAP定理与BASE理论详解", link: "cap-and-base-theorem" },
+            {
+              text: "分布式协调详解",
+              link: "centralized-and-decentralized",
+            },
+            { text: "拜占庭将军问题", link: "byzantine-generals-problem" },
+            { text: "Paxos算法详解", link: "paxos-algorithm" },
+            { text: "Raft算法详解", link: "raft-algorithm" },
+            { text: "ZAB协议详解", link: "zab" },
+            { text: "Gossip协议详解", link: "gossip-protocol" },
+            { text: "一致性哈希算法详解", link: "consistent-hashing" },
+          ],
+        },
+        {
+          text: "API网关",
+          icon: ICONS.GATEWAY,
+          children: [
+            { text: "API网关基础知识总结", link: "api-gateway" },
+            {
+              text: "Spring Cloud Gateway面试题总结",
+              link: "spring-cloud-gateway-questions",
+            },
+          ],
+        },
+        {
+          text: "分布式ID",
+          icon: ICONS.ID,
+          children: [
+            { text: "分布式ID生成方案详解", link: "distributed-id" },
+            { text: "分布式ID设计实战指南", link: "distributed-id-design" },
+          ],
+        },
+        {
+          text: "分布式锁",
+          icon: ICONS.LOCK,
+          children: [
+            { text: "分布式锁入门介绍", link: "distributed-lock" },
+            {
+              text: "分布式锁常见实现方案总结",
+              link: "distributed-lock-implementations",
+            },
+          ],
+        },
+        {
+          text: "分布式事务",
+          icon: ICONS.TRANSACTION,
+          children: [
+            { text: "分布式事务解决方案总结", link: "distributed-transaction" },
+          ],
+        },
+        {
+          text: "分布式配置中心",
+          icon: ICONS.MAVEN,
+          children: [
+            {
+              text: "分布式配置中心面试题总结",
+              link: "distributed-configuration-center",
+            },
+          ],
+        },
+        {
+          text: "RPC",
+          prefix: "rpc/",
+          icon: ICONS.RPC,
+          collapsible: true,
+          children: [
+            { text: "RPC专题", link: "/distributed-system/rpc/" },
+            { text: "RPC基础知识总结", link: "rpc-intro" },
+            { text: "Dubbo面试题总结", link: "dubbo" },
+          ],
+        },
+        {
+          text: "ZooKeeper",
+          prefix: "distributed-process-coordination/zookeeper/",
+          icon: ICONS.FRAMEWORK,
+          collapsible: true,
+          children: [
+            {
+              text: "ZooKeeper专题",
+              link: "/distributed-system/distributed-process-coordination/zookeeper/",
+            },
+            { text: "ZooKeeper入门指南", link: "zookeeper-intro" },
+            { text: "ZooKeeper进阶详解", link: "zookeeper-plus" },
+            { text: "ZooKeeper实战教程", link: "zookeeper-in-action" },
+          ],
+        },
+      ],
+    },
+    {
+      text: "高性能",
+      icon: ICONS.PERFORMANCE,
+      prefix: "high-performance/",
+      collapsible: true,
+      children: [
+        {
+          text: "⭐高性能系统设计高频面试题",
+          link: "high-performance-system-interview-questions",
+        },
+        {
+          text: "CDN",
+          icon: ICONS.CDN,
+          children: ["cdn"],
+        },
+        {
+          text: "负载均衡",
+          icon: ICONS.LOAD_BALANCING,
+          children: [
+            { text: "负载均衡原理及算法详解", link: "load-balancing" },
+          ],
+        },
+        {
+          text: "数据库优化",
+          icon: ICONS.MYSQL,
+          children: [
+            "read-and-write-separation-and-library-subtable",
+            "data-cold-hot-separation",
+            "sql-optimization",
+            "deep-pagination-optimization",
+          ],
+        },
+        {
+          text: "消息队列",
+          prefix: "message-queue/",
+          icon: ICONS.MQ,
+          collapsible: true,
+          children: [
+            {
+              text: "⭐消息队列高频面试题",
+              link: "message-queue-interview-questions",
+            },
+            "message-queue",
+            "disruptor-questions",
+            "kafka-questions-01",
+            "rocketmq-questions",
+            "rabbitmq-questions",
+          ],
+        },
+      ],
+    },
+    {
+      text: "高可用",
+      icon: ICONS.HIGH_AVAILABLE,
+      prefix: "high-availability/",
+      collapsible: true,
+      children: [
+        {
+          text: "⭐高可用系统面试题总结",
+          link: "high-availability-system-interview-questions",
+        },
+        {
+          text: "高可用系统设计指南",
+          link: "high-availability-system-design",
+        },
+        {
+          text: "⭐接口幂等方案总结",
+          link: "idempotency",
+        },
+        {
+          text: "⭐服务限流详解",
+          link: "limit-request",
+        },
+        {
+          text: "⭐超时和重试机制详解",
+          link: "timeout-and-retry",
+        },
+        {
+          text: "服务降级与熔断详解",
+          link: "fallback-and-circuit-breaker",
+        },
+        {
+          text: "冗余设计详解",
+          link: "redundancy",
+        },
+        {
+          text: "性能测试入门",
+          link: "performance-test",
+        },
+      ],
+    },
+  ],
+});

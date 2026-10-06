@@ -1,0 +1,8 @@
+guide — independent learning mirror of JavaGuide.
+Upstream: https://github.com/Snailclimb/JavaGuide
+Upstream revision: 9eab7aaf1a538dc139e6886cb2237b6c61e9a000
+Original authors: Guide and JavaGuide contributors.
+License: Apache License, Version 2.0; see LICENSE.
+Modified 2026-10-05: Pages base, mirror name/footer, search, QR asset base, deployment workflow, dependency metadata and four local navigation link repairs and base-aware stale-chunk recovery.
+Original article contents and attribution are retained. Canonical URLs intentionally credit the original publication.
+External image hosts and external linked services remain outside this repository.
