@@ -9,6 +9,8 @@ head:
       content: Java学习路线,Java后端路线,Java学习计划,校招准备,面试路线,Spring Boot,MySQL,Redis,JVM
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 ::: tip 重要说明
 
 本学习路线保持**年度系统性修订**，严格同步 Java 技术生态与招聘市场的最新动态，**确保内容时效性与前瞻性**。
@@ -31,7 +33,7 @@ head:
 
 对于初学者，你可以按照这篇文章推荐的学习路线和资料进行系统性的学习；对于有经验的开发者，你可以根据这篇文章更一步地深入学习 Java 后端开发，提升个人竞争力。
 
-在看这份学习路线的过程中，建议搭配 [Java 面试重点总结(重要)](https://javaguide.cn/interview-preparation/key-points-of-interview.html)，可以让你在学习过程中更有目的性。
+在看这份学习路线的过程中，建议搭配 [Java 面试重点总结(重要)](./key-points-of-interview.md)，可以让你在学习过程中更有目的性。
 
 由于这份学习路线内容太多，因此我将其整理成了 PDF 版本（共 **55** 页），方便大家阅读。这份 PDF 有黑夜和白天两种阅读版本，满足大家的不同需求。
 

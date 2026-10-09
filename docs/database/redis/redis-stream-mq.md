@@ -11,6 +11,8 @@ head:
       content: Redis消息队列,Redis Stream,Redis List,Redis Pub/Sub,消息队列,消费者组,ACK机制,XREADGROUP,XADD,XACK
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 先说结论：**可以是可以，但要看具体场景。和专业的消息队列（如 Kafka、RabbitMQ）相比，还是有一些欠缺的地方。**
 
 正式开始介绍之前，我们先来看看：**一个生产级 MQ 需要具备哪些核心能力？**
@@ -216,7 +218,7 @@ sequenceDiagram
 - [Redis 内存碎片详解](https://javaguide.cn/database/redis/redis-memory-fragmentation.html "Redis 内存碎片详解")
 - [Redis 常见阻塞原因总结](https://javaguide.cn/database/redis/redis-common-blocking-problems-summary.html "Redis 常见阻塞原因总结")
 
-我的 [《SpringAI 智能面试平台+RAG 知识库》](https://javaguide.cn/zhuanlan/interview-guide.html)项目就是用的 Redis Stream 作为消息队列。在我的项目的场景下，它几乎是最合适的选择，完全够用了。
+我的 [《SpringAI 智能面试平台+RAG 知识库》](../../zhuanlan/interview-guide.md)项目就是用的 Redis Stream 作为消息队列。在我的项目的场景下，它几乎是最合适的选择，完全够用了。
 
 ![系统架构图](https://oss.javaguide.cn/xingqiu/pratical-project/interview-guide/interview-guide-architecture-diagram.png)
 

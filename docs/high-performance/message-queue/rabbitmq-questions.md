@@ -10,6 +10,8 @@ head:
       content: RabbitMQ,AMQP协议,Exchange交换机,消息确认,死信队列,延迟队列,优先级队列,RabbitMQ集群,消息队列面试
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 RabbitMQ 现在不能只按“Exchange + Queue”那套老答案准备。RabbitMQ 4.0 已经移除镜像队列；需要复制和高可用时，主要看 Quorum Queue；需要日志型存储、历史回放或大量堆积时，再评估 Streams。
 
 这篇文章按 RabbitMQ 4.x 最新版本为核心介绍，同时保留 3.x 老集群里还会遇到的镜像队列问题。重点看四件事：AMQP 模型怎么工作，Exchange 怎么路由，消息可靠性怎么保证，以及 Classic Queue、Quorum Queue、Streams 该怎么选。
@@ -234,7 +236,7 @@ Classic Queue 可以通过 `x-max-priority` 参数声明优先级队列，Quorum
 - **手动 Ack**：`basicAck(deliveryTag, multiple)`，确保消费成功后再确认
 - **重试机制**：消费失败时可以 `basicNack` 或 `basicReject`，再根据异常类型决定是否 `requeue`
 - **死信队列**：达到最大重试次数或被拒绝后路由到 DLQ，后续再告警、补偿或人工处理
-- **幂等性保障**：业务层实现，避免重复消费导致的数据不一致。幂等性具体实现方案参考这篇文章：[接口幂等方案总结](https://javaguide.cn/high-availability/idempotency.html)。
+- **幂等性保障**：业务层实现，避免重复消费导致的数据不一致。幂等性具体实现方案参考这篇文章：[接口幂等方案总结](../../high-availability/idempotency.md)。
 
 > 注意：Alternate Exchange（备用交换器）也能处理路由失败。配置了备用交换器后，无法路由的消息会被转发过去；如果备用交换器也无法路由，并且消息设置了 mandatory，生产者才会收到 return。
 

@@ -8,6 +8,8 @@ head:
       content: Kimi K3,Kimi Code,AI编程,Agent Coding,全栈开发,Java项目改造,多模态,长程任务,游戏开发
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 你好，我是小 G。Kimi K3 上周五正式发布了！
 
 这两天被问得最多的，基本都是同一个问题：K3 能力到底怎么样？写代码体感如何？
@@ -350,9 +352,9 @@ K3 这块给我的感觉是，速度很快，价格放到同类模型里也比�
 
 **⭐️推荐阅读：**
 
-- [后端开发学习 + 面试指南](https://javaguide.cn/home.html)：覆盖 Java、计算机基础、数据库、框架、系统设计等后端开发核心知识与面试内容。
-- [AI 应用开发学习 + 面试指南](https://javaguide.cn/ai/)：覆盖 LLM、RAG、Agent、MCP、Prompt、评测、系统设计等 AI 应用开发知识与面试内容。
-- [AI 编程实战指南](https://javaguide.cn/ai-coding/)：覆盖 Claude Code、Cursor、Codex、Trae 等工具的使用技巧与面试内容。
+- [后端开发学习 + 面试指南](../../home.md)：覆盖 Java、计算机基础、数据库、框架、系统设计等后端开发核心知识与面试内容。
+- [AI 应用开发学习 + 面试指南](../../ai/README.md)：覆盖 LLM、RAG、Agent、MCP、Prompt、评测、系统设计等 AI 应用开发知识与面试内容。
+- [AI 编程实战指南](../README.md)：覆盖 Claude Code、Cursor、Codex、Trae 等工具的使用技巧与面试内容。
 
 ## 小结
 

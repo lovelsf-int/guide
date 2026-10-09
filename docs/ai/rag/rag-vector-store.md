@@ -8,6 +8,8 @@ head:
       content: RAG,向量数据库,向量索引,HNSW,IVFFLAT,pgvector,ANN,Embedding,相似度搜索
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 把 Embedding 存进普通字段并逐条计算距离，数据量小时可以作为精确检索基线。数据规模、并发或延迟要求上升后，全表扫描的计算开销会随向量数量线性增长，此时需要评估 ANN 索引或专门的向量检索系统。
 
 本文从距离度量和索引算法讲起，再结合 PostgreSQL + pgvector 说明 HNSW、IVFFLAT 的参数、过滤行为和选型方法。
@@ -164,7 +166,7 @@ ANN 是现代向量检索的主流。它接受一个工程取舍：不保证 100
 
 ## 你的项目使用的什么向量索引算法？
 
-这里以 [《SpringAI 智能面试平台+RAG 知识库》](https://javaguide.cn/zhuanlan/interview-guide.html)项目为例。
+这里以 [《SpringAI 智能面试平台+RAG 知识库》](../../zhuanlan/interview-guide.md)项目为例。
 
 项目里用的是 PostgreSQL 的 pgvector 扩展，并配置了 HNSW 索引。
 
@@ -327,7 +329,7 @@ flowchart TB
 
 ## 你为什么选择 PostgreSQL + pgvector？
 
-这里以 [《SpringAI 智能面试平台+RAG 知识库》](https://javaguide.cn/zhuanlan/interview-guide.html)项目为例。这个项目需要同时存结构化数据，比如简历、面试记录，也要存向量数据，也就是文档 Embedding。
+这里以 [《SpringAI 智能面试平台+RAG 知识库》](../../zhuanlan/interview-guide.md)项目为例。这个项目需要同时存结构化数据，比如简历、面试记录，也要存向量数据，也就是文档 Embedding。
 
 方案对比如下：
 

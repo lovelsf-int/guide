@@ -8,6 +8,8 @@ head:
       content: Context Engineering,上下文工程,Agent,LLM,RAG,Prompt Engineering,Compaction,Sub-agent
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 上下文窗口能装下更多资料，不代表 Agent 会稳定利用这些资料。一次调用里混入过期状态、无关日志或几十个相似工具描述后，模型仍可能漏掉真正影响决策的条件。
 
 Context Engineering 处理的就是调用前的信息组装：哪些规则进入消息，哪些证据按需检索，哪些工具在当前阶段可见，历史何时压缩，原始结果如何保留引用。长任务还要处理跨窗口的状态交接，避免摘要后丢失约束、版本号和未完成事项。
@@ -156,7 +158,7 @@ Just-in-Time 会先保留文件路径、数据库查询或 Web 链接等轻量�
 
 元数据本身也能参与判断。`tests/test_utils.py` 与 `src/core_logic/test_utils.py` 的路径语义不同，足以提示 Agent 它们服务于不同位置的测试逻辑。
 
-Anthropic 将这类分层获取信息的方式称为 **Progressive Disclosure**，即渐进式披露。Agent 通过多轮探索补充上下文：文件大小提示复杂度，时间戳提示相关性，目录结构提供位置语义。Skills 也利用了这一思路，具体可见：[Agent Skills 是什么？和 Prompt、MCP 到底差在哪？](https://javaguide.cn/ai/agent/skills.html)。
+Anthropic 将这类分层获取信息的方式称为 **Progressive Disclosure**，即渐进式披露。Agent 通过多轮探索补充上下文：文件大小提示复杂度，时间戳提示相关性，目录结构提供位置语义。Skills 也利用了这一思路，具体可见：[Agent Skills 是什么？和 Prompt、MCP 到底差在哪？](./skills.md)。
 
 按需加载增加了工具调用次数和延迟，并依赖 `glob`、`grep`、`tree` 等导航工具。导航能力不足或启发式规则失效时，Agent 可能沿着错误路径继续搜索，消耗更多上下文和调用次数。因此仍要预先设计索引、工具边界和导航策略。
 
@@ -367,7 +369,7 @@ Few-shot 示例应覆盖不同的标准场景。保留 3 到 5 个能代表策�
 - LangChain、LangGraph 负责控制流、状态管理和循环调度；工具调用与节点回退通常在这一层组织。
 - LlamaIndex 偏向 RAG 的数据摄取、索引生成和检索优化，适用于文档摄取与检索构成主要链路的场景。
 - Pinecone、Weaviate、Chroma、Qdrant 等提供 Embedding 存储和语义搜索。小项目可先用本地 Chroma，再按规模评估 Qdrant、Milvus 或 Pinecone。
-- MCP 规定工具如何标准化接入宿主程序，区分 Host、Client、Server，并暴露 Resources、Prompts、Tools 等能力。协议版本与调用示例统一见 [MCP 专文](https://javaguide.cn/ai/agent/mcp.html)。
+- MCP 规定工具如何标准化接入宿主程序，区分 Host、Client、Server，并暴露 Resources、Prompts、Tools 等能力。协议版本与调用示例统一见 [MCP 专文](./mcp.md)。
 - Mem0、LETTA（原 MemGPT）、ZEP 面向 Agent 记忆层，通常在向量库之上封装记忆写入、检索和遗忘等生命周期管理。
 
 通过 MCP 接入的工具也是副作用入口。读文件、查询数据库、发请求和修改配置要区分权限、调用条件与审计边界，否则问题难以定位和回放。
@@ -412,7 +414,7 @@ Anthropic 反复强调过一句话：`do the simplest thing that works`。
 - [OpenAI API Models Compare](https://developers.openai.com/api/docs/models/compare)
 - [Claude API Models Overview](https://platform.claude.com/docs/en/about-claude/models/overview)
 - [DeepSeek V4 Preview Release](https://api-docs.deepseek.com/news/news260424)
-- [MCP：协议版本、能力与调用示例](https://javaguide.cn/ai/agent/mcp.html)
+- [MCP：协议版本、能力与调用示例](./mcp.md)
 - [Context Rot: How Increasing Input Tokens Impacts LLM Performance](https://www.trychroma.com/research/context-rot)
 - [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)
 - [Context Engineering: The New Frontier of AI Development](https://medium.com/techacc/context-engineering-a8c3a4b39c07)

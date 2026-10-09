@@ -26,6 +26,7 @@ export default sidebar({
   "/about-the-author/": aboutTheAuthor,
   "/high-quality-technical-articles/": highQualityTechnicalArticles,
   "/zhuanlan/": zhuanlan,
+  "/reading/": [""],
   // 必须放在最后面
   "/": [
     {
@@ -482,7 +483,7 @@ export default sidebar({
         },
         {
           text: "⭐设计模式常见面试题总结",
-          link: "https://interview.javaguide.cn/system-design/design-pattern.html",
+          link: "/system-design/design-pattern.md",
         },
         "state-machine-and-workflow",
         "schedule-task",

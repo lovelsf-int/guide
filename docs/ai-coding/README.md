@@ -20,6 +20,8 @@ head:
       content: 梳理 Claude Code、Cursor、OpenAI Codex、Trae、oh-my-pi 等 AI 编程工具的使用边界、上下文管理、原理机制、规则文件、代码审查和真实项目落地经验。
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 <!-- @include: @small-advertisement.snippet.md -->
 
 AI 编程工具好不好用，真不全看模型。很多时候，差别反而出在你怎么给上下文、怎么拆任务、怎么看 diff。
@@ -33,7 +35,7 @@ AI 编程工具好不好用，真不全看模型。很多时候，差别反而�
 本专栏属于 AIGuide 项目，对标 JavaGuide 质量，免费开源，欢迎 Star 支持：
 
 - **项目地址**：[https://github.com/Snailclimb/AIGuide](https://github.com/Snailclimb/AIGuide)
-- **在线阅读**：[https://javaguide.cn/ai-coding/](https://javaguide.cn/ai-coding/)
+- **在线阅读**：[https://javaguide.cn/ai-coding/](./README.md)
 
 ## 适合谁看
 

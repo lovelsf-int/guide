@@ -9,6 +9,11 @@ export default navbar([
     text: "推荐阅读",
     icon: "mdi:book-open-page-variant-outline",
     children: [
+      {
+        text: "免费完整讲解",
+        icon: "mdi:book-open-page-variant-outline",
+        link: "/reading/",
+      },
       { text: "学习路线", icon: "mdi:map-outline", link: "/roadmap/" },
       { text: "开源项目", icon: "mdi:github", link: "/open-source-project/" },
       {
@@ -40,7 +45,7 @@ export default navbar([
       {
         text: "面试突击",
         icon: "mdi:file-pdf-box",
-        link: "https://interview.javaguide.cn/home.html",
+        link: "/interview-preparation/self-test-of-common-interview-questions.md",
       },
       {
         text: "更新历史",

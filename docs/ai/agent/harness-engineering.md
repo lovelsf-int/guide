@@ -8,6 +8,8 @@ head:
       content: Harness是什么,Harness Engineering,Agent Harness,Harness架构,Harness工程,AI Agent,智能体,Claude Code,Codex,AGENTS.md,上下文工程,Agent架构
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 Agent Harness 是运行在大模型外部的一套执行系统。它负责组织上下文、提供工具和执行环境，并把权限控制、状态管理、结果验证与失败恢复接入任务流程。Harness Engineering 研究的就是这套系统应该怎样设计。
 
 Can.ac 的一次编码评测中，Grok Code Fast 1 仅替换文件编辑接口，得分就[从 6.7% 升到 68.3%](https://blog.can.ac/2026/02/12/the-harness-problem/)。模型参数没有变化，差别出在接口提供了什么操作、怎样返回结果，以及错误能否被下一步利用。
@@ -196,7 +198,7 @@ Stripe Minions 在大型既有代码库中运行。对于缺少模块边界、�
 
 OpenAI 的 `AGENTS.md` 约 100 行，作为入口指向 `docs/` 中的设计文档、架构图、执行计划和质量评级。Agent 先读取任务所需的索引，再按路径加载细节，避免把整套规则放进每次会话。
 
-Agent Skills 也采用了相同的渐进式披露：上下文中常驻名称、描述等元数据，命中场景后再加载详细规则和执行流程。它把 `AGENTS.md` 的目录式做法标准化了。相关阅读可以看这篇：[Agent Skills 详解：是什么？怎么用？和 Prompt、MCP 有什么区别？](https://javaguide.cn/ai/agent/skills.html)。
+Agent Skills 也采用了相同的渐进式披露：上下文中常驻名称、描述等元数据，命中场景后再加载详细规则和执行流程。它把 `AGENTS.md` 的目录式做法标准化了。相关阅读可以看这篇：[Agent Skills 详解：是什么？怎么用？和 Prompt、MCP 有什么区别？](./skills.md)。
 
 #### 架构约束要靠工具执行
 

@@ -10,6 +10,8 @@ head:
       content: JVM 基础,类加载,方法区,堆栈,程序计数器,运行时数据区
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 > 来自[说出你的愿望吧丷](https://juejin.im/user/5c2400afe51d45451758aa96)投稿，原文地址：<https://juejin.im/post/5e1505d0f265da5d5d744050>。
 
 ## 前言
@@ -271,7 +273,7 @@ MaxMetaspaceSize：限制元空间大小上限
 
 ### 3.4 垃圾回收算法
 
-关于常见垃圾回收算法的详细介绍，建议阅读这篇：[JVM 垃圾回收详解（重点）](https://javaguide.cn/java/jvm/jvm-garbage-collection.html)。
+关于常见垃圾回收算法的详细介绍，建议阅读这篇：[JVM 垃圾回收详解（重点）](./jvm-garbage-collection.md)。
 
 ### 3.5（了解）各种各样的垃圾回收器
 

@@ -8,6 +8,8 @@ head:
       content: OpenAI Codex,Codex CLI,AI编程,AGENTS.md,Agent Skills,MCP,Subagents,Hooks,Scheduled Tasks,AI辅助开发
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 你好，我是小 G。前面写过一篇 [Claude Code 使用指南：配置、工作流与进阶技巧](./claudecode-tips.md)，发出去之后，有同学在后台问：Claude Code 讲了这么多，那 Codex 怎么用更稳？
 
 我最开始用 Codex 的时候，对它的预期其实不高。
@@ -136,7 +138,7 @@ Codex 启动时会构建一条 instruction chain。当前官方文档里的发�
 
 还有一种更适合大项目的写法：让 `AGENTS.md` 只做目录。
 
-我在 [一文搞懂 Harness Engineering](https://javaguide.cn/ai/agent/harness-engineering.html) 里也提到过，OpenAI 自己的 `AGENTS.md` 大约只有 100 行，更像一个索引：先告诉 Agent 最关键的仓库规则，再指向 `docs/` 下面更细的设计文档、架构图、执行计划和质量评级。Agent 真的需要深入某个模块时，再顺着链接去读。
+我在 [一文搞懂 Harness Engineering](../../ai/agent/harness-engineering.md) 里也提到过，OpenAI 自己的 `AGENTS.md` 大约只有 100 行，更像一个索引：先告诉 Agent 最关键的仓库规则，再指向 `docs/` 下面更细的设计文档、架构图、执行计划和质量评级。Agent 真的需要深入某个模块时，再顺着链接去读。
 
 这就是渐进式披露。
 
@@ -291,7 +293,7 @@ codex mcp add context7 -- npx -y @upstash/context7-mcp
 
 Skill 更适合放遇到某类任务时应该怎么做。比如做代码审查、写测试、改前端页面、网页调研、写技术文章，这些任务每次流程都差不多，就没必要每次都在聊天里重新提醒一遍。
 
-小 G 之前写过两篇相关的文章：[Agent Skills 是什么？和 Prompt、MCP 到底差在哪？](https://javaguide.cn/ai/agent/skills.html) 和 [AI 编程 Skills 选型清单](https://javaguide.cn/ai-coding/practices/programmer-essential-skills.html)。
+小 G 之前写过两篇相关的文章：[Agent Skills 是什么？和 Prompt、MCP 到底差在哪？](../../ai/agent/skills.md) 和 [AI 编程 Skills 选型清单](./programmer-essential-skills.md)。
 
 简单说，Skill 就是一份能被 Agent 按需加载的任务说明。它不是插件，也不是 MCP 工具本身，而是把某类任务的流程、约束、检查项和踩坑经验写进 `SKILL.md`。
 
@@ -334,7 +336,7 @@ Done when:
 
 现成 Skill 也可以直接用，比如 Superpowers 把 TDD、Code Review、Spec-Driven、Git Worktree、子 Agent 协作这些流程封装好了。
 
-我在 [AI 编程 Skills 选型清单：需求澄清、TDD、代码审查与 UI 设计](https://javaguide.cn/ai-coding/practices/programmer-essential-skills.html) 这篇文章中有详细推荐。
+我在 [AI 编程 Skills 选型清单：需求澄清、TDD、代码审查与 UI 设计](./programmer-essential-skills.md) 这篇文章中有详细推荐。
 
 但第三方 Skill 不要拿来就跑。`SKILL.md` 也是指令，里面如果带了危险命令、奇怪脚本、过宽权限，Agent 会照着做。装之前至少看一眼正文、`scripts/` 和 `references/`，确认它没有越权操作。
 

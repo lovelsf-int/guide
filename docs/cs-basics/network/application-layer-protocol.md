@@ -10,6 +10,8 @@ head:
       content: 应用层协议,HTTP,WebSocket,DNS,SMTP,FTP,特性,场景
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 <!-- @include: @article-header.snippet.md -->
 
 应用层协议很多，HTTP、WebSocket、SMTP、POP3/IMAP、FTP、Telnet、SSH、RTP、DNS 这些名字也经常一起出现。
@@ -67,7 +69,7 @@ WebSocket 本质上仍然是应用层协议。它通常先通过一次 HTTP 请�
 WebSocket 的常见应用场景包括：
 
 - 视频弹幕
-- 实时消息推送，详见[Web 实时消息推送详解](https://javaguide.cn/system-design/web-real-time-message-push.html)
+- 实时消息推送，详见[Web 实时消息推送详解](../../system-design/web-real-time-message-push.md)
 - 实时游戏对战
 - 多用户协同编辑
 - 在线客服 / 社交聊天

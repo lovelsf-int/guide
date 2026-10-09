@@ -9,6 +9,8 @@ head:
       content: 程序员简历,Java简历,简历优化,项目经历写法,简历模板,校招简历,社招简历,面试准备
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 ::: tip 友情提示
 本文节选自 **[《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md)**。这是一份教你如何更高效地准备面试的小册，涵盖常见八股文（系统设计、常见框架、分布式、高并发 ……）、优质面经等内容。
 :::
@@ -187,7 +189,7 @@ head:
 
 **4、如果你觉得你的项目技术比较落后的话，可以自己私下进行改进。重要的是让项目比较有亮点，通过什么方式就无所谓了。**
 
-项目经历这部分对于简历来说非常重要，[《Java 面试指北》](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html)的面试准备篇有好几篇关于优化项目经历的文章，建议你仔细阅读一下，应该会对你有帮助。
+项目经历这部分对于简历来说非常重要，[《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md)的面试准备篇有好几篇关于优化项目经历的文章，建议你仔细阅读一下，应该会对你有帮助。
 
 ![](https://oss.javaguide.cn/zhishixingqiu/4e11dbc842054e53ad6c5f0445023eb5~tplv-k3u1fbpfcp-zoom-1.png)
 

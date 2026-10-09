@@ -8,6 +8,8 @@ head:
       content: 大模型 API,LLM API,流式输出,Streaming,SSE,WebSocket,重试,限流,结构化返回,JSON Schema,AI 应用开发
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 本地调通一个大模型 API 只说明网络和参数基本可用。接进真实业务后，首字延迟、半截 JSON、429、取消和重复执行都要处理：
 
 - 用户等了 8 秒还看不到第一个字，以为系统卡死，直接刷新页面。
@@ -119,7 +121,7 @@ SSE 通常通过 HTTP 响应承载，媒体类型是 `text/event-stream`，消�
 
 **空行才是事件分隔符**。单个换行只是结束当前字段行，不会直接结束事件。服务端手写 `data:` 时如果没有给正文每一行加字段前缀，客户端可能丢掉后续行；额外写入空行还会提前结束事件。Markdown 列表和代码块很容易触发这些情况。
 
-小 G 在[《SpringAI 智能面试平台+RAG 知识库》](https://javaguide.cn/zhuanlan/interview-guide.html)的知识库问答里用的就是 SSE：模型一边生成，浏览器一边打字机展示；链路不长，但协议细节一个不落下。
+小 G 在[《SpringAI 智能面试平台+RAG 知识库》](../../zhuanlan/interview-guide.md)的知识库问答里用的就是 SSE：模型一边生成，浏览器一边打字机展示；链路不长，但协议细节一个不落下。
 
 ### Spring Boot + Spring AI 的 SSE 写法
 
@@ -406,7 +408,7 @@ Gemini 官方限流文档把限流维度拆成 RPM、输入 TPM、RPD，并说�
 - 供应商级：全局令牌桶 + 熔断器
 - 流式请求：并发信号量 + 总时长限制
 
-关于限流算法的详细介绍，可以参考这篇文章：[服务限流详解](https://javaguide.cn/high-availability/limit-request.html)。
+关于限流算法的详细介绍，可以参考这篇文章：[服务限流详解](../../high-availability/limit-request.md)。
 
 ### 收到 429 应该怎么处理
 

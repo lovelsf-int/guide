@@ -8,6 +8,8 @@ head:
       content: Loop Engineering,Agent Loop,AI Agent,Claude Code,/loop,/goal,Context Engineering,Harness Engineering,Agent Skills,MCP,AI 编程
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 CI 失败后，Agent 可以读失败日志、定位相关文件、运行最小测试集，再把排查结果写回 Issue。第一次排查没有收敛时，任务还会遇到一个更实际的问题：下一轮由谁启动，继续读哪些材料，什么时候该停下来交给人处理？
 
 Loop Engineering 讨论的就是这段外层流程。它负责把 Agent 的一次次执行接起来：CI、PR 或定时任务触发下一轮，项目规则和相关证据进入上下文，测试与审查决定结果是否可信，状态记录让后续任务可以从上次停下的地方继续。
@@ -36,7 +38,7 @@ Agent Loop 的基本顺序没有变化：读取当前上下文，交给 LLM 决�
 
 ReAct 也是这个思路：Reasoning 和 Acting 交替进行，模型走一步看一步，拿到外部反馈后再决定下一步。
 
-[AI Agent 基础概念](https://javaguide.cn/ai/agent/agent-basis.html) 中介绍过这条循环。线上故障排查、代码库阅读和测试失败定位都没有预先确定的完整路径，模型需要根据每次拿到的证据调整下一步。
+[AI Agent 基础概念](./agent-basis.md) 中介绍过这条循环。线上故障排查、代码库阅读和测试失败定位都没有预先确定的完整路径，模型需要根据每次拿到的证据调整下一步。
 
 这里要区分两层循环。Agent Loop 发生在一次任务执行中：模型推理、调用工具、读取结果，再决定下一步。外层 Loop 则在这次任务结束后工作，例如等待下一次 CI 事件、检查测试结果、保存排查记录，再决定是否重新启动 Agent。
 
@@ -53,7 +55,7 @@ ReAct 也是这个思路：Reasoning 和 Acting 交替进行，模型走一步�
 
 ![Workflow、Graph、Loop 三者关系概览](https://oss.javaguide.cn/github/javaguide/ai/workflow/workflow-graph-loop-relation.svg)
 
-“生成初稿 → 审核 → 不通过就修改 → 再审核”中，审核不通过的条件边就是从“审核”回到“修改”的回边；审核通过则离开循环。 [AI 工作流中的 Workflow、Graph 与 Loop](https://javaguide.cn/ai/agent/workflow-graph-loop.html) 对这套结构有更完整的说明。运行配置还要写明最大轮次、超时、Token 预算和失败后的降级方式，防止回边没有出口。
+“生成初稿 → 审核 → 不通过就修改 → 再审核”中，审核不通过的条件边就是从“审核”回到“修改”的回边；审核通过则离开循环。 [AI 工作流中的 Workflow、Graph 与 Loop](./workflow-graph-loop.md) 对这套结构有更完整的说明。运行配置还要写明最大轮次、超时、Token 预算和失败后的降级方式，防止回边没有出口。
 
 代码 Agent 把同一条回边延伸到 Claude Code、Codex、CI、GitHub、Issue 系统和本地仓库：测试失败后读取错误、修改文件、重跑命令，再由外部信号决定是否继续。
 
@@ -69,7 +71,7 @@ ReAct 也是这个思路：Reasoning 和 Acting 交替进行，模型走一步�
 
 ### Harness Engineering：模型外面的执行环境
 
-在 [Harness Engineering](https://javaguide.cn/ai/agent/harness-engineering.html) 中，Agent 可以拆成 Model + Harness。模型负责推理和生成，Harness 提供环境、工具、反馈、沙箱、权限、观测和恢复。
+在 [Harness Engineering](./harness-engineering.md) 中，Agent 可以拆成 Model + Harness。模型负责推理和生成，Harness 提供环境、工具、反馈、沙箱、权限、观测和恢复。
 
 ![Harness 和 Prompt/Context Engineering 的关系](https://oss.javaguide.cn/github/javaguide/ai/harness/harness-engineering-layers-arch.png)
 
@@ -109,7 +111,7 @@ TDD、CI、ReAct 和工作流图早就有循环。代码 Agent 把原来由人�
 
 ## Claude Code 的 /loop、/goal 可以怎么理解？
 
-`/loop` 按时间再次运行 Prompt，`/goal` 按完成条件决定是否继续。更多说明可以参考 [Claude Code 命令详解](https://javaguide.cn/ai-coding/practices/claudecode-commands.html)。
+`/loop` 按时间再次运行 Prompt，`/goal` 按完成条件决定是否继续。更多说明可以参考 [Claude Code 命令详解](../../ai-coding/practices/claudecode-commands.md)。
 
 ![Claude Code 推荐使用 loop 命令](https://oss.javaguide.cn/github/javaguide/ai/coding/claudecode/claudecode-father-loop.png)
 

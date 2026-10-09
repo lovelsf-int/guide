@@ -29,16 +29,22 @@ root = Path(__file__).resolve().parents[1]
 dist = root / "dist"
 errors = []
 html_files = list(dist.rglob("*.html"))
+pages = {}
 for source in html_files:
     page = Page()
     page.feed(source.read_text())
+    pages[source.resolve()] = page
+fragments_checked = 0
+for source, page in pages.items():
     for kind, urls in (("asset", page.assets), ("link", page.links)):
         for url in urls:
             parsed = urlsplit(url)
-            if parsed.scheme or parsed.netloc or not parsed.path:
+            if parsed.scheme or parsed.netloc or (not parsed.path and not parsed.fragment):
                 continue
             path = unquote(parsed.path)
-            if path.startswith("/"):
+            if not path:
+                target = source
+            elif path.startswith("/"):
                 if not path.startswith("/guide/"):
                     errors.append([str(source.relative_to(dist)), "outside base", url])
                     continue
@@ -49,6 +55,14 @@ for source in html_files:
                 target = target / "index.html"
             if not target.exists():
                 errors.append([str(source.relative_to(dist)), "missing " + kind, url])
+            target_page = pages.get(target.resolve())
+            if kind == "link" and parsed.fragment and target_page and source.name != "404.html":
+                fragment = unquote(parsed.fragment)
+                if fragment.startswith(":~:text="):
+                    continue
+                fragments_checked += 1
+                if fragment not in target_page.ids:
+                    errors.append([str(source.relative_to(dist)), "missing heading", url])
 
 article = dist / "ai/system-design/ai-application-architecture.html"
 if article.exists():
@@ -66,5 +80,5 @@ for name in ("LICENSE.txt", "NOTICE.txt", "index.html", "home.html", "sitemap.xm
 search_indexes = list((root / "docs/.vuepress/.temp").glob("internal/searchIndex.js"))
 if not search_indexes or "ai-application-architecture.html" not in search_indexes[0].read_text():
     errors.append(["search", "requested article absent from local search index"])
-print(json.dumps({"html_pages": len(html_files), "errors": errors}, ensure_ascii=False, indent=2))
+print(json.dumps({"html_pages": len(html_files), "fragments_checked": fragments_checked, "errors": errors}, ensure_ascii=False, indent=2))
 sys.exit(bool(errors))

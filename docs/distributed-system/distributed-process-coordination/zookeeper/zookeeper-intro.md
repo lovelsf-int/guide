@@ -10,6 +10,8 @@ head:
       content: ZooKeeper,ZooKeeper 入门,ZNode,Watcher,ACL,分布式锁,注册中心,配置中心,分布式协调,ZAB,临时节点,持久节点
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 相信大家对 ZooKeeper 应该不算陌生。但是你真的了解 ZooKeeper 到底有啥用不？如果别人/面试官让你给他讲讲对于 ZooKeeper 的认识，你能回答到什么地步呢？
 
 拿我自己来说吧！我本人在大学曾经使用 Dubbo 来做分布式项目的时候，使用了 ZooKeeper 作为注册中心。为了保证分布式系统能够同步访问某个资源，我还使用 ZooKeeper 做过分布式锁。另外，我在学习 Kafka 的时候，知道 Kafka 很多功能的实现依赖了 ZooKeeper。
@@ -74,7 +76,7 @@ ZooKeeper 概览中，我们介绍到使用其通常被用于实现诸如数据�
 
 1. **命名服务**：可以通过 ZooKeeper 的顺序节点生成全局唯一 ID。
 2. **数据发布/订阅**：通过 **Watcher 机制** 可以很方便地实现数据发布/订阅。当你将数据发布到 ZooKeeper 被监听的节点上，其他机器可通过监听 ZooKeeper 上节点的变化来实现配置的动态更新。
-3. **分布式锁**：通过创建唯一节点获得分布式锁，当获得锁的一方执行完相关代码或者是挂掉之后就释放锁。分布式锁的实现也需要用到 **Watcher 机制** ，我在 [分布式锁详解](https://javaguide.cn/distributed-system/distributed-lock.html) 这篇文章中有详细介绍到如何基于 ZooKeeper 实现分布式锁。
+3. **分布式锁**：通过创建唯一节点获得分布式锁，当获得锁的一方执行完相关代码或者是挂掉之后就释放锁。分布式锁的实现也需要用到 **Watcher 机制** ，我在 [分布式锁详解](../../distributed-lock.md) 这篇文章中有详细介绍到如何基于 ZooKeeper 实现分布式锁。
 
 实际上，这些功能的实现基本都得益于 ZooKeeper 可以保存数据的功能，但是 ZooKeeper 不适合保存大量数据，这一点需要注意。
 
@@ -273,13 +275,13 @@ ZAB 协议包括两种基本的模式，分别是
 
 关于 **ZAB 协议&Paxos 算法** 需要讲和理解的东西太多了，具体可以看下面这几篇文章：
 
-- [Paxos 算法详解](https://javaguide.cn/distributed-system/protocol/paxos-algorithm.html)
-- [Zab 协议详解](https://javaguide.cn/distributed-system/protocol/zab.html)
-- [Raft 算法详解](https://javaguide.cn/distributed-system/protocol/raft-algorithm.html)
+- [Paxos 算法详解](../../protocol/paxos-algorithm.md)
+- [Zab 协议详解](../../protocol/zab.md)
+- [Raft 算法详解](../../protocol/raft-algorithm.md)
 
 ## ZooKeeper VS ETCD
 
-[ETCD](https://etcd.io/) 是一种强一致性的分布式键值存储，它提供了一种可靠的方式来存储需要由分布式系统或机器集群访问的数据。ETCD 内部采用 [Raft 算法](https://javaguide.cn/distributed-system/protocol/raft-algorithm.html)作为一致性算法，基于 Go 语言实现。
+[ETCD](https://etcd.io/) 是一种强一致性的分布式键值存储，它提供了一种可靠的方式来存储需要由分布式系统或机器集群访问的数据。ETCD 内部采用 [Raft 算法](../../protocol/raft-algorithm.md)作为一致性算法，基于 Go 语言实现。
 
 与 ZooKeeper 类似，ETCD 也可用于数据发布/订阅、负载均衡、命名服务、分布式协调/通知、分布式锁等场景。那二者如何选择呢？
 

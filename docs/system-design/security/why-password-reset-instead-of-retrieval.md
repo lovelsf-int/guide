@@ -14,6 +14,8 @@ head:
       content: 密码重置,密码找回,哈希算法,密码存储,Bcrypt,加盐,密码安全,面试题
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 这是一个挺有意思的问题，很多公司也在面试中问过。挺简单的，不知道大家平时在重置密码的时候有没有想过这个问题。
 
 ![重置帐号密码](https://oss.javaguide.cn/github/javaguide/system-design/security/reset-password-page.png)
@@ -24,7 +26,7 @@ head:
 
 我们这里来简单分析一下。
 
-这篇文章不会谈论太多加密算法相关的内容，感兴趣的朋友可以看这篇文章：[常见加密算法总结](https://javaguide.cn/system-design/security/encryption-algorithms.html)。
+这篇文章不会谈论太多加密算法相关的内容，感兴趣的朋友可以看这篇文章：[常见加密算法总结](./encryption-algorithms.md)。
 
 ![](https://oss.javaguide.cn/github/javaguide/system-design/security/encryption-algorithms/javaguide-security-encryption-algorithms.png)
 
@@ -147,7 +149,7 @@ public PasswordEncoder passwordEncoder(){
 
 HTTPS 协议是保障传输安全的基础。HTTP 协议运行在 TCP 之上，所有传输的内容都是明文，客户端和服务器端都无法验证对方的身份。HTTPS 则是运行在 SSL/TLS 之上的 HTTP 协议，所有传输的内容都经过加密。
 
-关于 HTTP 和 HTTPS 的详细对比可以看这篇文章：[HTTP vs HTTPS（应用层）](https://javaguide.cn/cs-basics/network/http-vs-https.html)。
+关于 HTTP 和 HTTPS 的详细对比可以看这篇文章：[HTTP vs HTTPS（应用层）](../../cs-basics/network/http-vs-https.md)。
 
 对于普通 Web 应用，正确配置的 HTTPS 是密码传输安全的基础方案。服务端应默认使用 TLS 1.3，并按兼容性需要支持 TLS 1.2；全站强制 HTTPS，启用 HSTS，正确校验证书并禁用过时协议和弱密码套件。
 

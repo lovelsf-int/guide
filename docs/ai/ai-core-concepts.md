@@ -15,6 +15,8 @@ head:
       content: AI核心概念,大模型核心概念,LLM,Token,Agent,Agent Loop,ReAct,Plan-and-Execute,RAG,Embedding,MCP,Skills,多Agent,Prompt Engineering,Context Engineering,Function Calling,Tool Calling,GraphRAG,LLM Gateway,AI评测,AI可观测性,Prompt Injection,语音Agent
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 <!-- @include: @small-advertisement.snippet.md -->
 
 模型为什么每次回答不完全一样？Agent 为什么需要循环？RAG 已经检索到文档，为什么仍然可能答错？这些问题分别落在模型生成、任务执行、知识检索和应用治理几条链路上。
@@ -307,7 +309,7 @@ Context Engineering 负责在有限的 Token 窗口中选择、组织和更新�
 
 ![Context Engineering 和 Prompt Engineering 差别](https://oss.javaguide.cn/github/javaguide/ai/context-engineering/context-engineering-vs-context-engineering-dimension-comparison.png)
 
-进一步的设计方法见[《提示词工程（Prompt Engineering）》](https://javaguide.cn/ai/agent/prompt-engineering.html)和[《上下文工程（Context Engineering）》](https://javaguide.cn/ai/agent/context-engineering.html)。
+进一步的设计方法见[《提示词工程（Prompt Engineering）》](./agent/prompt-engineering.md)和[《上下文工程（Context Engineering）》](./agent/context-engineering.md)。
 
 ### Memory
 

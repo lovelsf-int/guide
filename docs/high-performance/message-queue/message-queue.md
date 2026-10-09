@@ -10,6 +10,8 @@ head:
       content: 消息队列,MQ,异步解耦,削峰填谷,消息丢失,消息幂等,消息顺序,Kafka,RocketMQ,RabbitMQ
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 ::: tip
 
 这篇文章中的消息队列主要指的是分布式消息队列。
@@ -96,7 +98,7 @@ head:
 
 RocketMQ、 Kafka、Pulsar、QMQ 都提供了事务相关的功能。事务允许事件流应用将消费，处理，生产消息整个过程定义为一个原子操作。
 
-详细介绍可以查看 [分布式事务详解(付费)](https://javaguide.cn/distributed-system/distributed-transaction.html) 这篇文章。
+详细介绍可以查看 [分布式事务详解](../../distributed-system/distributed-transaction.md) 这篇文章。
 
 ![分布式事务详解 - MQ事务](https://oss.javaguide.cn/github/javaguide/csdn/07b338324a7d8894b8aef4b659b76d92.png)
 

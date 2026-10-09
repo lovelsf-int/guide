@@ -10,6 +10,8 @@ head:
       content: Spring异步,@Async,EnableAsync,线程池,TaskExecutor,异步任务,Spring注解,方法异步
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 `@Async` 注解由 Spring 框架提供，被该注解标注的类或方法会在 **异步线程** 中执行。这意味着当方法被调用时，调用者将不会等待该方法执行完成，而是可以继续执行后续的代码。
 
 `@Async` 注解的使用非常简单，需要两个步骤：
@@ -602,7 +604,7 @@ public class MyService {
 
 这是因为 Spring 的异步机制是通过代理实现的，由于静态方法不属于实例而是属于类且不参与继承，Spring 的代理机制（无论是基于 JDK 还是 CGLIB）无法拦截静态方法来提供如异步执行这样的增强功能。
 
-篇幅问题，这里没有进一步详细介绍，不了解的代理机制的朋友，可以看看我写的 [Java 代理模式详解](https://javaguide.cn/java/basis/proxy.html)这篇文章。
+篇幅问题，这里没有进一步详细介绍，不了解的代理机制的朋友，可以看看我写的 [Java 代理模式详解](../../../java/basis/proxy.md)这篇文章。
 
 如果你需要异步执行一个静态方法的逻辑，可以考虑设计一个非静态的包装方法，这个包装方法使用 `@Async` 注解，并在其内部调用静态方法
 

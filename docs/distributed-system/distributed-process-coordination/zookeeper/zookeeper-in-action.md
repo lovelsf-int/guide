@@ -10,6 +10,8 @@ head:
       content: ZooKeeper,ZooKeeper 实战,ZooKeeper 安装,zkCli,Curator,四字命令,Docker 部署,分布式锁,ZooKeeper 教程
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 这篇文章简单给演示一下 ZooKeeper 常见命令的使用以及 ZooKeeper Java 客户端 Curator 的基本使用。介绍到的内容都是最基本的操作，能满足日常工作的基本需要。
 
 这篇偏实践，不负责解释 ZooKeeper 为什么能做协调。建议先看 [ZooKeeper 入门指南](./zookeeper-intro.md) 了解 ZNode、Watcher、Session，再看 [ZooKeeper 进阶详解](./zookeeper-plus.md) 或 [ZAB 协议详解](../../protocol/zab.md) 补协议和集群机制。
@@ -133,7 +135,7 @@ dataLength = 11
 numChildren = 1
 ```
 
-上面显示的一些信息比如 cversion、aclVersion、numChildren 等等，我在上面 “[ZooKeeper 相关概念总结(入门)](https://javaguide.cn/distributed-system/distributed-process-coordination/zookeeper/zookeeper-intro.html)” 这篇文章中已经介绍到。
+上面显示的一些信息比如 cversion、aclVersion、numChildren 等等，我在上面 “[ZooKeeper 相关概念总结(入门)](./zookeeper-intro.md)” 这篇文章中已经介绍到。
 
 ### 查看节点信息和状态(ls2 命令)
 

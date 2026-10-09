@@ -113,6 +113,18 @@ Maven 的依赖范围如下：
 
 ### 传递依赖性
 
+> 本节由 guide 原创补充，更新于 2026-10-09。
+
+如果应用 A 依赖库 B，而 B 依赖库 C，Maven 会根据 B 发布的 POM 继续解析 C。这样，应用通常不必把整条依赖链全部手工写出。**传递依赖是否进入你的 classpath，还取决于 scope、optional 和 exclusions。**
+
+例如，A 以 `compile` 引入 B，B 以 `compile` 引入 C，则 C 通常进入 A 的编译、测试与运行 classpath；B 的 `test` 依赖不会传给 A。B 把 C 标为 `optional` 时，A 若要使用 C，需要自己声明它。`dependencyManagement` 用于统一依赖版本和默认配置，本身不会把库加入依赖集合。
+
+可以在项目目录执行 `mvn dependency:tree` 查看实际依赖路径。当 A→B→C:1.0 和 A→D→E→C:2.0 同时存在，默认依赖调解优先采用更近路径的 C:1.0；深度相同则由声明顺序参与决定。对关键依赖，应显式管理版本，并验证调用方与新版本兼容，不能只为消除冲突而强行升降级。
+
+**排查例子：** 应用启动出现 `NoSuchMethodError`，先用依赖树确认运行时选中的库版本，再对照调用代码编译时使用的 API；必要时在引入冲突的依赖下添加精准的 `<exclusions>`，并在应用层直接声明需要的版本。不要删除整个依赖目录来掩盖版本问题。
+
+参考：[Maven 官方依赖机制](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)。
+
 ### 依赖冲突
 
 **1、对于 Maven 而言，同一个 groupId 同一个 artifactId 下，只能使用一个 version。**

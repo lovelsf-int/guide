@@ -11,6 +11,8 @@ head:
       content: Java面试,Java面试指南,Java八股文,Java面试题,Java基础面试,JVM面试,并发面试,线程池面试,Spring面试,MySQL面试,Redis面试,系统设计面试,分布式面试,后端面试
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 <!-- @include: @small-advertisement.snippet.md -->
 
 <!-- markdownlint-disable MD024 -->
@@ -19,7 +21,7 @@ JavaGuide 是一份系统化的 **Java 面试指南** 和**后端通用面试复
 
 如果你正在准备校招、社招或跳槽面试，可以从 [Java 后端面试通关计划](./interview-preparation/backend-interview-plan.md) 开始，再按下面的模块逐步复习高频 Java 八股文和后端面试题。
 
-本站所有内容都已免费开源，欢迎一起[维护完善](https://javaguide.cn/javaguide/contribution-guideline.html)，有帮助的话，欢迎 Star！
+本站所有内容都已免费开源，欢迎一起[维护完善](./javaguide/contribution-guideline.md)，有帮助的话，欢迎 Star！
 
 - **项目地址**：<https://github.com/Snailclimb/JavaGuide>
 - **在线阅读**：<https://javaguide.cn/>
@@ -204,7 +206,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8](https://docs.oracle.
 
 ## 搜索引擎
 
-[Elasticsearch 常见面试题总结(付费)](./database/elasticsearch/elasticsearch-questions-01.md)
+[Elasticsearch 常见面试题总结](./database/elasticsearch/elasticsearch-questions-01.md)
 
 ![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)
 
@@ -332,8 +334,8 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8](https://docs.oracle.
 
 ### 分布式锁
 
-- [分布式锁介绍](https://javaguide.cn/distributed-system/distributed-lock.html)
-- [分布式锁常见实现方案总结](https://javaguide.cn/distributed-system/distributed-lock-implementations.html)
+- [分布式锁介绍](./distributed-system/distributed-lock.md)
+- [分布式锁常见实现方案总结](./distributed-system/distributed-lock-implementations.md)
 
 ### 分布式事务
 

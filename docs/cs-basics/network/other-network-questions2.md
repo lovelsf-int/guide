@@ -10,6 +10,8 @@ head:
       content: 计算机网络面试题,TCP vs UDP,TCP三次握手,HTTP/3 QUIC,IPv4 vs IPv6,TCP可靠性,IP地址,NAT协议,ARP协议,传输层面试,网络层高频题,基于TCP协议,基于UDP协议,队头阻塞,四次挥手
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 计算机网络面试题里，真正容易被追问到细节的部分，往往集中在 **TCP、UDP、IP、ARP、NAT、IPv4/IPv6** 这些传输层和网络层知识点上。比如：为什么 TCP 可靠？为什么要三次握手和四次挥手？HTTP/3 为什么改用基于 UDP 的 QUIC？这些问题不仅考概念，也考你对网络通信过程的理解。
 
 这篇《计算机网络常见面试题总结（下）》会重点梳理 TCP 与 UDP、TCP 连接管理、可靠传输、IP 地址、ARP、NAT 等后端面试高频内容，帮助你把传输层和网络层的核心考点串起来。
@@ -201,7 +203,7 @@ TCP Keepalive 是“被动回收”——它必须先发探测包去问“你还
 - 如果第二次挥手时服务器的 ACK 没有送达客户端，会怎样？
 - 为什么第四次挥手客户端需要等待 2\*MSL（报文段最长寿命）时间后才进入 CLOSED 状态？
 
-**参考答案**：[TCP 三次握手和四次挥手（传输层）](https://javaguide.cn/cs-basics/network/tcp-connection-and-disconnection.html)。
+**参考答案**：[TCP 三次握手和四次挥手（传输层）](./tcp-connection-and-disconnection.md)。
 
 ### TCP TIME_WAIT 到底在等什么？为什么要等？
 
@@ -216,7 +218,7 @@ TCP Keepalive 是“被动回收”——它必须先发探测包去问“你还
 
 ### ⭐️ TCP 如何保证传输的可靠性？（重要）
 
-[TCP 传输可靠性保障（传输层）](https://javaguide.cn/cs-basics/network/tcp-reliability-guarantee.html)
+[TCP 传输可靠性保障（传输层）](./tcp-reliability-guarantee.md)
 
 ### TCP 和 UDP 可以使用同一个端口吗？
 
@@ -323,7 +325,7 @@ NAT 不光可以缓解 IPv4 地址资源短缺的问题，还会隐藏内部地�
 
 ![NAT 实现 IP地址转换](https://oss.javaguide.cn/github/javaguide/cs-basics/network/network-address-translation.png)
 
-相关阅读：[NAT 协议详解（网络层）](https://javaguide.cn/cs-basics/network/nat.html)。
+相关阅读：[NAT 协议详解（网络层）](./nat.md)。
 
 ## ARP
 
@@ -347,7 +349,7 @@ ARP 协议，全称 **地址解析协议（Address Resolution Protocol）**，�
 
 ### ARP 协议的工作原理？
 
-[ARP 协议详解(网络层)](https://javaguide.cn/cs-basics/network/arp.html)
+[ARP 协议详解(网络层)](./arp.md)
 
 ## 复习建议
 

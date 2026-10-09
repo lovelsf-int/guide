@@ -10,6 +10,8 @@ head:
       content: Java 20,JDK20,记录模式预览,虚拟线程改进,语言增强,JEP
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 JDK 20 于 2023 年 3 月 21 日发布，非长期支持版本。
 
 它的下一个版本是 2023 年 9 月发布的 LTS 版本 JDK 21。
@@ -233,7 +235,7 @@ JDK 20 中是第二次预览，由 [JEP 434](https://openjdk.org/jeps/434) 提�
 
 Java 虚拟线程的详细解读和原理可以看下面这几篇文章：
 
-- [虚拟线程极简入门](https://javaguide.cn/java/concurrent/virtual-thread.html)
+- [虚拟线程极简入门](../concurrent/virtual-thread.md)
 - [Java19 正式 GA！看虚拟线程如何大幅提高系统吞吐量](https://mp.weixin.qq.com/s/yyApBXxpXxVwttr01Hld6Q)
 - [虚拟线程 - VirtualThread 源码透视](https://www.cnblogs.com/throwable/p/16758997.html)
 

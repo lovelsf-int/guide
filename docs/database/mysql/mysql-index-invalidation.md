@@ -11,6 +11,8 @@ head:
     - content: MySQL索引失效,索引失效场景,最左前缀原则,覆盖索引,索引下推,隐式类型转换,SQL优化,MySQL性能优化,全表扫描,回表查询
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 在数据库性能优化中，索引是最直接有效的优化手段之一。然而，**建了索引并不等于一定能用上索引**。实际开发中，我们经常遇到这样的困惑：明明在字段上建立了索引，查询却依然慢如蜗牛，通过 `EXPLAIN` 分析发现居然是全表扫描。
 
 导致索引失效的原因多种多样，既有 SQL 语句写法问题，也有索引设计不当的因素。有些失效场景是显性的（如违背最左前缀原则），有些则非常隐蔽（如隐式类型转换）。如果不深入了解这些失效场景，很容易在生产环境中埋下性能隐患。
@@ -154,7 +156,7 @@ SELECT * FROM students WHERE s_code NOT IN (1, 2, 3);     -- 常量列表，全�
 - 当字符串与数字进行比较时，MySQL 默认将字符串转换为**浮点数（DOUBLE）**进行比较（详见 [MySQL 官方文档规则 7](https://dev.mysql.com/doc/refman/8.0/en/type-conversion.html)）。对索引列发生隐式类型转换等同于在索引列上应用了不可逆的转换函数，破坏了 B+ 树的有序性，导致只能走全表扫描。
 - `int_col = '123'` 会被转换为 `int_col = CAST('123' AS DOUBLE)`，转换发生在常量侧，不影响索引使用。
 
-**详细介绍**：[MySQL隐式转换造成索引失效](https://javaguide.cn/database/mysql/index-invalidation-caused-by-implicit-conversion.html)
+**详细介绍**：[MySQL隐式转换造成索引失效](./index-invalidation-caused-by-implicit-conversion.md)
 
 ### ORDER BY 排序优化陷阱
 
@@ -212,6 +214,6 @@ SELECT * FROM students WHERE s_code NOT IN (1, 2, 3);     -- 常量列表，全�
 
 **延伸阅读**：
 
-- [MySQL 索引详解](https://javaguide.cn/database/mysql/mysql-index.html)
-- [MySQL 执行计划分析](https://javaguide.cn/database/mysql/mysql-query-execution-plan.html)
-- [MySQL 隐式转换造成索引失效](https://javaguide.cn/database/mysql/index-invalidation-caused-by-implicit-conversion.html)
+- [MySQL 索引详解](./mysql-index.md)
+- [MySQL 执行计划分析](./mysql-query-execution-plan.md)
+- [MySQL 隐式转换造成索引失效](./index-invalidation-caused-by-implicit-conversion.md)

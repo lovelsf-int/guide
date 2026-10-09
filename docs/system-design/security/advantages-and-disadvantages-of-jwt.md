@@ -10,11 +10,13 @@ head:
       content: JWT,Token认证,无状态认证,JWT缺点,刷新令牌,注销失效,安全风险,替代方案
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 校招面试中，遇到大部分的候选者认证登录这块用的都是 JWT。提问 JWT 的概念性问题以及使用 JWT 的原因，基本都能回答一些，但当问到 JWT 存在的一些问题和解决方案时，只有一小部分候选者回答的还可以。
 
 JWT 不是银弹，也有很多缺陷，很多时候并不是最优的选择。这篇文章，我们一起探讨一下 JWT 身份认证的优缺点以及常见问题的解决办法，来看看为什么很多人不再推荐使用 JWT 了。
 
-关于 JWT 的基本概念介绍请看我写的这篇文章： [JWT 基本概念详解](https://javaguide.cn/system-design/security/jwt-intro.html)。
+关于 JWT 的基本概念介绍请看我写的这篇文章： [JWT 基本概念详解](./jwt-intro.md)。
 
 ## JWT 的优势
 

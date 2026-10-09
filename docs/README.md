@@ -20,27 +20,31 @@ actions:
   - text: 开始阅读
     link: /home.md
     type: primary
-  - text: 知识星球
-    link: /about-the-author/zhishixingqiu-two-years.md
+  - text: 免费完整讲解
+    link: /reading/
     type: default
 footer: |-
   guide · JavaGuide 独立学习镜像 · 原作者 <a href="https://github.com/Snailclimb/JavaGuide">Guide / JavaGuide contributors</a> · <a href="/guide/LICENSE.txt">Apache-2.0</a> | 主题: <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a>
 ---
+
+<!-- Modified for guide, 2026-10-09: add free lesson hub and describe the independently authored study supplements. -->
 
 <!-- Modified for the guide mirror on 2026-10-05: title, attribution footer. Original article content preserved. -->
 <!-- markdownlint-disable MD033 -->
 
 ## 核心入口
 
+- **免费完整讲解**：[专题补全目录](./reading/)：Redis 集群、Elasticsearch、Netty、Spring Boot、PriorityQueue、系统设计、设计模式、面试自测与实战教程。开源正文直接显示，新增内容均标明原创补充。
+
 - **后端面试主线**：[后端面试指南](./home.md)（⭐网站核心）：系统整理 Java 面试八股文和后端高频面试题，覆盖 Java 基础、集合、并发、JVM、Spring、MySQL、Redis、分布式、高并发、高可用和系统设计。
 - **计算机基础**：[计算机基础面试指南](./cs-basics/)：系统梳理计算机网络、操作系统、数据结构与算法等后端面试底层基础，适合补齐基础短板。
 - **AI 应用开发**：[AI 应用开发面试指南](./ai/)（⭐新增）：面向后端开发者梳理大模型基础、Prompt、Agent、RAG、MCP、LLM API 工程和 AI 系统设计等高频知识；如果想系统学习，可以配合 [AI 应用开发与 Agent 学习路线（2026 最新版）](./roadmap/java-to-ai-roadmap.md) 和 [后端转 AI Agent 学习建议（2026 最新版）](./roadmap/backend-to-ai-agent-roadmap.md)。
 - **AI 编程实战**：[AI 编程实践指南](./ai-coding/)（⭐新增）：聚焦 Claude Code、Codex、AI IDE、CLI Agent、上下文管理和 AI 辅助开发工作流，帮助你把 AI 真正用进日常编码。
 - **学习路线**：[学习路线合集（2026 最新版）](./roadmap/)：整理 Java 后端、AI 应用开发、AI Agent 和全栈开发等方向的系统学习建议。
-- **延伸资料**：
-  - [《Java 面试指北》](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html)：四年打磨，和 JavaGuide 开源版的内容互补，带你从零开始系统准备后端面试！
-  - [《后端面试高频系统设计&场景题》](https://javaguide.cn/zhuanlan/back-end-interview-high-frequency-system-design-and-scenario-questions.html)：30+ 道高频系统设计和场景面试，助你应对当下中大厂面试趋势。
-  - [⭐AI 智能面试辅助平台 + RAG 知识库](https://javaguide.cn/zhuanlan/interview-guide.html)：基于 Spring Boot 4.0 + Java 21 + Spring AI 2.0 的大模型实战项目，适合作为学习和简历项目。
+- **原创免费教程**：
+  - [Java 后端系统复习](./zhuanlan/java-mian-shi-zhi-bei.md)：从基础、项目表达、场景题到自测，建立可执行的复习路径。
+  - [系统设计与场景题练习](./zhuanlan/back-end-interview-high-frequency-system-design-and-scenario-questions.md)：用完整案例练习需求、不变量、失败处理与验证，并衔接 26 道场景题。
+  - [AI 面试平台与 RAG](./zhuanlan/interview-guide.md)：讲解数据模型、权限过滤、检索、结构化回答和评测，适合作为独立练习项目的实现指南。
 
 ## 精选文章
 

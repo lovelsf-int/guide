@@ -14,6 +14,8 @@ head:
       content: 高可用面试题,高可用系统设计面试题,2026 高可用面试题,SLA 面试题,单点故障,限流面试题,降级面试题,熔断面试题,超时重试面试题,接口幂等面试题,RTO,RPO,性能压测,故障演练
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 <!-- @include: @article-header.snippet.md -->
 
 高可用面试题经常从一句“系统怎么保证不挂”开始，随后追问单点故障、限流熔断、超时重试、接口幂等和异地容灾。只罗列组件通常答不完整，还要说明故障如何被发现、影响怎样被控制、服务如何恢复，以及数据能否保持正确。
@@ -40,7 +42,7 @@ head:
 
 ![提高系统可用性的三层方法](https://oss.javaguide.cn/github/javaguide/high-availability/ha-interview-availability-methods.png)
 
-相关内容：[高可用系统设计指南](https://javaguide.cn/high-availability/high-availability-system-design.html)
+相关内容：[高可用系统设计指南](./high-availability-system-design.md)
 
 常见面试题：
 
@@ -59,7 +61,7 @@ head:
 
 ![RTO 与 RPO](https://oss.javaguide.cn/github/javaguide/high-availability/redundancy-optimized-rto-rpo-timeline.png)
 
-相关内容：[冗余设计详解](https://javaguide.cn/high-availability/redundancy.html)
+相关内容：[冗余设计详解](./redundancy.md)
 
 常见面试题：
 
@@ -82,8 +84,8 @@ RTO/RPO 给出容灾目标，完成配置并不能证明系统已经达到目标
 
 相关内容：
 
-- [服务限流详解](https://javaguide.cn/high-availability/limit-request.html)
-- [降级&熔断详解](https://javaguide.cn/high-availability/fallback-and-circuit-breaker.html)
+- [服务限流详解](./limit-request.md)
+- [降级&熔断详解](./fallback-and-circuit-breaker.md)
 
 常见面试题：
 
@@ -110,8 +112,8 @@ RTO/RPO 给出容灾目标，完成配置并不能证明系统已经达到目标
 
 相关内容：
 
-- [超时&重试详解](https://javaguide.cn/high-availability/timeout-and-retry.html)
-- [接口幂等方案总结](https://javaguide.cn/high-availability/idempotency.html)
+- [超时&重试详解](./timeout-and-retry.md)
+- [接口幂等方案总结](./idempotency.md)
 
 常见面试题：
 
@@ -136,7 +138,7 @@ RTO/RPO 给出容灾目标，完成配置并不能证明系统已经达到目标
 
 ![性能压测主流程](https://oss.javaguide.cn/github/javaguide/high-availability/ha-interview-performance-test-flow.png)
 
-相关内容：[性能测试入门](https://javaguide.cn/high-availability/performance-test.html)
+相关内容：[性能测试入门](./performance-test.md)
 
 常见面试题：
 

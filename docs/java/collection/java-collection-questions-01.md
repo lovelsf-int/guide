@@ -10,6 +10,8 @@ head:
       content: Java集合,Collection,List,Set,Queue,ArrayList,LinkedList,HashMap,集合框架,Java面试题
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 <!-- markdownlint-disable MD024 -->
 
 ## 集合概述
@@ -190,7 +192,7 @@ System.out.println(listOfStrings);
 - 尾部插入/删除：只需要修改尾结点的指针即可完成插入/删除操作，因此时间复杂度为 O(1)。
 - 指定位置插入/删除：需要先移动到指定位置，再修改指定节点的指针完成插入/删除，不过由于有头尾指针，可以从较近的指针出发，因此需要遍历平均 n/4 个元素，时间复杂度为 O(n)。
 
-这里简单列举一个例子：假如我们要删除节点 9 的话，需要先遍历链表找到该节点。然后，再执行相应节点指针指向的更改，具体的源码可以参考：[LinkedList 源码分析](https://javaguide.cn/java/collection/linkedlist-source-code.html)。
+这里简单列举一个例子：假如我们要删除节点 9 的话，需要先遍历链表找到该节点。然后，再执行相应节点指针指向的更改，具体的源码可以参考：[LinkedList 源码分析](./linkedlist-source-code.md)。
 
 ![unlink 方法逻辑](https://oss.javaguide.cn/github/javaguide/java/collection/linkedlist-unlink.jpg)
 
@@ -249,7 +251,7 @@ public interface RandomAccess {
 
 ### ⭐️ 说一说 ArrayList 的扩容机制吧
 
-详见笔主的这篇文章: [ArrayList 扩容机制分析](https://javaguide.cn/java/collection/arraylist-source-code.html#arraylist-扩容机制分析)。
+详见笔主的这篇文章: [ArrayList 扩容机制分析](./arraylist-source-code.md#arraylist-扩容机制分析)。
 
 ### ⭐️ 集合中的 fail-fast 和 fail-safe 是什么？
 

@@ -13,6 +13,8 @@ head:
       content: Claude Code,Skills,Agent Skills,SKILL.md,Front Matter,动态上下文,Subagent,Plugin,AI编程
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 不少读者反馈 Skills 在现在的面试中经常会碰到，于是在前面已经写过两篇的基础上，我又肝了一篇。
 
 下面是正文。
@@ -31,7 +33,7 @@ head:
 
 这篇文章主要讲 Claude Code Skills 的技术实现和运行方式。我会参考社区源码分析材料看实现细节，但当前用法以官方文档和 changelog 为准。
 
-如果你想先系统了解 Agent Skills 和 Prompt、MCP、Function Calling 的区别，可以看我之前写的 [Agent Skills 是什么？和 Prompt、MCP 到底差在哪？](https://javaguide.cn/ai/agent/skills.html)。如果更关心有哪些现成 Skill 值得装，可以直接看 [AI 编程必备 Skills 推荐：TDD、代码审查、网页自动化与 MCP 实战](https://javaguide.cn/ai-coding/programmer-essential-skills.html)。
+如果你想先系统了解 Agent Skills 和 Prompt、MCP、Function Calling 的区别，可以看我之前写的 [Agent Skills 是什么？和 Prompt、MCP 到底差在哪？](../../ai/agent/skills.md)。如果更关心有哪些现成 Skill 值得装，可以直接看 [AI 编程必备 Skills 推荐：TDD、代码审查、网页自动化与 MCP 实战](https://javaguide.cn/ai-coding/programmer-essential-skills.html)。
 
 ## Skills 解决了什么问题
 
@@ -91,7 +93,7 @@ Plugin 负责分发。一个 Plugin 可以带 Skills、Agents、Hooks 和 MCP Se
 
 不适合做成 Skill 的，是项目里永远要遵守的硬规则。比如“所有 Java 代码使用 Google Java Style”，这种更适合放 `CLAUDE.md` 或项目规则里。
 
-关于 `CLAUDE.md` 的详细介绍和最佳实践，可以参考我写的这篇 [CLAUDE.md 最佳实践：该写什么、不该写什么、项目变大后怎么拆](https://javaguide.cn/ai-coding/practices/claude-md-best-practices.html)。
+关于 `CLAUDE.md` 的详细介绍和最佳实践，可以参考我写的这篇 [CLAUDE.md 最佳实践：该写什么、不该写什么、项目变大后怎么拆](../practices/claude-md-best-practices.md)。
 
 ## `SKILL.md` 怎么写
 

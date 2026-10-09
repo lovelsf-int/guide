@@ -10,6 +10,8 @@ head:
       content: JVM 参数,堆大小,栈大小,GC 设置,性能调优,XX 参数
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 > 本文由 JavaGuide 翻译自 [https://www.baeldung.com/jvm-parameters](https://www.baeldung.com/jvm-parameters)，并对文章进行了大量的完善补充。
 > 文档参数 [https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html)
 >
@@ -136,7 +138,7 @@ void MetaspaceGC::initialize() {
 
 ### 选择垃圾回收器
 
-选择合适的垃圾收集器（Garbage Collector, GC）对于应用的吞吐量和响应延迟至关重要。关于垃圾收集算法和收集器的详细介绍，可以看笔者写的这篇：[JVM 垃圾回收详解（重点）](https://javaguide.cn/java/jvm/jvm-garbage-collection.html)。
+选择合适的垃圾收集器（Garbage Collector, GC）对于应用的吞吐量和响应延迟至关重要。关于垃圾收集算法和收集器的详细介绍，可以看笔者写的这篇：[JVM 垃圾回收详解（重点）](./jvm-garbage-collection.md)。
 
 JVM 提供了多种 GC 实现，适用于不同的场景：
 
@@ -272,6 +274,6 @@ JDK 9 及之后应使用统一 JVM 日志框架 `-Xlog`。例如，下面的配�
 4. **OOM 故障排查：** 说明了如何通过 `-XX:+HeapDumpOnOutOfMemoryError` 等参数在发生 OOM 时自动生成堆转储文件，以便进行后续的内存泄漏分析。
 5. **其他参数：** 简要介绍了如字符串去重等其他有用参数，并指出了部分旧参数的现状。
 
-具体的问题排查和调优案例，可以参考笔者整理的这篇文章：[JVM 线上问题排查和性能调优案例](https://javaguide.cn/java/jvm/jvm-in-action.html)。
+具体的问题排查和调优案例，可以参考笔者整理的这篇文章：[JVM 线上问题排查和性能调优案例](./jvm-in-action.md)。
 
 <!-- @include: @article-footer.snippet.md -->

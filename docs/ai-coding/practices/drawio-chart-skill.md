@@ -14,6 +14,8 @@ head:
       content: draw.io,drawio-chart,Agent Skills,AI编程,技术文章配图,Codex,diagrams.net
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 你好，我是小 G。很多时候我感叹 AI 时代给我带来的冲击，是从一些小事引起的。
 
 在过去，我写一篇技术文章最少需要花费一周，长一点的甚至要一个月。其中，有 1/3 的时间都花费在了枯燥的配图上。
@@ -134,7 +136,7 @@ Spec Coding 这类文章也类似。它讲的是一套工作流，不是一个�
 
 ## `drawio-chart` 这个 Skill 做了什么？
 
-我之前在 [《Agent Skills 是什么？和 Prompt、MCP 到底差在哪？》](https://javaguide.cn/ai/agent/skills.html) 里讲过，Skill 更像一份按需加载的任务说明。
+我之前在 [《Agent Skills 是什么？和 Prompt、MCP 到底差在哪？》](../../ai/agent/skills.md) 里讲过，Skill 更像一份按需加载的任务说明。
 
 它不负责发明一个新工具，也不等同于 Function Calling 或 MCP。它解决的是：某类任务怎么做、什么时候做、哪些步骤不能漏、需要哪些参考资料。
 

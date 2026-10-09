@@ -8,6 +8,8 @@ head:
       content: AI Agent,智能体,ReAct,Function Calling,RAG,MCP,多智能体协作,Computer Use
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 “帮我排查今天早上 user-service 接口变慢的原因，并把结果发给负责人。”这类请求没有固定答案：先查监控、日志还是 Heap Dump，要看前一步拿到了什么证据。即使已经发现慢 SQL，也还得判断要不要继续查执行计划、怎样组织结论、是否可以发出通知。
 
 聊天模型可以给出一份排查清单，却不会自己把这条路径走完。要完成任务，模型需要选择工具、读取工具结果，再据此决定下一步或结束。AI Agent 处理的就是这段连续的决策与执行过程。
@@ -20,7 +22,7 @@ head:
 
 Agent 的能力不是一次性出现的。模型先获得外部调用能力，随后才有编排、长任务和长期在线这些需求。
 
-**2022 年，ChatGPT 这类产品刚火的时候**，模型主要依据已有知识回答问题，不能主动调用外部工具，也不能自行完成操作。[Prompt Engineering](https://javaguide.cn/ai/agent/prompt-engineering.html) 是当时最重要的使用方式：把约束和上下文说清楚，输出才更稳定。
+**2022 年，ChatGPT 这类产品刚火的时候**，模型主要依据已有知识回答问题，不能主动调用外部工具，也不能自行完成操作。[Prompt Engineering](./prompt-engineering.md) 是当时最重要的使用方式：把约束和上下文说清楚，输出才更稳定。
 
 **2023 年中，Function Calling 出现后，事情开始变了。**
 
@@ -34,7 +36,7 @@ Coze、Dify 等平台用 DAG（有向无环图）约束执行路径，给完全�
 
 **2024 年底，标准化和多模态开始变重要。**
 
-[MCP 协议](https://javaguide.cn/ai/agent/mcp.html)开始处理工具接入碎片化的问题，Computer Use 则把可执行范围扩展到图形界面。Cursor、Claude Code、Codex 等编程工具也逐渐把代码库阅读、修改、测试和提交串进同一条任务链路，“Vibe Coding”随之被更多人讨论。
+[MCP 协议](./mcp.md)开始处理工具接入碎片化的问题，Computer Use 则把可执行范围扩展到图形界面。Cursor、Claude Code、Codex 等编程工具也逐渐把代码库阅读、修改、测试和提交串进同一条任务链路，“Vibe Coding”随之被更多人讨论。
 
 **2025 年，Agent 开始往长任务执行方向走。**
 
@@ -186,7 +188,7 @@ Skill 用可按需加载的指令文件保存这条执行链的顺序、约束�
 
 `SKILL.md` 前面的轻量元数据用于发现，说明 Skill 的用途和触发条件；正文则记录流程、约束和示例。宿主先读取元数据，模型判断需要后才加载完整正文，这种延迟加载是 Agent Skills 与传统 Toolkits 的关键差异。
 
-Claude Code、Cursor 等工具会扫描项目中的 `.claude/skills/` 目录，由模型决定是否激活某个 Skill。调用路径固定时用 Toolkits；需要沉淀团队经验、又保留任务流程弹性时，Agent Skills 更合适。路由设计、`SKILL.md` 的写法和第三方 Skill 安全审计可参见：[《Agent Skills 详解》](https://javaguide.cn/ai/agent/skills.html)。
+Claude Code、Cursor 等工具会扫描项目中的 `.claude/skills/` 目录，由模型决定是否激活某个 Skill。调用路径固定时用 Toolkits；需要沉淀团队经验、又保留任务流程弹性时，Agent Skills 更合适。路由设计、`SKILL.md` 的写法和第三方 Skill 安全审计可参见：[《Agent Skills 详解》](./skills.md)。
 
 ### 通信接入：MCP 协议
 
@@ -218,7 +220,7 @@ JSON Schema 是数据格式，MCP 是通信协议层。
 
 ## 什么是 Prompt Engineering？
 
-Prompt 是给大语言模型的指令与上下文。Prompt Engineering 要处理的是任务边界、输出格式和约束条件：缺少这些信息时，模型只能自行猜测；条件明确后，输出才有稳定的依据。具体方法见：[《提示词工程（Prompt Engineering）》](https://javaguide.cn/ai/agent/prompt-engineering.html)。
+Prompt 是给大语言模型的指令与上下文。Prompt Engineering 要处理的是任务边界、输出格式和约束条件：缺少这些信息时，模型只能自行猜测；条件明确后，输出才有稳定的依据。具体方法见：[《提示词工程（Prompt Engineering）》](./prompt-engineering.md)。
 
 ## 什么是 Context Engineering？
 
@@ -230,7 +232,7 @@ Prompt Engineering 更偏提示词怎么写，Context Engineering 管得更宽�
 
 ![Context Engineering 和 Prompt Engineering 差别](https://oss.javaguide.cn/github/javaguide/ai/context-engineering/context-engineering-vs-context-engineering-dimension-comparison.png)
 
-这块展开讲内容很多，可以单独看这两篇：[《提示词工程（Prompt Engineering）》](https://javaguide.cn/ai/agent/prompt-engineering.html) 和 [《上下文工程（Context Engineering）》](https://javaguide.cn/ai/agent/context-engineering.html)。
+这块展开讲内容很多，可以单独看这两篇：[《提示词工程（Prompt Engineering）》](./prompt-engineering.md) 和 [《上下文工程（Context Engineering）》](./context-engineering.md)。
 
 ## Agent 核心范式有哪些？
 
@@ -357,7 +359,7 @@ Node 只做一件事，读取状态、执行逻辑、写回结果。节点里可
 
 “审核不通过就回到修改，最多重试 3 次”，翻译成图结构，是一条从 ReviewNode 指向 ReviseNode 的条件边，加上 `iteration_count >= 3` 时跳到 ExitNode 的安全边界。State 里的 `iteration_count` 是让这条逻辑能跑起来的关键。
 
-这套图结构比写死的 if-else 链更容易扩展，出了问题也好定位到哪个节点哪条边。LangGraph（Python）和 Spring AI Alibaba Graph（Java）都是基于这套思路实现的。详细设计和代码实现可以看：[《AI 工作流中的 Workflow、Graph 与 Loop》](https://javaguide.cn/ai/agent/workflow-graph-loop.html)。
+这套图结构比写死的 if-else 链更容易扩展，出了问题也好定位到哪个节点哪条边。LangGraph（Python）和 Spring AI Alibaba Graph（Java）都是基于这套思路实现的。详细设计和代码实现可以看：[《AI 工作流中的 Workflow、Graph 与 Loop》](./workflow-graph-loop.md)。
 
 ### 什么时候用 Agent，什么时候用 Workflow？
 

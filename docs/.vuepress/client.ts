@@ -1,10 +1,9 @@
-// Modified for guide on 2026-10-05: keep the base during stale-chunk recovery.
+// Modified for guide: preserve the base and display licensed articles in full (2026-10-09).
 import { defineClientConfig } from "vuepress/client";
 import { defineAsyncComponent, h } from "vue";
 import DeferredLayoutToggle from "./components/DeferredLayoutToggle.vue";
 import ClickImagePreview from "./components/ClickImagePreview.vue";
 import LazyMermaid from "./components/LazyMermaid.vue";
-import GlobalUnlock from "./components/unlock/GlobalUnlock.vue";
 
 const UnlockContent = defineAsyncComponent(
   () => import("./components/unlock/UnlockContent.vue"),
@@ -43,9 +42,5 @@ export default defineClientConfig({
       );
     });
   },
-  rootComponents: [
-    () => h(DeferredLayoutToggle),
-    () => h(GlobalUnlock),
-    () => h(ClickImagePreview),
-  ],
+  rootComponents: [() => h(DeferredLayoutToggle), () => h(ClickImagePreview)],
 });

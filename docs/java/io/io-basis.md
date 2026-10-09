@@ -11,6 +11,8 @@ head:
       content: Java IO,字节流,字符流,InputStream,OutputStream,Reader,Writer,文件操作,缓冲流
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 ## IO 流简介
 
 IO 即 `Input/Output`，输入和输出。数据输入到计算机内存的过程即输入，反之输出到外部存储（比如数据库，文件，远程主机）的过程即输出。数据传输过程类似于水流，因此称为 IO 流。IO 流在 Java 中分为输入流和输出流，而根据数据的处理方式又分为字节流和字符流。
@@ -544,7 +546,7 @@ randomAccessFile.write(new byte[]{'H', 'I', 'J', 'K'});
 
 ![](https://oss.javaguide.cn/github/javaguide/java/io/20210609164749122.png)
 
-我在[《Java 面试指北》](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html)中详细介绍了大文件的上传问题。
+我在[《Java 面试指北》](../../zhuanlan/java-mian-shi-zhi-bei.md)中详细介绍了大文件的上传问题。
 
 ![](https://oss.javaguide.cn/github/javaguide/java/image-20220428104115362.png)
 

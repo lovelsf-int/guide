@@ -299,7 +299,10 @@ export default hopeTheme({
   plugins: {
     blog: true,
     seo: {
-      canonical: "https://javaguide.cn",
+      canonical: (page) =>
+        page.frontmatter.author === "guide 原创补充"
+          ? `https://lovelsf-int.github.io/guide${page.path}`
+          : `https://javaguide.cn${page.path}`,
       fallBackImage: "https://javaguide.cn/logo.png",
       ogp: (ogp, page, app) => ({
         ...ogp,
@@ -519,9 +522,11 @@ export default hopeTheme({
 
     // Local title/heading search works without an external search account.
     ...(docsearchOptions ? { docsearch: docsearchOptions } : {}),
-    search: docsearchOptions ? false : {
-      maxSuggestions: 10,
-      locales: { "/": { placeholder: "搜索 guide" } },
-    },
+    search: docsearchOptions
+      ? false
+      : {
+          maxSuggestions: 10,
+          locales: { "/": { placeholder: "搜索 guide" } },
+        },
   },
 });

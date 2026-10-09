@@ -5,6 +5,8 @@ category: 开源项目
 icon: "mdi:tools"
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 本页收录独立运行的 GUI、CLI、平台，以及接入构建流程的检查工具。可以直接作为业务代码依赖的通用库放在[工具类库](./tool-library.md)。
 
 ## 代码质量
@@ -24,8 +26,8 @@ icon: "mdi:tools"
 
 ## 项目构建
 
-- [Maven](https://maven.apache.org/)：一个软件项目管理和理解工具。基于项目对象模型 (Project Object Model，POM) 的概念，Maven 可以从一条中心信息管理项目的构建、报告和文档。详细介绍：[Maven 核心概念总结](https://javaguide.cn/tools/maven/maven-core-concepts.html)。
-- [Gradle](https://gradle.org/) ：一个开源的构建自动化工具，它足够灵活，可以构建几乎任何类型的软件。Gradle 对你要构建什么或者如何构建它做了很少的假设，这使得 Gradle 特别灵活。详细介绍：[Gradle 核心概念总结](https://javaguide.cn/tools/gradle/gradle-core-concepts.html)。
+- [Maven](https://maven.apache.org/)：一个软件项目管理和理解工具。基于项目对象模型 (Project Object Model，POM) 的概念，Maven 可以从一条中心信息管理项目的构建、报告和文档。详细介绍：[Maven 核心概念总结](../tools/maven/maven-core-concepts.md)。
+- [Gradle](https://gradle.org/) ：一个开源的构建自动化工具，它足够灵活，可以构建几乎任何类型的软件。Gradle 对你要构建什么或者如何构建它做了很少的假设，这使得 Gradle 特别灵活。详细介绍：[Gradle 核心概念总结](../tools/gradle/gradle-core-concepts.md)。
 
 ## 反编译
 

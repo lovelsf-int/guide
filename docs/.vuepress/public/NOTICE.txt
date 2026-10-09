@@ -6,3 +6,5 @@ License: Apache License, Version 2.0; see LICENSE.
 Modified 2026-10-05: Pages base, mirror name/footer, search, QR asset base, deployment workflow, dependency metadata and four local navigation link repairs and base-aware stale-chunk recovery.
 Original article contents and attribution are retained. Canonical URLs intentionally credit the original publication.
 External image hosts and external linked services remain outside this repository.
+
+2026-10-09 guide additions: public article clipping removed; independently authored educational supplements added at previously promotional routes. Original public promotional material is retained and labeled. The original commercial course bodies are not reproduced.

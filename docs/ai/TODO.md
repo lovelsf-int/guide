@@ -10,7 +10,7 @@ head:
 
 最近整理：2026-08-15
 
-配套素材索引：[AI 写作素材索引](./MATERIALS.md)。写新文章前先查素材索引和现有正文，避免重复检索、重复造概念框架。
+配套素材索引 `MATERIALS.md` 未包含在当前开源快照中。写新文章前先核对现有正文与官方公开资料；此文件仅为未发布的维护计划。
 
 ## 已完成或已补齐
 
@@ -23,7 +23,7 @@ head:
 | `interview-questions/agent-project-interview-guide.md` | 已完成，已进入面试题 README、顶层 README 和项目经历指南 |
 | `system-design/ai-application-architecture.md`         | 已进入系统设计 README、顶层 README 和面试题             |
 | `system-design/ai-voice.md`                            | 已进入系统设计 README、顶层 README 和面试题             |
-| `MATERIALS.md`                                         | 已新增为内部写作素材索引，不进站点索引                  |
+| `MATERIALS.md`                                         | 原规划中的内部素材索引；当前快照未包含，不进站点索引                  |
 
 ## P0 · 系统设计和安全补全
 

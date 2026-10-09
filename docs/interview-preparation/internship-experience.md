@@ -9,6 +9,8 @@ head:
       content: 校招,实习经历,没有实习怎么办,项目经验,简历优化,技术面试准备,Java后端,秋招
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 <!-- @include: @small-advertisement.snippet.md -->
 
 由于目前的面试太卷，对于犹豫是否要找实习的同学来说，个人建议不论是本科生还是研究生都应该在参加校招面试之前，争取一下不错的实习机会，尤其是大厂的实习机会，日常实习或者暑期实习都可以。当然，如果大厂实习面不上，中小厂实习也是可以接受的。
@@ -31,7 +33,7 @@ head:
 
 你面试中的重点就是你的项目经历涉及到的知识点，如果你的项目经历比较简单的话，面试官直接不知道问啥了。另外，你的项目经历中不涉及的知识点，但在技能介绍中提到的知识点也很大概率会被问到。像 Redis 这种基本是面试 Java 后端岗位必备的技能，我觉得大部分面试官应该都会问。
 
-推荐阅读一下网站的这篇文章：[项目经验指南](https://javaguide.cn/interview-preparation/project-experience-guide.html)。
+推荐阅读一下网站的这篇文章：[项目经验指南](./project-experience-guide.md)。
 
 ### 完善简历
 
@@ -47,7 +49,7 @@ head:
 
 对于大部分求职者来说，实习/工作经历、项目经验、技能匹配度更重要一些。不过，不排除一些公司会因为学历卡人。
 
-详细的程序员简历编写指南可以参考这篇文章：[程序员简历编写指南(重要)](https://javaguide.cn/interview-preparation/resume-guide.html)。
+详细的程序员简历编写指南可以参考这篇文章：[程序员简历编写指南(重要)](./resume-guide.md)。
 
 ### 准备技术面试
 
@@ -60,9 +62,9 @@ head:
 
 一定不要抱着一种思想，觉得八股文或者基础问题的考查意义不大。如果你抱着这种思想复习的话，那效果可能不会太好。实际上，个人认为还是很有意义的，八股文或者基础性的知识在日常开发中也会需要经常用到。例如，线程池这块的拒绝策略、核心参数配置什么的，如果你不了解，实际项目中使用线程池可能就用的不是很明白，容易出现问题。而且，其实这种基础性的问题是最容易准备的，像各种底层原理、系统设计、场景题以及深挖你的项目这类才是最难的！
 
-八股文资料首推我的 [《Java 面试指北》](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html) 和 [JavaGuide](https://javaguide.cn/home.html) 。里面不仅仅是原创八股文，还有很多对实际开发有帮助的干货。除了我的资料之外，你还可以去网上找一些其他的优质的文章、视频来看。
+八股文资料首推我的 [《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md) 和 [JavaGuide](../home.md) 。里面不仅仅是原创八股文，还有很多对实际开发有帮助的干货。除了我的资料之外，你还可以去网上找一些其他的优质的文章、视频来看。
 
-如果你想要系统准备 Java 后端面试但又不知道如何开始的，可以参考 [Java 后端面试通关计划（后端通用）](https://javaguide.cn/interview-preparation/backend-interview-plan.html)。
+如果你想要系统准备 Java 后端面试但又不知道如何开始的，可以参考 [Java 后端面试通关计划（后端通用）](./backend-interview-plan.md)。
 
 ## 实习经历在简历上一般怎么写比较出彩？
 

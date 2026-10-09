@@ -8,6 +8,8 @@ head:
       content: 负载均衡,四层负载均衡,七层负载均衡,Nginx负载均衡,LVS,负载均衡算法,轮询,一致性哈希,客户端负载均衡
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 ## 什么是负载均衡？
 
 **负载均衡** 指的是将用户请求分摊到不同的服务器上处理，以提高系统整体的并发处理能力以及可靠性。负载均衡服务可以有由专门的软件或者硬件来完成，一般情况下，硬件的性能更好，软件的价格更便宜（后文会详细介绍到）。
@@ -83,7 +85,7 @@ head:
 
 在工作中，我们通常会使用 **Nginx** 来做七层负载均衡，LVS(Linux Virtual Server 虚拟服务器， Linux 内核的 4 层负载均衡)来做四层负载均衡。
 
-关于 Nginx 的常见知识点总结，[《Java 面试指北》](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html) 中「技术面试题篇」中已经有对应的内容了，感兴趣的小伙伴可以去看看。
+关于 Nginx 的常见知识点总结，[《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md) 中「技术面试题篇」中已经有对应的内容了，感兴趣的小伙伴可以去看看。
 
 ![](https://oss.javaguide.cn/github/javaguide/image-20220328105759300.png)
 

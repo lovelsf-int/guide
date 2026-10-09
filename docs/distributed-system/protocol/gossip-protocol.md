@@ -12,6 +12,8 @@ head:
       content: Gossip 协议,SWIM 协议,反熵,谣言传播,最终一致性,去中心化,Redis Cluster,Cassandra,分布式协议,分布式算法
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 ## 背景
 
 在分布式系统中，不同节点间共享状态是一个基本需求。
@@ -80,7 +82,7 @@ Redis Cluster 是一个去中心化的分布式缓存方案，各节点通过 Go
 
 > 注：Redis Cluster 主要通过 PING/PONG 的增量 gossip 传播节点/槽位/故障信息（带时间戳/标志位等），而不是采用像 Dynamo 那样基于 Merkle tree 的反熵对账流程。
 
-关于 Redis Cluster 的详细介绍，可以查看这篇文章 [Redis 集群详解(付费)](https://javaguide.cn/database/redis/redis-cluster.html)。
+关于 Redis Cluster 的详细介绍，可以查看这篇文章 [Redis 集群详解](../../database/redis/redis-cluster.md)。
 
 ## Gossip 协议传播模式
 

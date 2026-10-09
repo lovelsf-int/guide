@@ -10,6 +10,8 @@ head:
       content: 数据校验,前端校验,后端校验,参数校验,权限校验,输入验证,安全防护,防注入
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 > 相关面试题：
 >
 > - 前端做了校验，后端还还需要做校验吗？
@@ -194,7 +196,7 @@ Bean Validation 主要解决的是**数据格式、语法层面**的校验。但
 
 ![RBAC 权限模型示意图](https://oss.javaguide.cn/github/javaguide/system-design/security/design-of-authority-system/rbac.png)
 
-关于权限系统设计的详细介绍，可以看这篇文章：[权限系统设计详解](https://javaguide.cn/system-design/security/design-of-authority-system.html)。
+关于权限系统设计的详细介绍，可以看这篇文章：[权限系统设计详解](./design-of-authority-system.md)。
 
 ## 总结
 

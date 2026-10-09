@@ -10,6 +10,8 @@ head:
       content: Redis数据类型,String,List,Set,Hash,Zset,SDS,跳表,压缩列表,Redis命令
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 Redis 共有 5 种基本数据类型：String（字符串）、List（列表）、Set（集合）、Hash（散列）、Zset（有序集合）。
 
 这 5 种数据类型是直接提供给用户使用的，是数据的保存形式，其底层实现主要依赖这 8 种数据结构：简单动态字符串（SDS）、LinkedList（双向链表）、Dict（哈希表/字典）、SkipList（跳跃表）、Intset（整数集合）、ZipList（压缩列表）、QuickList（快速列表）。
@@ -134,7 +136,7 @@ OK
 
 ### 介绍
 
-Redis 中的 List 其实就是链表数据结构的实现。我在 [线性数据结构 :数组、链表、栈、队列](https://javaguide.cn/cs-basics/data-structure/linear-data-structure.html) 这篇文章中详细介绍了链表这种数据结构，我这里就不多做介绍了。
+Redis 中的 List 其实就是链表数据结构的实现。我在 [线性数据结构 :数组、链表、栈、队列](../../cs-basics/data-structure/linear-data-structure.md) 这篇文章中详细介绍了链表这种数据结构，我这里就不多做介绍了。
 
 许多高级编程语言都内置了链表的实现比如 Java 中的 `LinkedList`，但是 C 语言并没有实现链表，所以 Redis 实现了自己的链表数据结构。Redis 的 List 的实现为一个 **双向链表**，即可以支持反向查找和遍历，更方便操作，不过带来了部分额外的内存开销。
 
@@ -472,7 +474,7 @@ value1
 
 ![](https://oss.javaguide.cn/github/javaguide/database/redis/2021060714195385.png)
 
-[《Java 面试指北》](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html) 的「技术面试题篇」就有一篇文章详细介绍如何使用 Sorted Set 来设计制作一个排行榜。
+[《Java 面试指北》](../../zhuanlan/java-mian-shi-zhi-bei.md) 的「技术面试题篇」就有一篇文章详细介绍如何使用 Sorted Set 来设计制作一个排行榜。
 
 ![](https://oss.javaguide.cn/github/javaguide/database/redis/image-20220719071115140.png)
 

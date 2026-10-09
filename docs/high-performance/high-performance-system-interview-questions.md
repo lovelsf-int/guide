@@ -14,6 +14,8 @@ head:
       content: 高性能面试题,高性能系统设计,CDN面试题,负载均衡面试题,读写分离面试题,分库分表面试题,SQL优化面试题,深度分页面试题,消息队列面试题,Kafka面试题,RocketMQ面试题,RabbitMQ面试题
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 <!-- @include: @article-header.snippet.md -->
 
 高性能系统面试通常从一个具体症状开始：接口变慢、数据库 CPU 升高、消息开始积压，或者大促流量超过了现有容量。回答时先确认 QPS、P99、数据量和读写比例，再沿着请求链查入口、应用、缓存、数据库和消息队列，直接报出“加缓存、上 MQ、分库分表”很容易被继续追问。
@@ -41,8 +43,8 @@ CDN 把可缓存的内容放到离用户更近的边缘节点，减少跨地域�
 
 相关内容：
 
-- [CDN 工作原理详解](https://javaguide.cn/high-performance/cdn.html)
-- [负载均衡原理及算法详解](https://javaguide.cn/high-performance/load-balancing.html)
+- [CDN 工作原理详解](./cdn.md)
+- [负载均衡原理及算法详解](./load-balancing.md)
 
 常见面试题：
 
@@ -64,10 +66,10 @@ CDN 把可缓存的内容放到离用户更近的边缘节点，减少跨地域�
 
 相关内容：
 
-- [读写分离和分库分表详解](https://javaguide.cn/high-performance/read-and-write-separation-and-library-subtable.html)
-- [数据冷热分离详解](https://javaguide.cn/high-performance/data-cold-hot-separation.html)
-- [常见 SQL 优化手段总结](https://javaguide.cn/high-performance/sql-optimization.html)
-- [深度分页介绍及优化建议](https://javaguide.cn/high-performance/deep-pagination-optimization.html)
+- [读写分离和分库分表详解](./read-and-write-separation-and-library-subtable.md)
+- [数据冷热分离详解](./data-cold-hot-separation.md)
+- [常见 SQL 优化手段总结](./sql-optimization.md)
+- [深度分页介绍及优化建议](./deep-pagination-optimization.md)
 
 常见面试题：
 
@@ -91,12 +93,12 @@ CDN 把可缓存的内容放到离用户更近的边缘节点，减少跨地域�
 
 相关内容：
 
-- [消息队列面试题总结](https://javaguide.cn/high-performance/message-queue/message-queue-interview-questions.html)
-- [消息队列基础常见问题总结](https://javaguide.cn/high-performance/message-queue/message-queue.html)
-- [Kafka 常见面试题总结](https://javaguide.cn/high-performance/message-queue/kafka-questions-01.html)
-- [RocketMQ 常见面试题总结](https://javaguide.cn/high-performance/message-queue/rocketmq-questions.html)
-- [RabbitMQ 常见面试题总结](https://javaguide.cn/high-performance/message-queue/rabbitmq-questions.html)
-- [Disruptor 常见面试题总结](https://javaguide.cn/high-performance/message-queue/disruptor-questions.html)
+- [消息队列面试题总结](./message-queue/message-queue-interview-questions.md)
+- [消息队列基础常见问题总结](./message-queue/message-queue.md)
+- [Kafka 常见面试题总结](./message-queue/kafka-questions-01.md)
+- [RocketMQ 常见面试题总结](./message-queue/rocketmq-questions.md)
+- [RabbitMQ 常见面试题总结](./message-queue/rabbitmq-questions.md)
+- [Disruptor 常见面试题总结](./message-queue/disruptor-questions.md)
 
 常见面试题：
 
@@ -117,7 +119,7 @@ CDN 把可缓存的内容放到离用户更近的边缘节点，减少跨地域�
 
 系统设计题不会提前告诉你该用哪种组件。先确认业务目标和容量，再定位最可能的瓶颈；方案落地后还要用压测和监控验证，不能只用平均 RT 或单机 QPS 证明系统已经满足要求。
 
-相关内容：[性能测试入门](https://javaguide.cn/high-availability/performance-test.html)
+相关内容：[性能测试入门](../high-availability/performance-test.md)
 
 常见面试题：
 

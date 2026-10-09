@@ -12,6 +12,8 @@ head:
       content: 服务降级,熔断器,熔断机制,Fallback,熔断器状态机,Sentinel,Hystrix,Resilience4j,限流降级熔断区别,雪崩效应,线程池隔离,信号量隔离,高可用面试题
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 在微服务架构里，一个请求往往要经过好几个服务的调用链。如果链路上某个服务出了问题——比如响应变慢、超时甚至直接挂掉——很容易把上游的资源也拖垮，最后演变成整条链路雪崩。服务降级和熔断就是应对这类问题的两道防线：降级负责在系统压力大的时候主动"丢车保帅"，熔断负责在下游持续异常的时候及时"断路"止损。
 
 这篇文章会把降级和熔断的核心原理讲清楚，包括 Fallback 兜底、降级开关、熔断器状态机、隔离策略，以及 Sentinel、Hystrix、Resilience4j 的选型对比。
@@ -180,7 +182,7 @@ head:
 
 > 网络分区时别纠结理论，想清楚这几件事就行：各服务在分区期间读本地缓存还是拒绝请求、跨区写入要不要停、核心链路怎么保、要不要切成只读模式。
 >
-> **详细介绍：** [CAP & BASE理论详解](https://javaguide.cn/distributed-system/protocol/cap-and-base-theorem.html)。
+> **详细介绍：** [CAP & BASE理论详解](../distributed-system/protocol/cap-and-base-theorem.md)。
 
 ## 什么是 Fallback？
 

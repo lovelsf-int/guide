@@ -11,6 +11,8 @@ head:
       content: MySQL面试题,MySQL基础架构,InnoDB存储引擎,MySQL索引,B+树索引,事务隔离级别,redo log,undo log,binlog,MVCC,行级锁,慢查询优化
 ---
 
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+
 ## MySQL 基础
 
 ### 什么是关系型数据库？
@@ -64,7 +66,7 @@ MySQL 成功可以归功于在**生态、功能和运维**这三个层面上的�
 
 **第二，从核心技术功能上看，它非常强大且均衡。**
 
-- **强大的事务支持：** 这是它作为关系型数据库的立身之本。值得一提的是，InnoDB 默认的可重复读（REPEATABLE-READ）隔离级别，通过 MVCC 和 Next-Key Lock 机制，很大程度上避免了幻读问题，这在很多其他数据库中都需要更高的隔离级别才能做到，兼顾了性能和一致性。详细介绍可以阅读笔者写的这篇文章：[MySQL 事务隔离级别详解](https://javaguide.cn/database/mysql/transaction-isolation-level.html)。
+- **强大的事务支持：** 这是它作为关系型数据库的立身之本。值得一提的是，InnoDB 默认的可重复读（REPEATABLE-READ）隔离级别，通过 MVCC 和 Next-Key Lock 机制，很大程度上避免了幻读问题，这在很多其他数据库中都需要更高的隔离级别才能做到，兼顾了性能和一致性。详细介绍可以阅读笔者写的这篇文章：[MySQL 事务隔离级别详解](./transaction-isolation-level.md)。
 - **优秀的性能和可扩展性：** MySQL 本身经过了海量互联网业务的严酷考验，单机性能非常出色。更重要的是，它围绕着水平扩展，形成了一套非常成熟的架构方案，比如主从复制、读写分离、以及通过中间件实现的分库分表。这让它能够支撑从初创公司到大型互联网平台的各种规模的业务。
 
 **第三，从运维和使用角度看，它非常‘亲民’。**
@@ -444,7 +446,7 @@ MySQL 索引相关的问题比较多，也非常重要，更详细的介绍可�
 
 ### MySQL 索引底层数据结构是什么？
 
-在 MySQL 中，MyISAM 引擎和 InnoDB 引擎都是使用 B+Tree 作为索引结构，详细介绍可以参考笔者写的这篇文章：[MySQL 索引详解](https://javaguide.cn/database/mysql/mysql-index.html)。
+在 MySQL 中，MyISAM 引擎和 InnoDB 引擎都是使用 B+Tree 作为索引结构，详细介绍可以参考笔者写的这篇文章：[MySQL 索引详解](./mysql-index.md)。
 
 ### 为什么 InnoDB 没有使用哈希作为索引的数据结构？
 
@@ -595,11 +597,31 @@ MySQL 5.6 开始，查询缓存已默认禁用。MySQL 8.0 开始，已经不再
 
 ## ⭐️MySQL 日志
 
+> 本节由 guide 原创补充，更新于 2026-10-09。
+
+**redo log 用于崩溃恢复，undo log 用于回滚与构造旧版本，binlog 用于复制与基于日志的恢复。** 三者不能互相替代。
+
+| 日志 | 所在层与记录目标 | 一个实际用途 |
+| --- | --- | --- |
+| redo log | InnoDB，记录用于重做的数据变更 | 已提交修改尚未写入数据页时，崩溃后恢复 |
+| undo log | InnoDB，保留撤销修改所需的信息 | 事务回滚；一致性读按可见性规则找到旧版本 |
+| binlog | Server 层，按配置记录语句或行变更事件 | 副本复制；配合全量备份做时间点恢复 |
+
+例如订单状态从 `NEW` 改为 `PAID`：事务修改缓冲池中的数据，同时产生恢复所需日志。提交成功与数据页已经全部写入磁盘不是同一件事；提交的耐久性还受日志刷盘配置和存储可靠性影响。长事务则可能使旧版本迟迟不能清理，增加 undo 保留和查询成本。
+
+**追问：能否只留 binlog 不做备份？** 不能把它当成完整恢复方案。通常需要可用的基础备份，再按对应日志位点重放；日志过期、缺失或备份不可恢复都会破坏链条。恢复演练需要核对业务数据，而不仅是数据库能启动。
+
+完整展开：[MySQL 三大日志详解](./mysql-logs.md)、[备份与恢复](./mysql-backup-and-restore.md)、[MVCC](./innodb-implementation-of-mvcc.md)。官方依据：[redo](https://dev.mysql.com/doc/refman/8.4/en/innodb-redo-log.html)、[undo](https://dev.mysql.com/doc/refman/8.4/en/innodb-undo-logs.html)、[binlog](https://dev.mysql.com/doc/refman/8.4/en/binary-log.html)。
+
+::: details 原站公开专栏介绍
+
 上诉问题的答案可以在[《Java 面试指北》(付费，点击链接领取优惠卷)](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html) 的 **「技术面试题篇」** 中找到。
 
 ![《Java 面试指北》技术面试题篇](https://oss.javaguide.cn/javamianshizhibei/technical-interview-questions.png)
 
 文章地址：<https://www.yuque.com/snailclimb/mf2z3k/zr4kfk> （密码获取：<https://t.zsxq.com/avfM0>）。
+
+:::
 
 ## ⭐️MySQL 事务
 
@@ -965,11 +987,35 @@ MySQL 提供了两个方法来处理 ip 地址
 
 ### 有哪些常见的 SQL 优化手段？
 
+> 本节由 guide 原创补充，更新于 2026-10-09。
+
+**先找到慢在哪里，再减少扫描、传输和锁等待，最后用相同负载复测。** 一个可执行的顺序是：记录慢 SQL、参数分布和耗时分位数；看执行计划的扫描行数与连接顺序；针对过滤、排序和关联建立合适索引；控制返回列与分页方式；检查长事务和锁等待。
+
+例如按用户查最近订单：
+
+```sql
+SELECT id, created_at, status
+FROM orders
+WHERE user_id = 42
+ORDER BY created_at DESC, id DESC
+LIMIT 20;
+```
+
+可以评估 `(user_id, created_at, id)` 联合索引。`user_id` 是等值筛选，后面两列提供稳定排序；是否实际采用该索引，要看执行计划、数据分布和回表成本，不能仅凭列顺序认定一定更快。翻页可以携带最后一条记录的时间和 ID 作为游标，避免不断增大的 OFFSET；并发插入下还需说明分页的一致性预期。
+
+避免把“所有 SELECT 都加索引”“用了索引就快”“小表一定驱动大表”当成通用规则。索引增加存储和写放大，批量操作需要控制事务大小；连接池扩大也不能解决数据库本身过载。`EXPLAIN ANALYZE` 会实际运行查询，应在可控环境或获准的诊断窗口使用。
+
+继续阅读：[SQL 优化](../../high-performance/sql-optimization.md)、[深分页](../../high-performance/deep-pagination-optimization.md)、[执行计划](./mysql-query-execution-plan.md)。
+
+::: details 原站公开专栏介绍
+
 [《Java 面试指北》(付费)](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html) 的 **「技术面试题篇」** 有一篇文章详细介绍了常见的 SQL 优化手段，非常全面，清晰易懂！
 
 ![常见的 SQL 优化手段](https://oss.javaguide.cn/javamianshizhibei/javamianshizhibei-sql-optimization.png)
 
 文章地址：https://www.yuque.com/snailclimb/mf2z3k/abc2sv （密码获取：<https://t.zsxq.com/avfM0>）。
+
+:::
 
 ### 如何分析 SQL 的性能？
 
