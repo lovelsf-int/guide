@@ -13,7 +13,7 @@ date: 2026-10-09
 ---
 
 ::: tip 阅读说明
-本文由 guide 镜像独立原创补充，不是原站付费正文。源码入口固定到 Spring Boot 3.5.0 与 Spring Framework 6.2.7，用于学习常规 JVM 启动流程，不把这些版本称作最新版本；AOT 和 Native Image 还有额外路径。原站公开介绍保留在文末。
+源码入口固定到 Spring Boot 3.5.0 与 Spring Framework 6.2.7，用于学习常规 JVM 启动流程；AOT 和 Native Image 还有额外路径。
 :::
 
 ## 一分钟讲清启动过程
@@ -137,15 +137,3 @@ example.guide.autoconfigure.GreetingAutoConfiguration
 2. **为什么测试直接导入配置能通过，打成 SDK 后却不生效？** 测试绕过了自动发现，登记文件路径、内容、打包或依赖引入可能有问题。
 3. **Runner 启动异步线程后返回，Ready 是否等待它？** 默认不会。异步业务的完成和错误需要单独纳入就绪与恢复机制。
 4. **Bean 定义有 100 个，是否证明已创建 100 个对象？** 不证明。定义与实例分离，懒加载、作用域和 FactoryBean 等机制都会影响实际对象创建。
-
-## 原站公开介绍
-
-以下保留原始公开页面的介绍、链接与署名语境，其中“我的”指原作者；上方新增正文由 guide 独立编写。
-
-**Spring Boot 核心源码解读** 为我的[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)（点击链接即可查看详细介绍以及加入方法）专属内容，已经整理到了[《Java 必读源码系列》](https://javaguide.cn/zhuanlan/source-code-reading.html)中。
-
-![Spring Boot核心源码解读](https://oss.javaguide.cn/xingqiu/springboot-source-code.png)
-
-<!-- @include: @yuanma.snippet.md -->
-
-<!-- @include: @article-footer.snippet.md -->

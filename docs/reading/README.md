@@ -1,15 +1,15 @@
 ---
-title: 免费完整讲解：专题补全目录
+title: 专题复习目录
 author: guide 原创补充
 description: 直接阅读 Redis 集群、Elasticsearch、Netty、Spring Boot、系统设计、面试自测与实战教程，附代码示例、故障分析和自测答案。
 category: 学习指南
 ---
 
-本目录集中列出原来只有付费介绍、外链或简略提纲的学习入口。**本站新增讲解全部可直接阅读**；原有开源文章完整显示。新增正文是 guide 的原创补充，原站商业课程介绍在文末保留，便于区分来源。
+按技术原理、场景题和实战练习组织复习。先理解机制与适用条件，再通过示例、故障分析和自测检查掌握程度。
 
 ## 技术原理与源码
 
-| 主题 | 这次可以学到什么 |
+| 主题 | 学习重点 |
 | --- | --- |
 | [Redis 集群](../database/redis/redis-cluster.md) | 复制、Sentinel、槽迁移、故障切换、写入丢失边界与订单缓存实例 |
 | [Elasticsearch](../database/elasticsearch/elasticsearch-questions-01.md) | 倒排索引、分片副本、查询与过滤、深分页、写入与搜索一致性 |
@@ -21,7 +21,7 @@ category: 学习指南
 
 ## 场景题与面试训练
 
-- [系统设计完整场景题](../system-design/system-design-questions.md)：先确定业务不变量，再讲数据模型、失败重试、容量和验证。
+- [系统设计场景题](../system-design/system-design-questions.md)：先确定业务不变量，再讲数据模型、失败重试、容量和验证。
 - [带答案的面试自测](../interview-preparation/self-test-of-common-interview-questions.md)：先自己回答，再按关键点打分和回看知识点。
 - [模拟面试与复盘](../interview-preparation/interview-experience.md)：明确标注为训练情境，练习追问、取舍与项目证据表达。
 - [Java 后端系统复习](../zhuanlan/java-mian-shi-zhi-bei.md)：把准备、技术题、项目、自测和工作经验连成学习路径。
@@ -33,7 +33,7 @@ category: 学习指南
 - [AI 面试平台与 RAG](../zhuanlan/interview-guide.md)：数据流、权限过滤、检索、结构化回答、评测与故障处理。
 - [源码阅读方法](../zhuanlan/source-code-reading.md)：带问题追调用链，记录版本，用最小实验验证判断。
 
-## 原先缺失的小节
+## 基础知识补充
 
 - [Maven 传递依赖](../tools/maven/maven-core-concepts.md#传递依赖性)：scope、optional、版本调解与依赖树排错。
 - [MySQL 日志](../database/mysql/mysql-questions-01.md)：redo、undo、binlog 的职责和恢复边界。

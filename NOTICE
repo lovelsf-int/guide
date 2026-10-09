@@ -4,7 +4,8 @@ Upstream revision: 9eab7aaf1a538dc139e6886cb2237b6c61e9a000
 Original authors: Guide and JavaGuide contributors.
 License: Apache License, Version 2.0; see LICENSE.
 Modified 2026-10-05: Pages base, mirror name/footer, search, QR asset base, deployment workflow, dependency metadata and four local navigation link repairs and base-aware stale-chunk recovery.
-Original article contents and attribution are retained. Canonical URLs intentionally credit the original publication.
+Technical articles and original attribution are retained, with study-edition edits described below. Canonical URLs credit the original publication or the independently authored guide supplement.
 External image hosts and external linked services remain outside this repository.
 
-2026-10-09 guide additions: public article clipping removed; independently authored educational supplements added at previously promotional routes. Original public promotional material is retained and labeled. The original commercial course bodies are not reproduced.
+2026-10-09 guide study edition: public article clipping removed; independently authored educational supplements added at previously promotional routes. Advertising, membership pitches, promotional QR blocks and selected personal/marketing pages removed; study navigation and review checklists simplified. The original commercial course bodies are not reproduced.
+Original source-reading articles cover DeepSeek Harness at d743267388641bc76f17c45ce8b4c231aed1d32c and the TypeSafe Jev Python SDK at c743d814166a1bb5c47ea9929c020f467c923f0d. These are static analyses of public source, not claims of runtime validation or access to private model/product internals.

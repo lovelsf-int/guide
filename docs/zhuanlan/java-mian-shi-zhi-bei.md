@@ -1,7 +1,7 @@
 ---
-title: Java 后端面试准备与能力训练（原创补充）
-description: 免费原创面试训练：诊断评分、线程池案例、项目证据、面经复盘、自测与两周复习闭环。
-category: 知识星球
+title: Java 后端面试准备与能力训练
+description: 面试训练：诊断评分、线程池案例、项目证据、面经复盘、自测与两周复习闭环。
+category: 面试准备
 star: 5
 head:
   - - meta
@@ -10,9 +10,9 @@ head:
 author: guide 原创补充
 ---
 
-## 免费学习正文：把面试准备变成可检验的能力
+## 把面试准备变成可检验的能力
 
-> **guide 原创补充**：以下是本镜像独立编写的免费教程，不是《Java 面试指北》付费原文，也不代表已取得原书全部章节。本文复用站内公开资料，补充准备方法、案例、练习和评分标准；上游公开介绍完整保留在文末。
+> 围绕准备方法、案例、练习和评分标准，组织 Java 后端面试复习。
 
 准备 Java 后端面试，可以围绕三个交付物展开：一份能解释取舍的知识清单、一个有证据的项目案例、一组能暴露短板的自测记录。每天读了多少页只是投入，能在追问下解释清楚才是结果。本文按准备、技术、面经、自测、成长和工作六个方向组织，帮助你把分散文章接成一个闭环。
 
@@ -42,7 +42,7 @@ author: guide 原创补充
 
 随后准备三个追问。第一，使用 `CallerRunsPolicy` 会让提交任务的线程执行任务，因此必须检查提交方是不是请求线程或 I/O 线程。第二，Future 超时不等于下游副作用撤销，仍需要幂等键或结果查询。第三，虚拟线程降低线程的部分成本，却没有增加数据库连接和下游配额。完整机制见[线程池最佳实践](../java/concurrent/java-thread-pool-best-practices.md)与[虚拟线程](../java/concurrent/virtual-thread.md)。
 
-练习时运行三档负载：低于目标、目标负载、短时超过目标。每档保存相同的指标，记录是否发生拒绝、积压是否回落。**验收要求**：能够解释每个参数保护哪个资源，且失败时没有把已拒绝的任务描述成成功。这里给出的数值都是计算示例，不是本站或上游项目的压测成绩。
+练习时运行三档负载：低于目标、目标负载、短时超过目标。每档保存相同的指标，记录是否发生拒绝、积压是否回落。**验收要求**：能够解释每个参数保护哪个资源，且失败时没有把已拒绝的任务描述成成功。这里给出的数值都是计算示例，需要通过实际压测验证。
 
 ## 把项目经历写成可以追问的故事
 
@@ -63,108 +63,3 @@ author: guide 原创补充
 每日练习控制为三个动作：复述昨天一个问题、完成今天一个最小实验、记录一个仍不确定的边界。成长和工作能力也用同样方式积累：技术方案留下取舍记录，故障留下时间线，代码评审说明修改理由。这样求职准备会成为平时工程工作的整理，而不是临时背诵。
 
 进入下一轮投递前，至少满足以下条件：核心问题能先给 60 秒答案再接受追问；一个项目能画出成功与失败两条链路；所有简历数字都有来源；自测中原先的 0 分项已得到复测；遇到不会的问题能说明已知前提和验证路径。可继续使用[常见题自测](../interview-preparation/self-test-of-common-interview-questions.md)与[后端面试计划](../interview-preparation/backend-interview-plan.md)扩展练习。
-
-
-## 上游公开介绍（原文保留）
-
-> 以下为 JavaGuide 原作者在开源仓库中公开的介绍与宣传材料，保留原文及来源归属。文中项目版本、数量、服务与效果描述属于上游介绍，不作为本镜像原创补充的验证结果。
-
-
-**四年磨一剑，只为打造最优质的 Java 面试指南。**
-
-这本《Java 面试指北》（后端面试通用）的内容经过反复打磨，质量极高，旨在帮助每一位 Java/后端求职者从容应对面试挑战。
-
-**用数据说话：** 截至目前，专栏累计阅读量已突破 **477.1W**，收获点赞 **5,118** 个，评论互动 **1,657** 条。值得一提的是，评论区不仅仅是留言板，更是答疑区——几乎每一条提问，我都会用心回复，确保无疑问遗留。
-
-![](https://oss.javaguide.cn/xingqiu/java-interview-guide-statistics-2025.png)
-
-📅 **增长见证：** 下图记录了 2024 年时的成绩。对比当下，你会发现其增长速度可以用“惊人”来形容，这不仅是数据的攀升，更是无数读者认可的证明！
-
-![](https://oss.javaguide.cn/xingqiu/java-interview-guide-statistics.png)
-
-## 介绍
-
-**《Java 面试指北》** 是我的[知识星球](../about-the-author/zhishixingqiu-two-years.md)的一个内部小册，和 [JavaGuide 开源版](https://javaguide.cn/) 的内容互补。相比于开源版本来说，《Java 面试指北》添加了下面这些内容（不仅仅是这些内容）：
-
-- 17+ 篇文章手把手教你如何准备面试，50+ 准备面试过程中的常见问题详细解读，让你更高效地准备 Java 面试。
-- 更全面的八股文面试题（系统设计、场景题、常见框架、分布式&微服务、高并发 ……）。
-- 优质面经精选（相比于牛客网或者其他网站的面经，《Java 面试指北》中整理的面经质量更高，并且，我会提供优质的参考资料）。
-- 技术面试题自测（高效准备技术八股文的技巧之一在于多多自测，查漏补缺）。
-- 练级攻略（有助于个人成长的经验分享）。
-
-《Java 面试指北》 会根据每一年的面试情况对内容进行更新完善，保证内容质量的时效性。并且，只需要加入[知识星球](../about-the-author/zhishixingqiu-two-years.md)一次，即可永久获取《Java 面试指北》的访问权限，持续同步更新完善。
-
-下面是《Java 面试指北》 收到的部分球友的真实反馈：
-
-![《Java 面试指北》 收到的部分球友的真实反馈](https://oss.javaguide.cn/xingqiu/praise-that-the-mianshizhibei-received.png)
-
-## 内容概览
-
-![《Java 面试指北》内容概览](https://oss.javaguide.cn/javamianshizhibei/javamianshizhibei-content-overview.png)
-
-### 面试准备篇
-
-在 **「面试准备篇」** ，我写了 17+ 篇文章手把手教你如何准备面试，50+ 准备面试过程中的常见问题详细解读。准备面试过程中常见的疑问这里都有解答，内容涵盖项目经验、简历编写、源码学习、算法准备、面试资源等等。
-
-![《Java 面试指北》面试准备篇](https://oss.javaguide.cn/javamianshizhibei/preparation-for-interview.png)
-
-其中的 **「⭐Java 面试准备常见问题解答（补充）」** 和 **「⭐ 项目经验常见问题解答（补充）」** 强烈建议必看，信息密度非常高！
-
-![](https://oss.javaguide.cn/javamianshizhibei/java-project-experience-and-interview-faq.png)
-
-另外，考虑到很多同学项目经历不足，我还专门整理了一批**小众但优质的实战项目**：既有配套视频，也有高质量开源仓库，既包含完整业务系统，也有技术含量很高的轮子类项目，方便你快速补齐项目短板。
-
-![《Java面试指北》-实战项目推荐](https://oss.javaguide.cn/javamianshizhibei/practical-project-recommendation.png)
-
-### 技术面试题篇
-
-**「技术面试题篇」** 的内容和 JavaGuide 开源版本互补，不仅仅包括最基本的 Java、常见框架等八股文，还包括系统设计、分布式、高并发等进阶内容。
-
-![《Java 面试指北》技术面试题篇](https://oss.javaguide.cn/javamianshizhibei/technical-interview-questions.png)
-
-### 面经篇
-
-古人云：“**他山之石，可以攻玉**”。善于学习借鉴别人的面试的成功经验或者失败的教训，可以让自己少走许多弯路。
-
-**「面经篇」** 主打高质量 Java 后端真实面经：校招 / 社招全覆盖，大厂、中小厂、央国企、外企，连大厂内包都有，不管你是哪种求职方向，都能找到适配的面经参考。
-
-![《Java 面试指北》面经篇](https://oss.javaguide.cn/javamianshizhibei/real-interview-experience.png)
-
-**为何选择《Java 面试指北》的面经？**
-
-相比于网络上海量但杂乱的面经信息，《Java 面试指北》中提供的面经在质量筛选和价值挖掘上投入了更多精力。每一份收录的面经均力求做到：
-
-- **内容真实、有启发性**： 优先选择那些能反映实际面试场景、考察重点和面试官思路的经验。
-- **提供深度学习资源**： 拒绝“只有问题没有答案”的焦虑。针对面经中的高频/核心难题，我精心关联了高质量的参考资料（通常是我撰写的深度解析文章）或直接提供核心参考答案，助你知其然更知其所以然。
-
-另外，[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)还有专门分享面经和面试题的专题，持续更新优质的面经和面试题。
-
-![](https://oss.javaguide.cn/javamianshizhibei/xingqiu-real-interview-experience.png)
-
-### 技术面试题自测篇
-
-为了让小伙伴们自测以检查自己的掌握情况，我还推出了 **「技术面试题自测」** 系列。目前已经覆盖 Java 后端的核心高频考点，并在持续迭代更新中。
-
-![《Java 面试指北》技术面试题自测篇](https://oss.javaguide.cn/javamianshizhibei/self-test.png)
-
-每道题我都会给出**提示与思路**，并用 ⭐ 标注重要程度：⭐ 越多，说明面试越爱问，就越值得多花一些时间准备。
-
-![](https://oss.javaguide.cn/javamianshizhibei/self-test-key-points.png)
-
-高效准备技术八股文的技巧之一在于多多自测，查漏补缺。
-
-### 练级攻略篇
-
-**「练级攻略篇」** 这个系列主要分享一些有助于个人成长的经验。
-
-![《Java 面试指北》练级攻略篇](https://oss.javaguide.cn/javamianshizhibei/training-strategy-articles.png)
-
-每一篇内容都非常干货，不少球友看了之后表示收获满满。不过，最重要的还是知行合一。
-
-### 工作篇
-
-**「工作篇」** 这个系列主要分享有助于个人及职场发展的内容，以及在工作中经常会遇到的问题。
-
-![《Java 面试指北》工作篇](https://oss.javaguide.cn/javamianshizhibei/gongzuopian.png)
-
-<!-- @include: @planet2.snippet.md -->

@@ -10,6 +10,8 @@ head:
       content: Redis面试题,Redis基础,Redis数据结构,Redis线程模型,Redis持久化,Redis内存管理,Redis性能优化,Redis分布式锁,Redis消息队列,Redis延时队列,Redis缓存策略,Redis单线程,Redis多线程,Redis过期策略,Redis淘汰策略
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 ## Redis 基础
@@ -339,10 +341,6 @@ Redis 中有一个叫做 `Sorted Set`（有序集合）的数据类型经常被�
 相关的一些 Redis 命令：`ZRANGE`（从小到大排序）、`ZREVRANGE`（从大到小排序）、`ZREVRANK`（指定元素排名）。
 
 ![](https://oss.javaguide.cn/github/javaguide/database/redis/2021060714195385.png)
-
-[《Java 面试指北》](../../zhuanlan/java-mian-shi-zhi-bei.md) 的「技术面试题篇」就有一篇文章详细介绍如何使用 Sorted Set 来设计制作一个排行榜，感兴趣的小伙伴可以看看。
-
-![](https://oss.javaguide.cn/github/javaguide/database/redis/image-20220719071115140.png)
 
 ### Redis 的有序集合底层为什么要用跳表，而不用平衡树、红黑树或者 B+ 树？
 

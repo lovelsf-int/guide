@@ -15,11 +15,13 @@ head:
       content: 认证授权,Authentication,Authorization,Session,Token,OAuth2,JWT,SSO,RBAC,权限系统,加密算法,敏感词过滤,数据脱敏,数据校验,密码安全,后端面试
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 认证授权与数据安全专题关注后端系统里非常基础、但出错成本很高的一条链路：用户如何登录、身份如何传递、权限如何判断、敏感数据如何保护、输入数据如何校验。
 
 安全不是某一个框架或某一个注解能兜住的事情。它需要从认证、授权、传输、存储、展示、输入校验和审计等多个环节一起设计。
 
-时间比较紧的话，可以先看面试突击版的 [认证与授权常见面试题总结](https://interview.javaguide.cn/system-design/authentication-and-authorization-interview-questions.html) 和 [Web 安全常见面试题总结](https://interview.javaguide.cn/system-design/security-interview-questions.html)，再回到本专题补完整原理和实现方案。
+时间比较紧的话，可以先看 [认证与授权常见面试题总结](https://interview.javaguide.cn/system-design/authentication-and-authorization-interview-questions.html) 和 [Web 安全常见面试题总结](https://interview.javaguide.cn/system-design/security-interview-questions.html)，再回到本专题补完整原理和实现方案。
 
 ## 适合谁看
 

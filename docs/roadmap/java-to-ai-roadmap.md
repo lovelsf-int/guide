@@ -8,11 +8,13 @@ head:
       content: Java转AI,Go转AI,2026AI学习路线,AI应用开发学习路线,Agent学习路线,RAG学习路线,大模型学习路线,后端转AI,Java AI开发
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
-你好，我是 Guide。这是面向 Java/Go 后端开发者的 AI 应用开发与 Agent 学习路线 2026 最新版。JavaGuide 这两年陆续写了不少 AI 应用开发文章，公众号累计阅读超过 100w+。
+这是一份面向 Java/Go 后端开发者的 AI 应用开发与 Agent 学习路线。
 
-公众号后台经常看到类似的留言：
+开始学习前，先明确两个问题：
 
 > 我是 Java / Go 后端，想往 AI 应用开发走，第一步该干什么？
 >
@@ -533,7 +535,7 @@ PII 脱敏是第一步。用户输入发给 LLM 之前，检测并脱敏身份�
 
 听起来不复杂，动手后会发现每一步都有坑：简历里项目经历写得很散，怎么抽出技术栈和职责？面试题怎么根据用户水平调难度？知识库检索召回率怎么量化？这些问题靠多调几次 API 解决不了。
 
-**开源地址（欢迎 Star 鼓励）：**
+**开源地址：**
 
 - Github：<https://github.com/Snailclimb/interview-guide>
 - Gitee：<https://gitee.com/SnailClimb/interview-guide>

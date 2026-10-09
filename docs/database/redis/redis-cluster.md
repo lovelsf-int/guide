@@ -1,5 +1,5 @@
 ---
-title: Redis 集群详解：复制、Sentinel 与 Cluster（原创补充）
+title: Redis 集群详解：复制、Sentinel 与 Cluster
 description: Redis集群相关面试题详解，包括Redis Sentinel哨兵模式、Redis Cluster分片集群的原理、配置和使用，以及主从复制、故障转移等高可用方案。
 category: 数据库
 tag:
@@ -11,7 +11,7 @@ head:
 author: guide 原创补充
 ---
 
-> 本文为 guide 于 2026-10-09 独立编写的免费学习内容，依据 Redis 官方文档整理原理并设计练习。原站付费教程没有包含在开源仓库中；文末保留原站公开介绍及来源。
+> 依据 Redis 官方文档梳理复制、Sentinel 与 Cluster 的原理，并通过练习检查故障处理边界。
 
 ## 先回答：复制、Sentinel、Cluster 分别解决什么
 
@@ -109,13 +109,3 @@ redis-cli -h 127.0.0.1 -p 6379 CLUSTER KEYSLOT 'order:{42}:header'
 在隔离环境建立主从或 Cluster 后，先记录一组已确认写入的序号，再模拟节点停止与客户端重连，统计恢复耗时、失败率和丢失窗口；测回源限制是否生效。验收要求来自业务目标，而不是“控制台显示绿色”。这些是待读者执行的练习，不代表本站已完成生产压测。
 
 继续阅读：[Redis 持久化](./redis-persistence.md)、[缓存读写策略](./3-commonly-used-cache-read-and-write-strategies.md)、[接口幂等](../../high-availability/idempotency.md)、[分布式锁](../../distributed-system/distributed-lock.md)。
-
-## 原站公开介绍
-
-以下保留 JavaGuide 原作者的公开介绍。其商业服务与本站原创补充相互独立。
-
-**Redis 集群** 相关的面试题为我的 [知识星球](../../about-the-author/zhishixingqiu-two-years.md)（点击链接即可查看详细介绍以及加入方法）专属内容，已经整理到了[《Java 面试指北》](../../zhuanlan/java-mian-shi-zhi-bei.md)中。
-
-![](https://oss.javaguide.cn/xingqiu/mianshizhibei-database.png)
-
-<!-- @include: @planet.snippet.md -->

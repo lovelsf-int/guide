@@ -12,11 +12,13 @@ head:
       content: 消息队列面试题,MQ面试题,消息可靠性,重复消费,消息幂等,顺序消息,消息积压,Kafka面试题,RocketMQ面试题,RabbitMQ面试题,消息队列选型
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 消息队列面试通常从“为什么使用 MQ”开始，随后沿着一条消息的生命周期继续追问：生产者发送超时后能不能重试？Broker 返回成功是否代表消息不会丢？消费者处理成功但确认失败会发生什么？重复消费、顺序错乱和消息积压又该怎样处理？
 
 这篇文章是 JavaGuide 消息队列专题的复习入口，按使用场景、消息可靠性、主流中间件和技术选型四部分整理。每部分只列复习时需要抓住的问题，完整答案和实现细节放在对应专题文章中。
 
-时间比较紧的话，可以先看面试突击版的[消息队列常见面试题总结](https://interview.javaguide.cn/high-performance/message-queue-interview-questions.html)，把讲不清楚的问题标出来，再回到本文补原理和工程细节。
+时间比较紧的话，可以先看[消息队列常见面试题总结](https://interview.javaguide.cn/high-performance/message-queue-interview-questions.html)，把讲不清楚的问题标出来，再回到本文补原理和工程细节。
 
 ## 复习时先抓住哪些问题？
 

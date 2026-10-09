@@ -10,6 +10,8 @@ head:
       content: Java异常,泛型,反射,注解,SPI,序列化,IO流,语法糖,try-with-resources,BIO NIO AIO,Java面试题
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 ## 异常
@@ -622,7 +624,7 @@ Java IO 流的 40 多个类都是从如下 4 个抽象类基类中派生出来�
 举个例子，Java 中的 `for-each` 就是一个常用的语法糖，其原理其实就是基于普通的 for 循环和迭代器。
 
 ```java
-String[] strs = {"JavaGuide", "公众号：JavaGuide", "博客：https://javaguide.cn/"};
+String[] strs = {"Java", "Collection", "Stream"};
 for (String s : strs) {
     System.out.println(s);
 }

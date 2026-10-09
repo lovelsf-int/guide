@@ -1,6 +1,5 @@
 import { sidebar } from "vuepress-theme-hope";
 
-import { aboutTheAuthor } from "./about-the-author.js";
 import { ai } from "./ai.js";
 import { aiCoding } from "./ai-coding.js";
 import { books } from "./books.js";
@@ -23,14 +22,14 @@ export default sidebar({
   "/cs-basics/": csBasics,
   "/open-source-project/": openSourceProject,
   "/books/": books,
-  "/about-the-author/": aboutTheAuthor,
+  "/about-the-author/": [""],
   "/high-quality-technical-articles/": highQualityTechnicalArticles,
   "/zhuanlan/": zhuanlan,
   "/reading/": [""],
   // 必须放在最后面
   "/": [
     {
-      text: "项目介绍",
+      text: "复习指南",
       icon: ICONS.STAR,
       collapsible: true,
       prefix: "javaguide/",
@@ -57,7 +56,7 @@ export default sidebar({
           link: "key-points-of-interview",
         },
         {
-          text: "Java 面试 + 后端面试 PDF 资料",
+          text: "后端复习清单",
           link: "pdf-interview-javaguide",
         },
         { text: "Java 学习路线", link: "java-roadmap" },

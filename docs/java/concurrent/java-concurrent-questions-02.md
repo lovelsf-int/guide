@@ -10,6 +10,8 @@ head:
       content: synchronized,ReentrantLock,volatile,JMM,happens-before,可见性,原子性,有序性,并发面试题
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 <!-- @include: @article-header.snippet.md -->
@@ -195,8 +197,6 @@ public class VolatileHappensBeforeDemo {
 
 ```java
 /**
- * 微信搜 JavaGuide 回复"面试突击"即可免费领取个人原创的 Java 面试手册
- *
  * @author Guide哥
  * @date 2022/08/03 13:40
  **/

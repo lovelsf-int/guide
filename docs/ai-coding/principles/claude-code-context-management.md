@@ -13,15 +13,17 @@ head:
       content: Claude Code,上下文管理,Context Engineering,上下文窗口,Context Rot,AutoCompact,/compact,Sub-agent,Context Reset,长任务,AI编程
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
-大家好，我是小 G。最近星球里有不少 G 友分享 Agent 岗位的面经，我看了一下，发现问到上下文管理的次数比较多。
+上下文管理涉及窗口预算、工具输出、历史压缩和长任务交接，也是理解 Coding Agent 工作方式的重要切入点。
 
 ![Claude Code、Skills 与上下文工程面试题记录](https://oss.javaguide.cn/github/javaguide/ai/claude-code/claude-code-context-management-interview-questions.png)
 
 我在之前的文章中已经分享过一篇： [上下文工程(Context Engineering) 是什么？和 Prompt Engineering 有什么区别？](../../ai/agent/context-engineering.md)，介绍了上下文管理的核心内容。
 
-所以，这篇想结合最顶级的 Coding Agent——Claude Code，进一步挖掘一下底层思想。
+这篇结合 Claude Code，进一步分析上下文管理的实现思路。
 
 它不只是怎么压缩聊天记录，还关系到任务目标、工具输出、文件记录和交接信息分别该留在哪里。
 

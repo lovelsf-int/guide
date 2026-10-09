@@ -5,6 +5,8 @@ category: 计算机书籍
 icon: "mdi:language-java"
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 ## Java 基础
@@ -228,22 +230,12 @@ O'Reilly 家族书，性能调优的入门书，我个人觉得性能调优是�
 
 ![](https://oss.javaguide.cn/github/javaguide/books/20210412224443177.png)
 
-《从零开始学架构》这本书对应的有一个极客时间的专栏—《从零开始学架构》，里面的很多内容都是这个专栏里面的，两者买其一就可以了。我看了很小一部分，内容挺全面的，是一本真正在讲如何做架构的书籍。
+《从零开始学架构》介绍架构设计中的复杂度分析与方案取舍，可与实际项目中的系统设计问题结合阅读。
 
 ![](https://oss.javaguide.cn/github/javaguide/books/20210412232441459.png)
 
 事务与锁、分布式（CAP、分布式事务……）、高并发、高可用 《软件架构设计：大型网站技术架构与业务架构融合之道》 这本书都有介绍到。
 
-## 面试
+## 面试复习
 
-**《JavaGuide 面试突击版》**
-
-![](https://oss.javaguide.cn/github/javaguide-mianshituji/image-20220830103023493.png)
-
-![](https://oss.javaguide.cn/github/javaguide-mianshituji/image-20220830102925775.png)
-
-[JavaGuide](https://javaguide.cn/) 的面试版本，涵盖了 Java 后端方面的大部分知识点比如 集合、JVM、多线程还有数据库 MySQL 等内容。
-
-公众号后台回复：“**面试突击**” 即可免费获取，无任何套路。
-
-![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)
+阅读书籍后，可以通过[Java 面试重点总结](../interview-preparation/key-points-of-interview.md)和[常见面试题自测](../interview-preparation/self-test-of-common-interview-questions.md)检查集合、JVM、并发和数据库等知识的掌握情况。

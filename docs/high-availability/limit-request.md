@@ -12,6 +12,8 @@ head:
       content: 服务限流,限流算法,固定窗口,滑动窗口,令牌桶,漏桶,单机限流,分布式限流,Guava RateLimiter,Bucket4j,Sentinel,Redis Lua,Redisson 限流,限流面试题
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 针对软件系统来说，限流就是对请求的速率进行限制，避免瞬时的大量请求击垮软件系统。毕竟，软件系统的处理能力是有限的。如果请求量超过了系统的处理能力，软件系统可能直接就挂掉了。
 
 限流可能会导致用户的请求无法被正确处理或者无法立即被处理，不过，这往往也是权衡了软件系统的稳定性之后得到的最优解。
@@ -148,8 +150,6 @@ head:
 import com.google.common.util.concurrent.RateLimiter;
 
 /**
- * 微信搜 JavaGuide 回复"面试突击"即可免费领取个人原创的 Java 面试手册
- *
  * @author Guide哥
  * @date 2021/10/08 19:12
  **/
@@ -191,8 +191,6 @@ import com.google.common.util.concurrent.RateLimiter;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 微信搜 JavaGuide 回复"面试突击"即可免费领取个人原创的 Java 面试手册
- *
  * @author Guide哥
  * @date 2021/10/08 19:12
  **/

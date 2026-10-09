@@ -10,11 +10,9 @@ head:
       content: 程序员学习,技术学习方法,快速学习,官方文档,技术面试,八股文,知行合一,学习技巧
 ---
 
-<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
 
-> **推荐语**：这是[《Java 面试指北》](../../zhuanlan/java-mian-shi-zhi-bei.md)练级攻略篇中的一篇文章，分享了我对于如何快速学习一门新技术的看法。
->
-> ![《Java 面试指北》练级攻略篇](https://oss.javaguide.cn/javamianshizhibei/training-strategy-articles.png)
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 很多时候，我们因为工作原因需要快速学习某项技术，进而在项目中应用。或者说，我们想要去面试的公司要求的某项技术我们之前没有接触过，为了应对面试需要，我们需要快速掌握这项技术。
 

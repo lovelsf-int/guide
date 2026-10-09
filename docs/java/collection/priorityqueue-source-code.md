@@ -13,7 +13,7 @@ date: 2026-10-09
 ---
 
 ::: tip 阅读说明
-本文由 guide 镜像独立原创补充，不是原站付费正文。源码细节以 OpenJDK 21 系列为参照；算法图解和示例为本页独立编写，原站公开介绍保留在文末。
+源码细节以 OpenJDK 21 系列为参照，通过算法图解和示例梳理堆结构与 Top K 问题。
 :::
 
 ## 先记住结论
@@ -120,15 +120,3 @@ public class TopKDemo {
 2. **打印队列得到 `[2, 5, 3]`，实现是否坏了？** 没坏，它满足堆约束。打印和迭代不承诺排序，连续 `poll()` 才按当前比较顺序取出。
 3. **`remove(x)` 找到元素后只调整一条路径，为什么仍是线性复杂度？** 查找 x 已经需要 O(n)，后续 O(log n) 修复不会改变总体量级。
 4. **多个线程只调用 `offer()` 可以共享普通 PriorityQueue 吗？** 不可以，它们会同时修改数组、大小与堆关系。使用明确的外部同步或适当并发容器，并一起检查容量和背压需求。
-
-## 原站公开介绍
-
-以下保留原始公开页面的介绍、链接与署名语境，其中“我的”指原作者；上方新增正文由 guide 独立编写。
-
-**PriorityQueue 源码分析** 为我的[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)（点击链接即可查看详细介绍以及加入方法）专属内容，已经整理到了[《Java 必读源码系列》](https://javaguide.cn/zhuanlan/source-code-reading.html)中。
-
-![PriorityQueue 源码分析](https://oss.javaguide.cn/xingqiu/image-20230727084055593.png)
-
-<!-- @include: @yuanma.snippet.md -->
-
-<!-- @include: @article-footer.snippet.md -->

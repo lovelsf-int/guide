@@ -259,19 +259,10 @@ export default hopeTheme({
   navbar,
   sidebar,
   footer:
-    'guide · JavaGuide 独立学习镜像 · 原作者 <a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener noreferrer">Guide / JavaGuide contributors</a> · <a href="/guide/LICENSE.txt">Apache-2.0</a>',
+    'guide · 来源 <a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener noreferrer">Guide / JavaGuide contributors</a> · <a href="/guide/LICENSE.txt">Apache-2.0</a>',
   displayFooter: true,
 
-  pageInfo: ["Author", "Category", "Tag", "Original", "Word", "ReadingTime"],
-
-  blog: {
-    intro: "/about-the-author/",
-    medias: {
-      Zhihu: "https://www.zhihu.com/people/javaguide",
-      Github: "https://github.com/Snailclimb",
-      Gitee: "https://gitee.com/SnailClimb",
-    },
-  },
+  pageInfo: ["Word", "ReadingTime"],
 
   markdown: {
     align: true,

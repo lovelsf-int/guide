@@ -8,11 +8,13 @@ head:
       content: Java学习路线,Java后端学习路线,2026Java学习路线,Java后端,Java面试,Spring Boot,MySQL,Redis,JVM,Java并发,分布式,微服务,AI应用开发
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 这是 Java 学习路线的 2026 最新版，每年都会根据当下 Java 后端求职和招聘的最新要求进行全面的优化和改进。
 
-这篇文章可能是你所见过的最用心、最全面的 Java 后端学习路线，共 4w+ 字。不过，也不用担心内容太多学不完，我会按照学习难度给出找一份小厂工作必学的内容以及适合循序渐进提高 Java 后端开发能力的学习路线。
+这份路线按学习难度组织 Java 后端知识。初学者可以先完成基础、数据库、常用框架与工具，再逐步学习并发、JVM 和分布式系统。
 
 对于初学者，你可以按照这篇文章推荐的学习路线和资料进行系统性的学习；对于有经验的开发者，你可以根据这篇文章更进一步地深入学习 Java 后端开发，提升个人竞争力。
 
@@ -34,10 +36,6 @@ head:
 
 ![Java 后端学习路线概览](https://oss.javaguide.cn/github/javaguide/interview-preparation/java-learning-route/java-learning-route-2024.png)
 
-上面这张图片的原图+PDF 版本，可以在公众号**「JavaGuide」**后台回复“**学习路线**”获取。
-
-![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)
-
 **内容比较多？劝退？** 如果你只想找到一份小厂的开发工作的话，建议你把重心放在 Java 基础、数据库、常用框架、常用工具上。
 
 像 JVM、分布式、高并发、高可用、微服务这些知识点，如果你想进大厂或者说让自己在求职的时候更有竞争力，那你就也是要多花一点时间来学习的。
@@ -46,7 +44,7 @@ head:
 
 ## 已经淘汰的 Java 技术
 
-[已经淘汰的 Java 技术，不要再学了！](https://javaguide.cn/about-the-author/deprecated-java-technologies.html)这篇文章提到了在 Java 开发领域中已经被淘汰的技术，一定一定一定不要再学了！谁推荐你学下面这些技术，直接甩他两耳光子。
+学习优先级应结合目标项目、维护需求与基础知识来安排，可参考[旧技术栈的学习与维护](../about-the-author/deprecated-java-technologies.md)。
 
 **JSP**
 
@@ -92,7 +90,7 @@ head:
 
 ## 面试题自测
 
-纸上学来终觉浅，躬行此事要知难。为了帮助你更好地将知识内化，我特别准备了一份与该学习路线完全匹配的高频面试题集：[Java 后端学习路线配套高频面试题集](https://t.zsxq.com/0eM78gbAr)（[JavaGuide 知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)专属）。
+每完成一个专题，可以使用[常见面试题自测](../interview-preparation/self-test-of-common-interview-questions.md)检验理解，再回到对应正文补齐薄弱环节。
 
 **这份资源可以帮你：**
 
@@ -109,10 +107,6 @@ head:
 如果你之前没有学习过编程的话，我建议你可以看看视频教程。像尚硅谷的 [《Java 基础教程系列》](https://www.bilibili.com/video/BV1PY411e7J6/)和韩顺平老师的[《零基础 30 天学会 Java》](https://www.bilibili.com/video/BV1fh411y7R8)就很不错。
 
 ![](https://oss.javaguide.cn/github/javaguide/interview-preparation/java-learning-route/20210409143842888.png)
-
-👉我整理了尚硅谷最新的 Java 后端学习系列完整的视频教程&资料，喜欢看视频的朋友可以点此链接下载： [【最新整理】尚硅谷 Java 后端全套教程 & 实战项目](https://mp.weixin.qq.com/s/jkZthmOSDgTF1PrCeNus_A)（推荐）。
-
-![](https://oss.javaguide.cn/github/javaguide/books/88714e9becd0485aae247772b6ed9949.png)
 
 看视频的同时，配套一本好书也是非常有作用的。
 
@@ -187,10 +181,6 @@ Java 并发书籍的话，挺多写的还不错的，比如《实战 Java 高并
 
 视频的话，还是推荐尚硅谷周阳老师讲的：[Java 并发编程视频教程](https://www.bilibili.com/video/BV1ar4y1x727/)。
 
-👉我整理了尚硅谷最新的 Java 后端学习系列完整的视频教程&资料，喜欢看视频的朋友可以点此链接下载： [【最新整理】尚硅谷 Java 后端全套教程 & 实战项目](https://mp.weixin.qq.com/s/jkZthmOSDgTF1PrCeNus_A)（推荐）。
-
-![](https://oss.javaguide.cn/github/javaguide/books/88714e9becd0485aae247772b6ed9949.png)
-
 学习的过程中，强烈建议配合上我总结的常见问题和重要知识点：
 
 - [Java并发常见面试题总结（上）](../java/concurrent/java-concurrent-questions-01.md)（多线程基础知识，例如线程和进程的概念、死锁）
@@ -240,10 +230,6 @@ JVM 属于是比并发更高阶一些的内容，学习顺序可以适当延后�
 3. 《性能监控与调优篇》
 
 ![](https://oss.javaguide.cn/github/javaguide/interview-preparation/java-learning-route/20210409181534319.png)
-
-👉我整理了尚硅谷最新的 Java 后端学习系列完整的视频教程&资料，喜欢看视频的朋友可以点此链接下载： [【最新整理】尚硅谷 Java 后端全套教程 & 实战项目](https://mp.weixin.qq.com/s/jkZthmOSDgTF1PrCeNus_A)（推荐）。
-
-![](https://oss.javaguide.cn/github/javaguide/books/88714e9becd0485aae247772b6ed9949.png)
 
 学习的过程中，强烈建议配合上我总结的常见问题和重要知识点：
 
@@ -340,13 +326,11 @@ PostgreSQL 中文文档建议看看：[PostgreSQL 14 中文文档](http://www.po
 
 ![《Redis 设计与实现》和《Redis 设计与实现》](https://oss.javaguide.cn/github/javaguide/books/redis-books.png)
 
-付费专栏的话，推荐一个极客时间的[《Redis 核心技术与实战》](https://time.geekbang.org/column/intro/100056701?utm_campaign=geektime_search&utm_content=geektime_search&utm_medium=geektime_search&utm_source=geektime_search&utm_term=geektime_search)，虽然未涉及到太多新版 Redis 的内容，但胜在内容全面且清晰易懂。我当时看这个专栏确实学了不少东西，尤其是评论区有很多大佬的精彩的评论。
-
 学习的过程中，强烈建议配合上我总结的常见问题和重要知识点：
 
 - [缓存基础常见面试题总结](../database/redis/cache-basics.md)
 - [Redis 常见面试题总结（上）](../database/redis/redis-questions-01.md)
-- [Redis 常见面试题总结（下）](../database/redis/redis-questions-01.md)
+- [Redis 常见面试题总结（下）](../database/redis/redis-questions-02.md)
 - [Redis 5 种基本数据类型详解](../database/redis/redis-data-structures-01.md)
 - [Redis 3 种特殊数据类型详解](../database/redis/redis-data-structures-02.md)
 - [Redis 持久化机制详解](../database/redis/redis-persistence.md)
@@ -435,8 +419,6 @@ Git 技能对于程序员来说也是必备的！试着在学习的过程中将�
 ![](https://oss.javaguide.cn/github/javaguide/interview-preparation/java-learning-route/20210423183749743.png)
 
 这是这本书的另外一个在线阅读地址：<https://git-scm.com/book/zh/v2>。
-
-如果你比较喜欢看视频教程的话，可以看看极客时间的[《玩转 Git 三剑客》](http://gk.link/a/10qcT)，课程的作者是携程代码平台负责人苏玲，讲的挺不错的！
 
 ### Docker
 
@@ -547,17 +529,13 @@ Tomcat 是 Apache 基金会下的一个项目，主要用作 Web 服务器。
 1. 处理 `Socket` 连接，负责网络字节流与 `Request` 和 `Response` 对象的转化。
 2. 加载和管理 `Servlet`，以及具体处理 `Request` 请求。
 
-如果你要深入研究 Tomcat 的话，首选极客时间的 [《深入拆解 Tomcat & Jetty》](http://gk.link/a/10r1C) 这个专栏。这是我看过讲解 Tomcat 底层原理最好的资料，强烈推荐！
-
-这个专栏不光可以加深自己对于 Tomcat 的理解，还能提高自己对于系统架构、性能优化等领域的思考。
-
-![](https://oss.javaguide.cn/github/javaguide/interview-preparation/java-learning-route/20210512202540785.png)
+深入学习时，可以围绕请求处理、线程池、Servlet 生命周期、连接管理和性能排查组织笔记，并结合实际项目验证。
 
 除了 Tomcat 之外，Nginx 也是必须要学习的！
 
 Nginx 是一个高性能的 HTTP 和反向代理服务器，经常被拿来做反向代理和负载均衡。
 
-如果你要学习 Nginx 的话，可以看看[《Nginx 核心知识 150 讲》](http://gk.link/a/10r1D) 。内容很全面，从概念、代码再到实战，从 HTTP 到 OpenResty 。
+学习 Nginx 时，可先掌握反向代理、负载均衡、静态资源服务和超时配置，再结合[负载均衡详解](../high-performance/load-balancing.md)理解常见策略。
 
 ## 常用框架
 
@@ -684,7 +662,7 @@ ps：Flowable 和 Camunda 都是 Activiti5 的一个分支发展而来， 三者
 
 视频教程可以看看尚硅谷的 [《ElasticSearch 入门到精通》](https://www.bilibili.com/video/BV1hh411D7sb/)，前面基于 ElasticSearch 7.x 讲解，后面加更了 Elasticsearch8.x 新特性。
 
-书籍可以看看《一本书讲透Elasticsearch：原理、进阶与工程实践》。这本书基于 8.x 版本编写，目前全网最新的 Elasticsearch 讲解书籍。内容覆盖 Elastic 官方认证的核心知识点，源自真实项目案例和企业级问题解答。
+书籍可以看看《一本书讲透Elasticsearch：原理、进阶与工程实践》。这本书基于 8.x 版本编写，内容围绕 Elasticsearch 的原理和工程实践展开。内容覆盖 Elastic 官方认证的核心知识点，源自真实项目案例和企业级问题解答。
 
 ![](https://oss.javaguide.cn/github/javaguide/books/one-book-guide-to-elasticsearch.png)
 
@@ -694,7 +672,7 @@ ps：Flowable 和 Camunda 都是 Activiti5 的一个分支发展而来， 三者
 - [Elasticsearch 基础入门详文 - 腾讯技术工程](https://mp.weixin.qq.com/s/GG_zrQlaiP2nfPOxzx_j9w)
 - [在工作中 ElasticSearch 的一些使用规范](https://juejin.cn/post/7244819106343518268)
 - [《滴滴技术的 ES 系列》](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU1ODEzNjI2NA==&action=getalbum&album_id=3044498415449210882&scene=173&from_msgid=2247560768&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
-- [《死磕 Elasticsearch 系列》](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2NDY1MTA3OQ==&action=getalbum&album_id=1340073242396114944&scene=173&from_msgid=2247487667&from_itemidx=1&count=3&nolastread=1#wechat_redirect)（上百篇 ES 的理论+实战文章，全网最全面的 ES 教程。部分内容对应的视频教程：<https://space.bilibili.com/471049389> ）
+- [《死磕 Elasticsearch 系列》](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2NDY1MTA3OQ==&action=getalbum&album_id=1340073242396114944&scene=173&from_msgid=2247487667&from_itemidx=1&count=3&nolastread=1#wechat_redirect)（包含 ES 的理论与实战文章。部分内容对应的视频教程：<https://space.bilibili.com/471049389> ）
 
 ## 分布式&微服务（进阶）
 
@@ -708,7 +686,7 @@ ps：Flowable 和 Camunda 都是 Activiti5 的一个分支发展而来， 三者
 
 ![](https://oss.javaguide.cn/github/javaguide/books/deep-understanding-of-distributed-system.png)
 
-《从零开始学架构》这本书的内容比较全面，分布式、微服务、高并发、高可用这些都有涉及到。这本书对应的是极客时间的专栏：[《从零开始学架构》](http://gk.link/a/10pKZ)，里面的很多内容都是这个专栏里面的，两者选一个阅读就行了。
+《从零开始学架构》介绍了分布式、微服务、高并发和高可用等主题，可配合实际系统的设计取舍阅读。
 
 ![](https://oss.javaguide.cn/github/javaguide/books/20210412224443177.png)
 
@@ -873,7 +851,7 @@ CDN 就是将静态资源分发到多个不同的地方以实现就近访问，�
 
 关于消息队列基础概念、技术选型方面的介绍，建议阅读我写的[消息队列基础知识总结](../high-performance/message-queue/message-queue.md)这篇文章。
 
-Kafka、RocketMQ、RabbitMQ 学习资源推荐请看[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)的这篇帖子：<https://t.zsxq.com/0bEDFwgon> 。
+继续阅读：[Kafka 常见问题](../high-performance/message-queue/kafka-questions-01.md)、[RocketMQ 常见问题](../high-performance/message-queue/rocketmq-questions.md)、[RabbitMQ 常见问题](../high-performance/message-queue/rabbitmq-questions.md)。
 
 ### 读写分离&分库分表（掌握概念和原理即可）
 
@@ -981,24 +959,10 @@ AI 已经成为 Java 后端能力体系的一部分，但不建议一开始就�
 
 ## 总结
 
-这是一份非常详细的学习路线，把上面的内容学完之后，找到一份比较好的工作已经比较容易。
+完成路线后，建议通过项目实践、自测和模拟面试检查掌握程度，再根据目标岗位调整复习重点。
 
 另外，我在上面也说了，如果你觉得内容比较多自己学不完或者如果你只想找到一份小厂的开发工作的话，建议你把重心放在 Java 基础、数据库、常用框架、常用工具上。
 
 像 JVM、分布式、高并发、高可用、微服务这些知识点，如果你想进大厂或者说让自己在求职的时候更有竞争力，那你就也是要多花一点时间来学习的。
 
 现在面试很卷，想要找到一个好工作的话，就需要你去多学一点，多练习一点。虽然，你目前学的很多知识，在你工作之后可能用不到，但是，面试的筛选就需要你会这些。毕竟，很多岗位是很多人一起竞争，为了达到筛选效果，面试难度通常都会比较大的。这也就是所谓的：“面试造火箭，入职拧螺丝”。
-
-## 公众号(推荐)
-
-学习路线的最新更新会第一时间同步在公众号，推荐大家关注一波！
-
-![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)
-
-## 知识星球
-
-为了帮助更多同学准备 Java 面试以及学习 Java ，我创建了一个纯粹的[Java 面试知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)。虽然收费只有培训班/训练营的百分之一，但是知识星球里的内容质量更高，提供的服务也更全面，非常适合准备 Java 面试和学习 Java 的同学。
-
-**欢迎准备 Java 面试以及学习 Java 的同学加入我的 [知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)，干货非常多，学习氛围也很不错！收费虽然是白菜价，但星球里的内容或许比你参加上万的培训班质量还要高。**
-
-[![星球服务](https://oss.javaguide.cn/xingqiu/xingqiufuwu.png)](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)

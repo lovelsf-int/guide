@@ -8,13 +8,15 @@ head:
       content: 负载均衡,四层负载均衡,七层负载均衡,Nginx负载均衡,LVS,负载均衡算法,轮询,一致性哈希,客户端负载均衡
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 ## 什么是负载均衡？
 
 **负载均衡** 指的是将用户请求分摊到不同的服务器上处理，以提高系统整体的并发处理能力以及可靠性。负载均衡服务可以有由专门的软件或者硬件来完成，一般情况下，硬件的性能更好，软件的价格更便宜（后文会详细介绍到）。
 
-下图是[《Java 面试指北》](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247519384&idx=1&sn=bc7e71af75350b755f04ca4178395b1a&chksm=cea1c353f9d64a458f797696d4144b4d6e58639371a4612b8e4d106d83a66d2289e7b2cd7431&token=660789642&lang=zh_CN&scene=21#wechat_redirect) 「高并发篇」中的一篇文章的配图，从图中可以看出，系统的商品服务部署了多份在不同的服务器上，为了实现访问商品服务请求的分流，我们用到了负载均衡。
+下图中，商品服务部署在多台服务器上，通过负载均衡将请求分发给不同的服务实例。
 
 ![多服务实例-负载均衡](https://oss.javaguide.cn/github/javaguide/high-performance/load-balancing/multi-service-load-balancing.drawio.png)
 
@@ -84,10 +86,6 @@ head:
 > 第 4 层负载平衡是一种流行的流量处理体系结构方法，当时商用硬件没有现在这么强大，客户端和应用程序服务器之间的交互也不那么复杂。它比更复杂的负载平衡方法(如第 7 层)需要更少的计算量，但是 CPU 和内存现在足够快和便宜，在大多数情况下，第 4 层负载平衡的性能优势已经变得微不足道或无关紧要。
 
 在工作中，我们通常会使用 **Nginx** 来做七层负载均衡，LVS(Linux Virtual Server 虚拟服务器， Linux 内核的 4 层负载均衡)来做四层负载均衡。
-
-关于 Nginx 的常见知识点总结，[《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md) 中「技术面试题篇」中已经有对应的内容了，感兴趣的小伙伴可以去看看。
-
-![](https://oss.javaguide.cn/github/javaguide/image-20220328105759300.png)
 
 不过，LVS 这个绝大部分公司真用不上，像阿里、百度、腾讯、eBay 等大厂才会使用到，用的最多的还是 Nginx。
 

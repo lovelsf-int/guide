@@ -6,11 +6,11 @@ export default navbar([
   { text: "AI应用开发", icon: "mdi:robot-outline", link: "/ai/" },
   { text: "AI编程", icon: "mdi:code-tags", link: "/ai-coding/" },
   {
-    text: "推荐阅读",
+    text: "学习导航",
     icon: "mdi:book-open-page-variant-outline",
     children: [
       {
-        text: "免费完整讲解",
+        text: "专题复习",
         icon: "mdi:book-open-page-variant-outline",
         link: "/reading/",
       },
@@ -22,35 +22,35 @@ export default navbar([
         link: "/books/",
       },
       {
-        text: "程序人生",
+        text: "工程实践与经验",
         icon: "mdi:code-tags",
         link: "/high-quality-technical-articles/",
       },
     ],
   },
   {
-    text: "网站相关",
+    text: "复习工具",
     icon: "mdi:information-outline",
     children: [
       {
-        text: "关于作者",
+        text: "使用指南",
         icon: "mdi:account-edit-outline",
-        link: "/about-the-author/",
+        link: "/javaguide/use-suggestion.md",
       },
       {
-        text: "PDF下载",
+        text: "复习清单",
         icon: "mdi:file-pdf-box",
         link: "/interview-preparation/pdf-interview-javaguide.md",
       },
       {
-        text: "面试突击",
+        text: "面试自测",
         icon: "mdi:file-pdf-box",
         link: "/interview-preparation/self-test-of-common-interview-questions.md",
       },
       {
-        text: "更新历史",
-        icon: "mdi:history",
-        link: "/timeline/",
+        text: "来源与许可",
+        icon: "mdi:information-outline",
+        link: "/about-the-author/",
       },
     ],
   },

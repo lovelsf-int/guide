@@ -21,7 +21,7 @@ JavaGuide 是一份系统化的 **Java 面试指南** 和**后端通用面试复
 
 如果你正在准备校招、社招或跳槽面试，可以从 [Java 后端面试通关计划](./interview-preparation/backend-interview-plan.md) 开始，再按下面的模块逐步复习高频 Java 八股文和后端面试题。
 
-本站所有内容都已免费开源，欢迎一起[维护完善](./javaguide/contribution-guideline.md)，有帮助的话，欢迎 Star！
+按模块整理知识点，结合示例、自测和场景题进行复习。
 
 - **项目地址**：<https://github.com/Snailclimb/JavaGuide>
 - **在线阅读**：<https://javaguide.cn/>
@@ -147,7 +147,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8](https://docs.oracle.
 
 > 计算机基础（计算机网络、操作系统、数据结构与算法）已独立为单独模块，详见 [计算机基础知识总结](./cs-basics/)。
 
-[![Banner](https://oss.javaguide.cn/xingqiu/xingqiu.png)](./about-the-author/zhishixingqiu-two-years.md)
+
 
 ## 数据库
 
@@ -208,7 +208,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8](https://docs.oracle.
 
 [Elasticsearch 常见面试题总结](./database/elasticsearch/elasticsearch-questions-01.md)
 
-![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)
+
 
 ## 开发工具
 
@@ -403,13 +403,3 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8](https://docs.oracle.
 - **容灾**：在异地建立两个完全相同的系统。当某个地方的系统突然挂掉，整个应用系统可以切换到另一个，这样系统就可以正常提供服务了。
 
 **异地多活** 描述的是将服务部署在异地并且服务同时对外提供服务。和传统的灾备设计的最主要区别在于“多活”，即所有站点都是同时在对外提供服务的。异地多活是为了应对突发状况比如火灾、地震等自然或者人为灾害。
-
-## Star 趋势
-
-![Stars](https://api.star-history.com/svg?repos=Snailclimb/JavaGuide&type=Date)
-
-## 公众号
-
-如果大家想要实时关注我更新的文章以及分享的干货的话，可以关注我的公众号“**JavaGuide**”。
-
-![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)

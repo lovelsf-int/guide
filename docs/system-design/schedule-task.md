@@ -9,6 +9,8 @@ head:
       content: 定时任务,Quartz,Elastic-Job,XXL-JOB,PowerJob
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 ## 为什么需要定时任务？
@@ -204,9 +206,7 @@ Redis 是可以用来做延时任务的，基于 Redis 实现延时任务的功�
 1. Redis 过期事件监听
 2. Redisson 内置的延时队列
 
-这部分内容的详细介绍我放在了[《后端面试高频系统设计&场景题》](../zhuanlan/back-end-interview-high-frequency-system-design-and-scenario-questions.md)中，有需要的同学可以进入星球后阅读学习。篇幅太多，这里就不重复分享了。
-
-![《后端面试高频系统设计&场景题》](https://oss.javaguide.cn/xingqiu/back-end-interview-high-frequency-system-design-and-scenario-questions-fengmian.png)
+具体实现和可靠性限制参见 [如何基于 Redis 实现延时任务](../database/redis/redis-delayed-task.md)。
 
 ### MQ
 
@@ -356,13 +356,7 @@ public class MyApiJobHandler {
 
 ### PowerJob
 
-非常值得关注的一个分布式任务调度框架，分布式任务调度领域的新星。目前，已经有很多公司接入比如 OPPO、京东、中通、思科。
-
-这个框架的诞生也挺有意思的，PowerJob 的作者当时在阿里巴巴实习过，阿里巴巴那会使用的是内部自研的 SchedulerX（阿里云付费产品）。实习期满之后，PowerJob 的作者离开了阿里巴巴。想着说自研一个 SchedulerX，防止哪天 SchedulerX 满足不了需求，于是 PowerJob 就诞生了。
-
-更多关于 PowerJob 的故事，小伙伴们可以去看看 PowerJob 作者的视频 [《我和我的任务调度中间件》](https://www.bilibili.com/video/BV1SK411A7F3/)。简单点概括就是：“游戏没啥意思了，我要扛起了新一代分布式任务调度与计算框架的大旗！”。
-
-由于 SchedulerX 属于人民币产品，我这里就不过多介绍。PowerJob 官方也对比过其和 QuartZ、XXL-JOB 以及 SchedulerX。下表是项目方的功能对比，不是独立基准测试；性能和容量仍需结合版本、数据库、部署规模与业务负载验证。
+PowerJob 是一个分布式任务调度与计算框架。下表是项目方对 PowerJob、QuartZ、XXL-JOB 和 SchedulerX 的功能对比，不是独立基准测试；性能和容量仍需结合版本、数据库、部署规模与业务负载验证。
 
 |                | QuartZ                                      | xxl-job                                    | SchedulerX 2.0                                       | PowerJob                                                        |
 | -------------- | ------------------------------------------- | ------------------------------------------ | ---------------------------------------------------- | --------------------------------------------------------------- |
@@ -373,7 +367,7 @@ public class MyApiJobHandler {
 | 日志白屏化     | 不支持                                      | 支持                                       | 不支持                                               | **支持**                                                        |
 | 调度方式及性能 | 基于数据库锁，有性能瓶颈                    | 基于数据库锁，有性能瓶颈                   | 不详                                                 | **项目方称采用无锁化设计，实际容量需压测**                      |
 | 报警监控       | 无                                          | 邮件                                       | 短信                                                 | **WebHook、邮件、钉钉与自定义扩展**                             |
-| 系统依赖       | JDBC 支持的关系型数据库（MySQL、Oracle...） | MySQL                                      | 人民币                                               | **任意 Spring Data Jpa 支持的关系型数据库（MySQL、Oracle...）** |
+| 系统依赖       | JDBC 支持的关系型数据库（MySQL、Oracle...） | MySQL                                      | 云服务                                               | **任意 Spring Data Jpa 支持的关系型数据库（MySQL、Oracle...）** |
 | DAG 工作流     | 不支持                                      | 不支持                                     | 支持                                                 | **支持**                                                        |
 
 ## 定时任务方案总结

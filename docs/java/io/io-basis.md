@@ -11,6 +11,8 @@ head:
       content: Java IO,字节流,字符流,InputStream,OutputStream,Reader,Writer,文件操作,缓冲流
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 ## IO 流简介
@@ -545,10 +547,6 @@ randomAccessFile.write(new byte[]{'H', 'I', 'J', 'K'});
 `RandomAccessFile` 可以帮助我们合并文件分片，示例代码如下：
 
 ![](https://oss.javaguide.cn/github/javaguide/java/io/20210609164749122.png)
-
-我在[《Java 面试指北》](../../zhuanlan/java-mian-shi-zhi-bei.md)中详细介绍了大文件的上传问题。
-
-![](https://oss.javaguide.cn/github/javaguide/java/image-20220428104115362.png)
 
 `RandomAccessFile` 的实现依赖于 `FileDescriptor`（文件描述符） 和 `FileChannel`（内存映射文件）。
 

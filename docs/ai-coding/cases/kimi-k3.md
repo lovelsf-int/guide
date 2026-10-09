@@ -8,13 +8,13 @@ head:
       content: Kimi K3,Kimi Code,AI编程,Agent Coding,全栈开发,Java项目改造,多模态,长程任务,游戏开发
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 你好，我是小 G。Kimi K3 上周五正式发布了！
 
 这两天被问得最多的，基本都是同一个问题：K3 能力到底怎么样？写代码体感如何？
-
-国内外已经有很多大佬把 K3 拿去和一线 Coding 模型对比，反馈都很不错。数据也不会骗人，这几天 K3 的订阅和使用量暴增，算力都快顶不住了。
 
 我还是更想看它在真实项目里的表现，我觉得这才是最实际的。
 
@@ -180,7 +180,7 @@ Feed 页能展示抓取和分析后的 Entry，也支持按状态、Monitor、�
 
 这类任务和第一个全栈 MVP 不太一样。重点是先读懂已有代码，再沿着现象去找调用链、数据源和实现细节。对 Coding Agent 来说，这种任务更贴近日常开发：线上或本地发现一个问题，把它定位清楚，改最小范围，然后跑验证。
 
-这里我们以星球的下一个多智能体股票分析实战项目为例，这段时间依然在持续完善和补充教程中。
+这里以一个多智能体股票分析项目为例，观察模型怎样定位已有代码中的问题。
 
 先放第一个：修复股票搜索乱码。
 

@@ -9,6 +9,8 @@ head:
       content: 校招,实习经历,没有实习怎么办,项目经验,简历优化,技术面试准备,Java后端,秋招
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 <!-- @include: @small-advertisement.snippet.md -->
@@ -62,7 +64,7 @@ head:
 
 一定不要抱着一种思想，觉得八股文或者基础问题的考查意义不大。如果你抱着这种思想复习的话，那效果可能不会太好。实际上，个人认为还是很有意义的，八股文或者基础性的知识在日常开发中也会需要经常用到。例如，线程池这块的拒绝策略、核心参数配置什么的，如果你不了解，实际项目中使用线程池可能就用的不是很明白，容易出现问题。而且，其实这种基础性的问题是最容易准备的，像各种底层原理、系统设计、场景题以及深挖你的项目这类才是最难的！
 
-八股文资料首推我的 [《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md) 和 [JavaGuide](../home.md) 。里面不仅仅是原创八股文，还有很多对实际开发有帮助的干货。除了我的资料之外，你还可以去网上找一些其他的优质的文章、视频来看。
+复习时可先看[Java 面试重点总结](./key-points-of-interview.md)，再结合自己的实习内容进行[面试题自测](./self-test-of-common-interview-questions.md)。技术原理需要通过官方文档和代码实践查证。
 
 如果你想要系统准备 Java 后端面试但又不知道如何开始的，可以参考 [Java 后端面试通关计划（后端通用）](./backend-interview-plan.md)。
 
@@ -81,7 +83,7 @@ head:
 7. 排查并解决扣费模块由于扣费父任务和反作弊子任务使用同一个线程池导致的死锁问题，通过线程池隔离策略根除该隐患。
 8. 实习期间独立负责 7 个功能需求与 3 个线上问题修复，代码均一次性通过评审与测试。
 
-下面是[星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)一位球友分享的实习经历介绍，整体写的还是非常不错的：
+下面是一位读者分享的实习经历介绍，可参考它组织职责和技术成果的方式：
 
 ![实习经历模板](https://oss.javaguide.cn/github/javaguide/interview-preparation/qiuyou-shixijingli-demo.png)
 

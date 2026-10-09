@@ -10,7 +10,7 @@ head:
       content: 设计模式,单例模式,工厂模式,代理模式,责任链模式,策略模式,观察者模式,面试题
 ---
 
-> 本文由 **guide 项目原创补充**。内容包含 23 种经典设计模式的作用、适用场景与代价，以及 4 个可以独立保存运行的 Java 示例；原站公开介绍保留在文末。
+> 整理 23 种经典设计模式的作用、适用场景与代价，以及 4 个可以独立保存运行的 Java 示例。
 
 ## 设计模式首先解决什么问题
 
@@ -279,19 +279,3 @@ public class ObserverDemo {
 | 成本值得吗 | 类和跳转层数没有超过变化带来的维护收益 |
 
 结合框架阅读可继续看 [Spring 中的设计模式](./framework/spring/spring-design-patterns-summary.md)。四个示例仅演示模式的协作方式；支付、鉴权或消息系统的生产保证仍需完整的领域约束和故障验证。
-
----
-
-## 原站公开介绍
-
-以下为迁移时的公开资料入口；前文为 guide 项目独立补充的在线教程。
-
-**设计模式** 相关的面试题已经整理到了 PDF 手册中，你可以在我的公众号“**JavaGuide**”后台回复“**PDF**” 获取。
-
-![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)
-
-**《设计模式》PDF 电子书内容概览**：
-
-![《设计模式》PDF文档概览](https://oss.javaguide.cn/github/javaguide/system-design/design-pattern-pdf.png)
-
-<!-- @include: @article-footer.snippet.md -->

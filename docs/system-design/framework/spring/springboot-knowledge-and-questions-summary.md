@@ -13,7 +13,7 @@ date: 2026-10-09
 ---
 
 ::: tip 阅读说明
-本文由 guide 镜像独立原创补充，不是原站付费正文。以 Spring Boot 3.5、Java 17 及以上的常规 JVM 应用为基线，避免把不同大版本的注册方式、包名和默认配置混在一起。原站公开介绍保留在文末。
+以 Spring Boot 3.5、Java 17 及以上的常规 JVM 应用为基线，梳理自动配置、生命周期与排障方法。不同大版本的注册方式、包名和默认配置需要分别核对。
 :::
 
 ## 面试先回答 Spring Boot 帮我们做了什么
@@ -131,17 +131,3 @@ Actuator 可以提供健康、指标、条件报告和配置排查入口。端�
 2. **自己声明 Bean 后默认 Bean 一定消失吗？** 不一定，要看相应自动配置是否使用缺失 Bean 条件，以及它按什么类型或名称匹配。
 3. **默认单例控制器能保存当前请求的用户信息吗？** 不适合放入共享字段，会产生跨请求竞态；使用参数、局部变量或设计清楚的请求作用域。
 4. **`@SpringBootTest` 通过能证明线上 API 正常吗？** 只能证明它实际覆盖的条件。模拟环境没有验证真实网络链路，外部依赖被替身替代时也没有验证真实服务行为。
-
-## 原站公开介绍
-
-以下保留原始公开页面的介绍、链接与署名语境，其中“我的”指原作者；上方新增正文由 guide 独立编写。
-
-**Spring Boot** 相关的面试题为我的[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)（点击链接即可查看详细介绍以及加入方法）专属内容，已经整理到了[《Java 面试指北》](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html)中。
-
-很多 Spring Boot 重要的新特性都已经同步到了这篇文章中，质量很高，保证内容与时俱进！
-
-![SpringBoot 面试题](https://oss.javaguide.cn/javamianshizhibei/springboot-questions.png)
-
-<!-- @include: @planet.snippet.md -->
-
-<!-- @include: @article-footer.snippet.md -->

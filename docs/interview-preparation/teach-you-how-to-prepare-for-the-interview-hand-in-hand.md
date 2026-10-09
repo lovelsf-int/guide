@@ -1,7 +1,7 @@
 ---
 title: 如何高效准备Java面试？
 description: 如何高效准备Java面试：从求职导向学习、技能清单制定到简历优化与面试冲刺，提供系统化备战方法，帮助你少走弯路、提高面试通过率。
-category: 知识星球
+category: 面试准备
 icon: "mdi:map-marker-path"
 head:
   - - meta
@@ -9,11 +9,9 @@ head:
       content: Java面试准备,高效备战面试,求职导向学习,面试冲刺,简历优化,项目准备,校招,Java后端
 ---
 
-<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
 
-::: tip 友情提示
-本文节选自 **[《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md)**。这是一份教你如何更高效地准备面试的专栏，内容和 JavaGuide 互补，涵盖常见八股文（系统设计、常见框架、分布式、高并发 ……）、优质面经等内容。
-:::
+<!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 你身边是否有这样的朋友：编程能力比你强，求职结果却不如你？其实**技术好≠面试能过** —— 如今的面试早已不是 “会写代码就行”，不做准备就去面，大概率是 “撞枪口”。
 
@@ -143,9 +141,7 @@ Java 后端面试复习的重点请看这篇文章：[Java 面试重点总结(�
 
 一定不要抱着一种思想，觉得八股文或者基础问题的考查意义不大。如果你抱着这种思想复习的话，那效果可能不会太好。实际上，个人认为还是很有意义的，八股文或者基础性的知识在日常开发中也会需要经常用到。例如，线程池这块的拒绝策略、核心参数配置什么的，如果你不了解，实际项目中使用线程池可能就用的不是很明白，容易出现问题。而且，其实这种基础性的问题是最容易准备的，像各种底层原理、系统设计、场景题以及深挖你的项目这类才是最难的！
 
-八股文资料首推我的 [《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md) (配合 JavaGuide 使用，会根据每一年的面试情况对内容进行更新完善)和 [JavaGuide](https://javaguide.cn/) 。里面不仅仅是原创八股文，还有很多对实际开发有帮助的干货。除了我的资料之外，你还可以去网上找一些其他的优质的文章、视频来看。
-
-![《Java 面试指北》内容概览](https://oss.javaguide.cn/javamianshizhibei/javamianshizhibei-content-overview.png)
+可以从[Java 面试重点总结](./key-points-of-interview.md)确定复习范围，再用[常见面试题自测](./self-test-of-common-interview-questions.md)检查掌握情况。遇到薄弱知识点，回到对应技术文章、官方文档和代码实验中查证。
 
 ## 提前准备手撕算法
 
@@ -155,9 +151,7 @@ Java 后端面试复习的重点请看这篇文章：[Java 面试重点总结(�
 
 社招往往是在技术面试的最后，面试官给你一个算法题目让你做。
 
-关于如何准备算法面试[《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md) 的面试准备篇有详细介绍到。
-
-![《Java 面试指北》面试准备篇](https://oss.javaguide.cn/javamianshizhibei/preparation-for-interview.png)
+算法复习可以从[算法专题](../cs-basics/algorithms/README.md)开始，结合常见数据结构、复杂度分析和分类练习，训练独立编码与解释思路的能力。
 
 ## 提前准备自我介绍
 

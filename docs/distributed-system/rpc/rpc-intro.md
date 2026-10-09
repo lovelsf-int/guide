@@ -10,6 +10,8 @@ head:
       content: RPC,RPC 原理,远程过程调用,动态代理,序列化,服务发现,Dubbo,gRPC,Thrift,微服务通信,RPC 面试题
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 这篇文章会简单介绍一下 RPC 相关的基础概念。
 
 放到分布式系统里看，RPC 解决的是**服务之间如何互相调用**。外部请求进入系统通常先经过 [API 网关](../api-gateway.md)，进入内部服务后，服务之间才会通过 RPC、HTTP Client、消息队列等方式继续协作。如果你想看 Dubbo 这种成熟 RPC 框架的服务治理细节，可以继续读 [Dubbo 面试题总结](./dubbo.md)。
@@ -135,13 +137,7 @@ Dubbo 也是 Spring Cloud Alibaba 里面的一个组件。
 
 ## 如何设计并实现一个 RPC 框架？
 
-**《手写 RPC 框架》** 是我的[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)的一个内部小册，我写了 12 篇文章来讲解如何从零开始基于 Netty+Kyro+Zookeeper 实现一个简易的 RPC 框架。
-
-麻雀虽小五脏俱全，项目代码注释详细，结构清晰，并且集成了 Check Style 规范代码结构，非常适合阅读和学习。
-
-**内容概览**：
-
-![](https://oss.javaguide.cn/github/javaguide/image-20220308100605485.png)
+实现练习可以参考开源项目 [guide-rpc-framework](https://github.com/Snailclimb/guide-rpc-framework)，结合前文梳理网络通信、序列化、服务发现和调用流程。
 
 ## 既然有了 HTTP 协议，为什么还要有 RPC ？
 

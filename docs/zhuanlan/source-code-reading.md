@@ -1,7 +1,7 @@
 ---
-title: Java 源码阅读实践：Spring Boot、Netty 与 Dubbo（原创补充）
+title: Java 源码阅读实践：Spring Boot、Netty 与 Dubbo
 description: 用具体问题和版本证据卡阅读 Spring Boot、Netty 与 Dubbo，包含条件装配、消息拆帧、调用模型和实验验收。
-category: 知识星球
+category: 技术专题
 star: true
 head:
   - - meta
@@ -10,9 +10,9 @@ head:
 author: guide 原创补充
 ---
 
-## 免费学习正文：沿着一个问题读懂框架源码
+## 沿着一个问题读懂框架源码
 
-> **guide 原创补充**：本节是独立编写的源码阅读教程，不是《Java 必读源码系列》付费原文。上游公开介绍提及的 Dubbo 2.6.x、Netty 4.x、Spring Boot 2.1 属于原作者的版本范围；下面的方法要求先锁定自己项目的依赖版本，再寻找对应实现。原公开介绍保留在文末。
+> 沿着具体问题阅读 Spring Boot、Netty 与 Dubbo 源码。先锁定项目的依赖版本，再寻找对应实现。
 
 源码阅读的起点可以很小：“为什么这个 Bean 出现了”“一条消息为什么被拆成两次回调”“调用失败后是谁发起第二次请求”。带着这类可观察的问题进入框架，比从仓库第一个包开始顺序读，更容易建立因果关系。阅读结果应包含一个具体假设、一条调用链和一个能推翻假设的实验。
 
@@ -81,27 +81,3 @@ class GreetingConfiguration {
 最终交付一页材料：版本和环境、入口与关键边界、一个成功时序、两个失败时序、可运行实验的位置。不要堆积几十个无解释的类名。能把自动配置中的条件思想迁移到扩展点选择，把 Netty 的消息边界迁移到 RPC 协议，把 Dubbo 的调用分层迁移到自己的代理与治理模块，阅读才产生了可复用的知识。
 
 完成本课的标准是：三类框架各有一个经过验证的问题；每条结论能指向当前版本的源码或实验；未执行的推断明确标记；能在更换一个条件后预测行为并复测。本文给出的是训练方法与预期，不声称已替你在本机执行这些框架实验。
-
-
-## 上游公开介绍（原文保留）
-
-> 以下为 JavaGuide 原作者在开源仓库中公开的介绍与宣传材料，保留原文及来源归属。文中项目版本、数量、服务与效果描述属于上游介绍，不作为本镜像原创补充的验证结果。
-
-
-## 介绍
-
-**《Java 必读源码系列》** 是我的[知识星球](../about-the-author/zhishixingqiu-two-years.md)的一个内部小册，目前已经整理了 Dubbo 2.6.x、Netty 4.x、Spring Boot 2.1 等框架/中间件的源码。后续还会整理更多值得阅读的优质源码，持续完善中。
-
-结构清晰，内容详细，非常适合想要深入学习框架/中间件源码的同学阅读。
-
-## 内容概览
-
-![](https://oss.javaguide.cn/xingqiu/image-20220621091832348.png)
-
-<!-- @include: @planet2.snippet.md -->
-
-## 更多专栏
-
-除了《Java 必读源码系列》之外，我的知识星球还有 [《Java 面试指北》](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247536358&idx=2&sn=a6098093107d596d3c426c9e71e871b8&chksm=cea1012df9d6883b95aab61fd815a238c703b2d4b36d78901553097a4939504e3e6d73f2b14b&token=710779655&lang=zh_CN#rd)、[《后端面试高频系统设计&场景题》](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247536451&idx=1&sn=5eae2525ac3d79591dd86c6051522c0b&chksm=cea10088f9d6899e0aee4146de162a6de6ece71ba4c80c23f04d12b1fd48c087a31bc7d413f4&token=710779655&lang=zh_CN#rd)、[《手写 RPC 框架》](./handwritten-rpc-framework.md)等多个专栏。进入星球之后，统统都可以免费阅读。
-
-![](https://oss.javaguide.cn/xingqiu/image-20220211231206733.png)

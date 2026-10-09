@@ -22,6 +22,8 @@ LESSONS = [
     "zhuanlan/source-code-reading",
     "zhuanlan/handwritten-rpc-framework",
     "zhuanlan/interview-guide",
+    "ai/agent-source/deepseek-harness",
+    "ai/agent-source/jev-sdk",
 ]
 
 
@@ -33,8 +35,11 @@ class Article(HTMLParser):
         self.headings = 0
         self.in_title = False
         self.title = ""
+        self.canonical = ""
 
     def handle_starttag(self, tag, attrs):
+        if tag == "link" and dict(attrs).get("rel") == "canonical":
+            self.canonical = dict(attrs).get("href", "")
         if tag == "title":
             self.in_title = True
         if dict(attrs).get("id") == "markdown-content":
@@ -58,6 +63,18 @@ class Article(HTMLParser):
 
 
 errors = []
+promotion_markers = (
+    "知识星球", "原站公开介绍", "上游公开介绍", "星球专属",
+    "限时优惠", "公众号后台回复", "欢迎 Star", "免费完整讲解", "付费专栏",
+    "gongzhonghaoxuanchuan", "gongzhonghao-javaguide",
+    "xingqiuyouhuijuan", "xingqiufuwu", "interview-guide-banner.png",
+)
+for page_path in DIST.rglob("*.html"):
+    html = page_path.read_text()
+    found = [marker for marker in promotion_markers if marker in html]
+    if found:
+        errors.append([str(page_path.relative_to(DIST)), "promotional content", found])
+
 for asset in list((DIST / "assets").glob("*.js")) + list((DIST / "assets").glob("*.css")):
     content = asset.read_text()
     if "unlock-global-style" in content or "data-unlock-target" in content:
@@ -75,8 +92,8 @@ for route in LESSONS:
         errors.append([route, "still a paid placeholder title"])
     if len(text) < 1800 or article.headings < 5:
         errors.append([route, "substantive lesson absent", len(text), article.headings])
-    if "原创" not in text:
-        errors.append([route, "independent contribution attribution missing"])
+    if not article.canonical.startswith("https://lovelsf-int.github.io/guide/"):
+        errors.append([route, "study lesson canonical URL missing"])
 
 print(json.dumps({"required_lessons": len(LESSONS), "errors": errors}, ensure_ascii=False, indent=2))
 sys.exit(bool(errors))

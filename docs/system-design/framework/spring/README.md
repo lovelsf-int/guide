@@ -15,11 +15,13 @@ head:
       content: Spring,Spring Boot,Spring面试题,SpringBoot面试题,IoC,AOP,Bean生命周期,Spring事务,Spring自动装配,Spring常用注解,Spring源码,@Async,Java后端面试
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 Spring 是 Java 后端最核心的基础设施之一。学习 Spring 不能只背注解，还要理解 IoC、AOP、Bean 生命周期、事务、自动装配、设计模式和常见扩展点。
 
 Spring Boot 则进一步把配置、依赖管理、自动装配和生产可观测能力整合起来，让应用开发更快，但也更容易让人忽略底层原理。
 
-时间比较紧的话，可以先看面试突击版的 [Spring 常见面试题总结](https://interview.javaguide.cn/system-design/spring.html)，再回到本专题补 IoC、AOP、事务和自动装配的完整细节。
+时间比较紧的话，可以先看 [Spring 常见面试题总结](https://interview.javaguide.cn/system-design/spring.html)，再回到本专题补 IoC、AOP、事务和自动装配的完整细节。
 
 ## 适合谁看
 

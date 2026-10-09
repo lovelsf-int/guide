@@ -15,9 +15,11 @@ head:
       content: Java新特性,Java8新特性,Java11新特性,Java17新特性,Java21新特性,Lambda,Stream,Optional,模块化,var,Record,Switch,虚拟线程,模式匹配
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 Java 新特性不适合按版本机械背诵，更适合抓住“语言表达能力、标准库增强、并发模型、JVM 改进、长期支持版本”这几条主线。日常开发优先掌握 Java 8、11、17、21 等 LTS 版本中的稳定特性，再按需了解后续版本的预览和孵化特性。
 
-时间比较紧的话，可以先看面试突击版的 [Java 新特性常见面试题总结](https://interview.javaguide.cn/java/java-new-features.html)，再回到本专题查看对应版本的完整说明。
+时间比较紧的话，可以先看 [Java 新特性常见面试题总结](https://interview.javaguide.cn/java/java-new-features.html)，再回到本专题查看对应版本的完整说明。
 
 ## 适合谁看
 

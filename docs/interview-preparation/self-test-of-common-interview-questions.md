@@ -2,15 +2,15 @@
 author: guide 原创补充
 title: Java 后端面试自测：28 题、参考答案与评分
 description: 常见面试题自测：按面试提问方式整理Java后端高频问题，提供提示与重要程度标注，适合面试前自测、定位短板、针对性复习。
-category: 知识星球
-icon: "mdi:shield-lock-outline"
+category: 面试准备
+icon: "mdi:clipboard-check-outline"
 head:
   - - meta
     - name: keywords
       content: 面试题自测,Java面试题,八股文自测,查缺补漏,面试复习,高频考点,Java后端面试,参考答案
 ---
 
-> 本文由 **guide 项目原创补充**。下面 28 道题及答案可直接在线练习，原站公开介绍保留在文末。
+> 通过 28 道题、参考答案和评分标准，检查 Java 后端知识的掌握程度。
 
 ## 自测方法与评分
 
@@ -395,22 +395,4 @@ OAuth 2.0 主要解决授权，OpenID Connect 在其上提供身份层，JWT 是
 
 ## 版本与核验资料
 
-以上回答以现代 Java 和常见 InnoDB/Spring 用法为背景，具体实现细节应与项目版本对应。ConcurrentHashMap 的单键并发保证可核对 [JDK 21 API](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html)；任务提交、执行与 Future.get 的内存可见性关系见 [ExecutorService API](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html)；RR/RC 的一致性读和锁定读行为见 [MySQL 8.4 官方说明](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html)。这些来源用来核对机制，正文答案为本项目独立组织。
-
----
-
-## 原站公开介绍
-
-以下保留迁移时的公开说明；本页前文的自测题和答案由 guide 项目独立补充。
-
-面试之前，强烈建议大家多拿常见的面试题来进行自测，检查一下自己的掌握情况，这是一种非常实用的备战技术面试的小技巧。
-
-在 **[《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md)** 的 **「技术面试题自测篇」** ，我总结了 Java 面试中最重要的知识点的最常见的面试题并按照面试提问的方式展现出来。
-
-![《Java 面试指北》技术面试题自测篇](https://oss.javaguide.cn/javamianshizhibei/self-test.png)
-
-每道题我都会给出**提示与思路**，并用 ⭐ 标注重要程度：⭐ 越多，说明面试越爱问，就越值得多花一些时间准备。
-
-![](https://oss.javaguide.cn/javamianshizhibei/self-test-key-points.png)
-
-<!-- @include: @planet.snippet.md -->
+以上回答以现代 Java 和常见 InnoDB/Spring 用法为背景，具体实现细节应与项目版本对应。ConcurrentHashMap 的单键并发保证可核对 [JDK 21 API](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html)；任务提交、执行与 Future.get 的内存可见性关系见 [ExecutorService API](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html)；RR/RC 的一致性读和锁定读行为见 [MySQL 8.4 官方说明](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html)。这些来源用于核对机制与版本差异。

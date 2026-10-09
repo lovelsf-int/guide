@@ -11,6 +11,8 @@ head:
       content: Java开源项目,Java实战项目,Java项目推荐,Java技术教程,Java系统设计项目,Java工具库,开源项目推荐,后端项目,简历项目
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 <!-- @include: @small-advertisement.snippet.md -->
 
 这份 **Java 开源项目精选** 面向 Java 后端学习、项目实战和工具选型，整理 GitHub 和 Gitee 上仍在维护的 Java/JVM 项目。
@@ -60,6 +62,6 @@ head:
 - [分布式系统知识体系](../distributed-system/)
 - [高性能系统知识体系](../high-performance/)
 - [技术书籍精选](../books/)
-- [星球专属优质专栏](../zhuanlan/)
+- [专题学习](../zhuanlan/)
 
 <!-- @include: @article-footer.snippet.md -->

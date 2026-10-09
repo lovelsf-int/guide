@@ -10,10 +10,11 @@ JavaGuide 独立学习镜像，保留原作者 Guide 与 JavaGuide contributors 
 - 上游：https://github.com/Snailclimb/JavaGuide
 - 固定版本：`9eab7aaf1a538dc139e6886cb2237b6c61e9a000`
 - Apache-2.0；完整许可证见 LICENSE，变更说明见 NOTICE。
-- 原始源码 627 个文件，其中 docs 下 454 个 Markdown：446 个可生成页面、7 个共用片段、1 个排除的 TODO。
+- 初始上游快照有 627 个文件，其中 docs 下 454 个 Markdown：446 个可生成页面、7 个共用片段、1 个排除的 TODO；后续复习版有增删。
 - Async.md 与 async.md 内容相同、文件名大小写不同。Git 和源码 ZIP 保留两者。macOS 默认文件系统只显示一个，GitHub Actions 的 Linux 构建可生成两个大小写页面。
 - 首次本地构建生成 670 个 HTML（含分类、标签、索引与重定向）；新增专题目录后数量会增加。Linux 比 macOS 多一个大小写重复页，实际数量以发布检查输出为准。
-- 开源正文及原作者署名保留；2026-10-09 为原先只有商业介绍的专题加入独立原创讲解，旧介绍保留在明确标记的文末。
+- 开源技术正文及原作者署名保留；2026-10-09 为原先只有商业介绍的专题加入独立原创讲解，并移除商业介绍、推广页脚、引流二维码和部分个人生活/宣传页面，首页与导航改为复习入口。
+- AI 应用开发新增 Agent 源码阅读模块，固定分析 DeepSeek Harness 提交 `d743267388641bc76f17c45ce8b4c231aed1d32c` 与 Jev Python SDK 提交 `c743d814166a1bb5c47ea9929c020f467c923f0d`。只完成公开源码静态阅读，未调用实际接口；SDK 不代表模型内部实现。
 
 ## 保留的外部依赖
 
@@ -34,7 +35,7 @@ python3 scripts/verify-mirror.py
 python3 scripts/verify-readable-content.py
 ```
 
-静态产物在 dist/；它部署于 /guide/ 子路径。验证脚本扫描全部 HTML 内部链接、静态资源、许可证、站内搜索索引，以及指定文章的“一个最小请求链路”锚点。
+静态产物在 dist/；它部署于 /guide/ 子路径。验证脚本扫描全部 HTML 内部链接与锚点、静态资源、许可证、站内搜索索引，以及指定文章的“一个最小请求链路”锚点。复习检查另外验证 17 个补充专题的正文与来源声明、运行时截断代码及已移除的推广标记。
 
 ## 发布
 

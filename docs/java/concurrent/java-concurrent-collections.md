@@ -10,6 +10,8 @@ head:
       content: Java并发容器,ConcurrentHashMap,CopyOnWriteArrayList,BlockingQueue,ConcurrentLinkedQueue,线程安全容器
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 JDK 提供的这些容器大部分在 `java.util.concurrent` 包中。
 
 - **`ConcurrentHashMap`** : 线程安全的 `HashMap`
@@ -135,7 +137,7 @@ private static ArrayBlockingQueue<Integer> blockingQueue = new ArrayBlockingQueu
 
 ## ConcurrentSkipListMap
 
-> 下面这部分内容参考了极客时间专栏[《数据结构与算法之美》](https://time.geekbang.org/column/intro/126?code=zl3GYeAsRI4rEJIBNu5B/km7LSZsPDlGWQEpAYw5Vu0=&utm_term=SPoster “《数据结构与算法之美》”)以及《实战 Java 高并发程序设计》。
+> 本节参考：[《数据结构与算法之美》](https://time.geekbang.org/column/intro/126)、《实战 Java 高并发程序设计》。
 
 为了引出 `ConcurrentSkipListMap`，先带着大家简单理解一下跳表。
 

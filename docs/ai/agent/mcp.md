@@ -8,6 +8,8 @@ head:
       content: MCP,Model Context Protocol,JSON-RPC,Function Calling,AI Agent,工具接入,Anthropic
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 同一个 Git 工具接到 Claude Desktop、Cursor 和自建 Agent 时，往往要各写一层适配。工具参数、鉴权方式或版本一变，接入它的多个客户端都得跟着改。
 
 MCP 约定外部系统以 Server 形式暴露能力，支持该协议的 Host 通过 Client 发现并调用这些能力。它处理的是工具和数据源的接入；模型如何决定调用、任务如何编排，仍属于 Function Calling 和 Agent 的职责。
@@ -26,13 +28,13 @@ MCP 全称是 Model Context Protocol，中文一般叫“模型上下文协议�
 - Context：把外部上下文、工具和数据源带给模型；
 - Protocol：用一套标准协议把交互方式定下来。
 
-不过，也不要把 MCP 理解成给模型加插件这么简单。之前在星球群里看大家讨论 MCP 的时候，有不少同学都是这样认为的。
+不要仅把 MCP 理解成给模型加插件；理解它还需要区分协议、客户端、服务端和模型各自的职责。
 
 更准确一点说，MCP 是 **MCP Client 和 MCP Server 之间的通信协议**。Host 负责承载用户交互和模型调用，Client 负责和 Server 说话，Server 负责把具体能力暴露出来。
 
 举个很常见的场景。
 
-G 友问：“帮我看看这个项目最近一次提交改了什么。”
+用户问：“帮我看看这个项目最近一次提交改了什么。”
 
 你用的模型或者 Agent 当然不知道你本地 Git 仓库的提交记录。它得借助外部能力读取 Git 日志。
 

@@ -10,6 +10,8 @@ head:
       content: Spring事务,@Transactional,事务传播,隔离级别,事务失效,回滚规则,声明式事务,AOP事务
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 前段时间答应读者的 **Spring 事务** 分析总结终于来了。这部分内容比较重要，不论是对于工作还是面试，但是网上比较好的参考资料比较少。
@@ -200,7 +202,7 @@ public interface PlatformTransactionManager {
 
 主要是因为要将事务管理行为抽象出来，然后不同的平台去实现它，这样我们可以保证提供给外部的行为不变，方便我们扩展。
 
-我前段时间在我的[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)分享过：**“为什么我们要用接口？”** 。
+接口的作用可以结合下面的例子理解：
 
 > 《设计模式》（GOF 那本）这本书在很多年前都提到过说要基于接口而非实现编程，你真的知道为什么要基于接口编程么？
 >

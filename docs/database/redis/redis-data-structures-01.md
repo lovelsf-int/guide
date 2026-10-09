@@ -10,6 +10,8 @@ head:
       content: Redis数据类型,String,List,Set,Hash,Zset,SDS,跳表,压缩列表,Redis命令
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 Redis 共有 5 种基本数据类型：String（字符串）、List（列表）、Set（集合）、Hash（散列）、Zset（有序集合）。
@@ -473,10 +475,6 @@ value1
 - 相关命令：`ZRANGE` (从小到大排序)、 `ZREVRANGE` （从大到小排序）、`ZREVRANK` (指定元素排名)。
 
 ![](https://oss.javaguide.cn/github/javaguide/database/redis/2021060714195385.png)
-
-[《Java 面试指北》](../../zhuanlan/java-mian-shi-zhi-bei.md) 的「技术面试题篇」就有一篇文章详细介绍如何使用 Sorted Set 来设计制作一个排行榜。
-
-![](https://oss.javaguide.cn/github/javaguide/database/redis/image-20220719071115140.png)
 
 **需要存储的数据有优先级或者重要程度的场景** 比如优先级任务队列。
 

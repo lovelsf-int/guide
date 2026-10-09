@@ -44,6 +44,12 @@ head:
 
 文章会随 API、框架和模型能力变化持续校订，涉及版本、价格和产品能力时请同时核对对应官方文档。
 
+## Agent 原理与源码
+
+- [源码阅读导图](./agent-source/README.md)：对照 Agent 执行框架与决策接口，建立源码阅读路径。
+- [DeepSeek Harness 源码分析](./agent-source/deepseek-harness.md)：从插件注册追到执行循环、工具调度、会话与取消清理。
+- [Jev 决策接口与 SDK 源码](./agent-source/jev-sdk.md)：阅读类型化问题、请求准备、响应解码与错误重试；范围是官方公开的客户端 SDK。
+
 ## 适合谁看
 
 - 正在从后端开发转向 AI 应用开发，想补齐大模型、Agent、RAG 和系统设计主线的工程师。

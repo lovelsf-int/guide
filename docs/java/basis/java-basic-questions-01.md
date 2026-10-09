@@ -10,6 +10,8 @@ head:
       content: Java基础,JVM,JDK,JRE,Java SE,字节码,Java编译,自动装箱,基本数据类型,方法重载,Java面试题
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 ## 基础概念与常识
@@ -1235,8 +1237,6 @@ public static void method2(String arg1, String... args) {
 
 ```java
 /**
- * 微信搜 JavaGuide 回复"面试突击"即可免费领取个人原创的 Java 面试手册
- *
  * @author Guide哥
  * @date 2021/12/13 16:52
  **/

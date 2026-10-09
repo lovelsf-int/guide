@@ -12,7 +12,7 @@ date: 2026-10-09
 ---
 
 ::: tip 阅读说明
-本文由 guide 镜像独立原创补充，不是原站付费正文。以下以 Netty 4.1 的 API 和典型 NIO 服务端为例，框架版本、传输实现与操作系统会影响具体性能表现。原站公开介绍保留在文末。
+以 Netty 4.1 的 API 和典型 NIO 服务端为例，梳理事件处理、协议拆帧与资源管理。框架版本、传输实现与操作系统会影响具体性能表现。
 :::
 
 ## 面试先说清楚 Netty 的职责
@@ -104,13 +104,3 @@ ByteBuf 把 readerIndex 和 writerIndex 分开，读操作通常前移读索引�
 2. **业务里 `Thread.sleep()` 只影响当前连接吗？** 通常会阻塞当前 EventLoop，影响其管理的其他连接；应重构为异步流程或隔离到受控执行器。
 3. **为什么中文正文有五个字符，却不能把长度头写成五？** UTF-8 编码后可能超过五字节，接收方按字节拆帧，字符数会导致边界错乱。
 4. **Future 成功就可以删除待确认订单消息吗？** 取决于协议。仅写出成功不足以证明对端业务处理成功，需要收到满足协议定义的业务确认，再执行相应清理。
-
-## 原站公开介绍
-
-以下保留原始公开页面的介绍、链接与署名语境，其中“我的”指原作者；上方新增正文由 guide 独立编写。
-
-**Netty** 相关的面试题为我的[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)（点击链接即可查看详细介绍以及加入方法）专属内容，已经整理到了[《Java 面试指北》](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html)中。
-
-![](https://oss.javaguide.cn/javamianshizhibei/netty-questisons.png)
-
-<!-- @include: @planet.snippet.md -->

@@ -55,6 +55,16 @@ export const ai = arraySidebar([
     ],
   },
   {
+    text: "Agent 原理与源码",
+    icon: ICONS.CODE,
+    prefix: "agent-source/",
+    children: [
+      { text: "源码阅读导图", link: "" },
+      { text: "DeepSeek Harness 源码分析", link: "deepseek-harness" },
+      { text: "Jev 决策接口与 SDK 源码", link: "jev-sdk" },
+    ],
+  },
+  {
     text: "RAG",
     icon: ICONS.SEARCH,
     prefix: "rag/",

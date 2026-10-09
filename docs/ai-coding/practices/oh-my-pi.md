@@ -8,6 +8,8 @@ head:
       content: oh-my-pi,omp,AI编程,终端AI编码代理,Claude Code替代,OpenCode,Codex CLI,Hashline,LSP,DAP,多模型路由
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 和阿里的朋友确认了一下，从 7 月 10 日起，阿里会把 Claude Code 列入高风险软件名单，并推荐内部员工使用 Qoder 作为替代。
 
 这事就不展开讨论了。
@@ -189,8 +191,6 @@ omp
 先选要登录的 provider。这里可以连多个，比如 ChatGPT Plus/Pro、Anthropic、Z.AI、Kimi Code、OpenRouter、Copilot、Cursor 这些都会列出来。你已经配过环境变量的 provider，也会直接显示 logged in。
 
 ![oh-my-pi 第一次启动选择模型 provider](https://oss.javaguide.cn/github/javaguide/ai/coding/oh-my-pi/oh-my-pi-setup-provider-login-kimi.png)
-
-![Kimi Code 会员权益页面](https://oss.javaguide.cn/github/javaguide/ai/coding/oh-my-pi/oh-my-pi-kimi-code-home.png)
 
 然后切到 Web search，选择 `web_search` 工具优先使用哪个搜索后端。当前项目已扩展到约 25 个后端，静态列出名称很快会过期；选 `Auto` 时会从已经配置好的后端中选择，手动模式以当前 Setup 页面为准。
 

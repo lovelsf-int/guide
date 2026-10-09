@@ -11,6 +11,8 @@ head:
       content: MySQL面试题,MySQL基础架构,InnoDB存储引擎,MySQL索引,B+树索引,事务隔离级别,redo log,undo log,binlog,MVCC,行级锁,慢查询优化
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 ## MySQL 基础
@@ -597,7 +599,7 @@ MySQL 5.6 开始，查询缓存已默认禁用。MySQL 8.0 开始，已经不再
 
 ## ⭐️MySQL 日志
 
-> 本节由 guide 原创补充，更新于 2026-10-09。
+<!-- 本节由 guide 补充，2026-10-09。 -->
 
 **redo log 用于崩溃恢复，undo log 用于回滚与构造旧版本，binlog 用于复制与基于日志的恢复。** 三者不能互相替代。
 
@@ -612,16 +614,6 @@ MySQL 5.6 开始，查询缓存已默认禁用。MySQL 8.0 开始，已经不再
 **追问：能否只留 binlog 不做备份？** 不能把它当成完整恢复方案。通常需要可用的基础备份，再按对应日志位点重放；日志过期、缺失或备份不可恢复都会破坏链条。恢复演练需要核对业务数据，而不仅是数据库能启动。
 
 完整展开：[MySQL 三大日志详解](./mysql-logs.md)、[备份与恢复](./mysql-backup-and-restore.md)、[MVCC](./innodb-implementation-of-mvcc.md)。官方依据：[redo](https://dev.mysql.com/doc/refman/8.4/en/innodb-redo-log.html)、[undo](https://dev.mysql.com/doc/refman/8.4/en/innodb-undo-logs.html)、[binlog](https://dev.mysql.com/doc/refman/8.4/en/binary-log.html)。
-
-::: details 原站公开专栏介绍
-
-上诉问题的答案可以在[《Java 面试指北》(付费，点击链接领取优惠卷)](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html) 的 **「技术面试题篇」** 中找到。
-
-![《Java 面试指北》技术面试题篇](https://oss.javaguide.cn/javamianshizhibei/technical-interview-questions.png)
-
-文章地址：<https://www.yuque.com/snailclimb/mf2z3k/zr4kfk> （密码获取：<https://t.zsxq.com/avfM0>）。
-
-:::
 
 ## ⭐️MySQL 事务
 
@@ -987,7 +979,7 @@ MySQL 提供了两个方法来处理 ip 地址
 
 ### 有哪些常见的 SQL 优化手段？
 
-> 本节由 guide 原创补充，更新于 2026-10-09。
+<!-- 本节由 guide 补充，2026-10-09。 -->
 
 **先找到慢在哪里，再减少扫描、传输和锁等待，最后用相同负载复测。** 一个可执行的顺序是：记录慢 SQL、参数分布和耗时分位数；看执行计划的扫描行数与连接顺序；针对过滤、排序和关联建立合适索引；控制返回列与分页方式；检查长事务和锁等待。
 
@@ -1006,16 +998,6 @@ LIMIT 20;
 避免把“所有 SELECT 都加索引”“用了索引就快”“小表一定驱动大表”当成通用规则。索引增加存储和写放大，批量操作需要控制事务大小；连接池扩大也不能解决数据库本身过载。`EXPLAIN ANALYZE` 会实际运行查询，应在可控环境或获准的诊断窗口使用。
 
 继续阅读：[SQL 优化](../../high-performance/sql-optimization.md)、[深分页](../../high-performance/deep-pagination-optimization.md)、[执行计划](./mysql-query-execution-plan.md)。
-
-::: details 原站公开专栏介绍
-
-[《Java 面试指北》(付费)](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html) 的 **「技术面试题篇」** 有一篇文章详细介绍了常见的 SQL 优化手段，非常全面，清晰易懂！
-
-![常见的 SQL 优化手段](https://oss.javaguide.cn/javamianshizhibei/javamianshizhibei-sql-optimization.png)
-
-文章地址：https://www.yuque.com/snailclimb/mf2z3k/abc2sv （密码获取：<https://t.zsxq.com/avfM0>）。
-
-:::
 
 ### 如何分析 SQL 的性能？
 

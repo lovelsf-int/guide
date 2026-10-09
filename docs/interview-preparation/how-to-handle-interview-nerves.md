@@ -9,6 +9,8 @@ head:
       content: 面试紧张,技术面试,面试心态,临场发挥,模拟面试,表达训练,面试准备,校招
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 很多小伙伴在第一次技术面试时都会感到紧张甚至害怕，遇到稍微刁钻的问题大脑就一片空白，面试结束后还会有种“懵懵的”感觉。我也经历过类似的状况，对这种手心出汗、语无伦次的窘境深有体会。
@@ -39,11 +41,7 @@ head:
 - **约朋友或同学互相提问**：以真实的面试场景来进行演练，并及时对回答进行诊断和反馈。
 - **线上练习**：直接利用 AI 来进行模拟面试即可，免费且高效。把自己的简历投喂给它，让它根据你的简历，尤其是项目经历生成面试问题。
 - **面经**：平时可以多看一些前辈整理的面经，尤其是目标岗位或目标公司的面经，总结高频考点和常见问题。
-- **技术面试题自测**：在 [《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md) 的 「技术面试题自测篇」 ，我总结了 Java 面试中最重要的知识点的最常见的面试题并按照面试提问的方式展现出来。其中，每一个问题都有提示和重要程度说明，非常适合用来自测。
-
-[《Java 面试指北》](../zhuanlan/java-mian-shi-zhi-bei.md) 的 「技术面试题自测篇」概览：
-
-![技术面试题自测篇](https://oss.javaguide.cn/javamianshizhibei/technical-interview-questions-self-test.png)
+- **技术面试题自测**：按[常见面试题自测](./self-test-of-common-interview-questions.md)逐题口述回答，记录遗漏、概念混淆和追问时卡住的地方，再回到相应知识点复习。
 
 ### 多表达
 

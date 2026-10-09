@@ -8,11 +8,11 @@ head:
       content: Claude Code,AI编程,CLAUDE.md,MCP,Skills,Sub-Agent,Agentic Coding,AI辅助开发
 ---
 
+<!-- Modified for guide, 2026-10-09: remove promotional copy and retain study content. -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
-你好，我是小 G。前几天那篇 [Vibe Coding 实用技巧总结](./the-cool-tricks-for-vibe-coding.md)，公众号阅读两天时间到了 6w+，评论区里问 Claude Code 的朋友不少。
-
-这篇就来单独聊聊 Claude Code。
+这篇介绍 Claude Code 的配置和工作流，也可以结合 [Vibe Coding 实用技巧总结](./the-cool-tricks-for-vibe-coding.md)阅读。
 
 不知道大家和我是不是有同样的感觉，刚开始用的时候真挺别扭，甚至有点抵触：已经习惯了 Cursor、IDEA 里的侧边栏、文件树、diff 面板，再回到终端里跟 AI 协作，真心不顺手。
 

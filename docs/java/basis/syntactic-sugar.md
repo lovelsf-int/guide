@@ -10,6 +10,8 @@ head:
       content: Java语法糖,自动装箱拆箱,泛型擦除,增强for循环,可变参数,枚举,内部类,Lambda表达式,语法糖原理
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 > 作者：Hollis
 >
 > 原文：<https://mp.weixin.qq.com/s/o4XdEMq1DL-nBS-f8Za5Aw>
@@ -214,7 +216,7 @@ public static void main(String args[])
 ```java
 public static void main(String[] args)
     {
-        print("Holis", "公众号:Hollis", "博客：www.hollischuang.com", "QQ：907607222");
+        print("Holis", "示例:Hollis", "示例：Java", "示例：JVM");
     }
 
 public static void print(String... strs)
@@ -232,7 +234,7 @@ public static void print(String... strs)
  public static void main(String args[])
 {
     print(new String[] {
-        "Holis", "\u516C\u4F17\u53F7:Hollis", "\u535A\u5BA2\uFF1Awww.hollischuang.com", "QQ\uFF1A907607222"
+        "Holis", "示例:Hollis", "示例：Java", "示例：JVM"
     });
 }
 
@@ -513,9 +515,9 @@ public class AssertTest {
         int a = 1;
         int b = 1;
         assert a == b;
-        System.out.println("公众号：Hollis");
+        System.out.println("示例：Hollis");
         assert a != b : "Hollis";
-        System.out.println("博客：www.hollischuang.com");
+        System.out.println("示例：Java");
     }
 }
 ```
@@ -533,13 +535,13 @@ public class AssertTest {
     int b = 1;
     if(!$assertionsDisabled && a != b)
         throw new AssertionError();
-    System.out.println("\u516C\u4F17\u53F7\uFF1AHollis");
+    System.out.println("示例：Hollis");
     if(!$assertionsDisabled && a == b)
     {
         throw new AssertionError("Hollis");
     } else
     {
-        System.out.println("\u535A\u5BA2\uFF1Awww.hollischuang.com");
+        System.out.println("示例：Java");
         return;
     }
 }
@@ -587,11 +589,11 @@ public class Test
 
 ```java
 public static void main(String... args) {
-    String[] strs = {"Hollis", "公众号：Hollis", "博客：www.hollischuang.com"};
+    String[] strs = {"Hollis", "示例：Hollis", "示例：Java"};
     for (String s : strs) {
         System.out.println(s);
     }
-    List<String> strList = ImmutableList.of("Hollis", "公众号：Hollis", "博客：www.hollischuang.com");
+    List<String> strList = ImmutableList.of("Hollis", "示例：Hollis", "示例：Java");
     for (String s : strList) {
         System.out.println(s);
     }
@@ -604,7 +606,7 @@ public static void main(String... args) {
 public static transient void main(String args[])
 {
     String strs[] = {
-        "Hollis", "\u516C\u4F17\u53F7\uFF1AHollis", "\u535A\u5BA2\uFF1Awww.hollischuang.com"
+        "Hollis", "示例：Hollis", "示例：Java"
     };
     String args1[] = strs;
     int i = args1.length;
@@ -614,7 +616,7 @@ public static transient void main(String args[])
         System.out.println(s);
     }
 
-    List strList = ImmutableList.of("Hollis", "\u516C\u4F17\u53F7\uFF1AHollis", "\u535A\u5BA2\uFF1Awww.hollischuang.com");
+    List strList = ImmutableList.of("Hollis", "示例：Hollis", "示例：Java");
     String s;
     for(Iterator iterator = strList.iterator(); iterator.hasNext(); System.out.println(s))
         s = (String)iterator.next();
@@ -717,7 +719,7 @@ public static transient void main(String args[])
 
 ```java
 public static void main(String... args) {
-    List<String> strList = ImmutableList.of("Hollis", "公众号：Hollis", "博客：www.hollischuang.com");
+    List<String> strList = ImmutableList.of("Hollis", "示例：Hollis", "示例：Java");
 
     strList.forEach( s -> { System.out.println(s); } );
 }
@@ -729,7 +731,7 @@ public static void main(String... args) {
 
 ```java
 public static /* varargs */ void main(String ... args) {
-    ImmutableList strList = ImmutableList.of((Object)"Hollis", (Object)"\u516c\u4f17\u53f7\uff1aHollis", (Object)"\u535a\u5ba2\uff1awww.hollischuang.com");
+    ImmutableList strList = ImmutableList.of((Object)"Hollis", (Object)"示例：Hollis", (Object)"示例：Java");
     strList.forEach((Consumer<String>)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)V, lambda$main$0(java.lang.String ), (Ljava/lang/String;)V)());
 }
 
@@ -744,7 +746,7 @@ private static /* synthetic */ void lambda$main$0(String s) {
 
 ```java
 public static void main(String... args) {
-    List<String> strList = ImmutableList.of("Hollis", "公众号：Hollis", "博客：www.hollischuang.com");
+    List<String> strList = ImmutableList.of("Hollis", "示例：Hollis", "示例：Java");
 
     List HollisList = strList.stream().filter(string -> string.contains("Hollis")).collect(Collectors.toList());
 
@@ -756,7 +758,7 @@ public static void main(String... args) {
 
 ```java
 public static /* varargs */ void main(String ... args) {
-    ImmutableList strList = ImmutableList.of((Object)"Hollis", (Object)"\u516c\u4f17\u53f7\uff1aHollis", (Object)"\u535a\u5ba2\uff1awww.hollischuang.com");
+    ImmutableList strList = ImmutableList.of((Object)"Hollis", (Object)"示例：Hollis", (Object)"示例：Java");
     List<Object> HollisList = strList.stream().filter((Predicate<String>)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)Z, lambda$main$0(java.lang.String ), (Ljava/lang/String;)Z)()).collect(Collectors.toList());
     HollisList.forEach((Consumer<Object>)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)V, lambda$main$1(java.lang.Object ), (Ljava/lang/Object;)V)());
 }

@@ -10,6 +10,8 @@ head:
       content: ThreadLocal,线程池,Executor框架,Future,CompletableFuture,并发工具类,并发容器,并发面试题
 ---
 
+<!-- 修改于 2026-10-09：清理推广文案，保留知识内容与来源。 -->
+
 <!-- Modified for guide, 2026-10-09: route available study articles to this mirror. -->
 
 <!-- @include: @article-header.snippet.md -->
@@ -1005,10 +1007,6 @@ CPU 密集型简单理解就是利用 CPU 计算能力的任务比如你在内�
 最终实现的可动态修改线程池参数效果如下。👏👏👏
 
 ![动态配置线程池参数最终效果](https://oss.javaguide.cn/github/javaguide/java/concurrent/meituan-dynamically-configuring-thread-pool-parameters.png)
-
-还没看够？我在[《后端面试高频系统设计&场景题》](../../zhuanlan/back-end-interview-high-frequency-system-design-and-scenario-questions.md)中详细介绍了如何设计一个动态线程池，这也是面试中常问的一道系统设计题。
-
-![《后端面试高频系统设计&场景题》](https://oss.javaguide.cn/xingqiu/back-end-interview-high-frequency-system-design-and-scenario-questions-fengmian.png)
 
 如果我们的项目也想要实现这种效果的话，可以借助现成的开源项目：
 
