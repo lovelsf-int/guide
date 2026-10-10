@@ -12,6 +12,8 @@ head:
 
 ## Kafka 基础
 
+如果想把生产、存储和消费串成一条完整链路，继续阅读 [Kafka 日志写入与日志搜索过程详解](./kafka-log-write-and-search.md)：包含批次追加、Page Cache 与刷盘、ACK 与副本、offset 和时间索引定位，以及 HW/LSO 对读取的影响。
+
 ### Kafka 是什么？主要应用场景有哪些？
 
 Kafka 是一个分布式流式处理平台。这到底是什么意思呢？
@@ -93,7 +95,7 @@ Kafka 将生产者发布的消息发送到 **Topic（主题）** 中，需要这
 
 还有一点我觉得比较重要的是 Kafka 为分区（Partition）引入了多副本（Replica）机制。分区（Partition）中的多个副本之间会有一个叫做 leader 的家伙，其他副本称为 follower。我们发送的消息会被发送到 leader 副本，然后 follower 副本才能从 leader 副本中拉取消息进行同步。
 
-> 生产者和消费者只与 leader 副本交互。你可以理解为其他副本只是 leader 副本的拷贝，它们的存在只是为了保证消息存储的安全性。当 leader 副本发生故障时会从 follower 中选举出一个 leader,但是 follower 中如果有和 leader 同步程度达不到要求的参加不了 leader 的竞选。
+> 生产者向 leader 写入；消费者通常从 leader 读取，配置优选副本读取后也可访问合适的 follower。副本用于容错与复制，故障时哪些副本可以安全当选 leader，取决于同步状态和版本机制；Kafka 4.1 还需考虑 ELR，详见 [日志写入与读取流程](./kafka-log-write-and-search.md)。
 
 **Kafka 的多分区（Partition）以及多副本（Replica）机制有什么好处呢？**
 
@@ -206,7 +208,7 @@ if (sendResult.getRecordMetadata() != null) {
 
 #### Kafka 弄丢了消息
 
-我们知道 Kafka 为分区（Partition）引入了多副本（Replica）机制。分区（Partition）中的多个副本之间会有一个叫做 leader 的家伙，其他副本称为 follower。我们发送的消息会被发送到 leader 副本，然后 follower 副本才能从 leader 副本中拉取消息进行同步。生产者和消费者只与 leader 副本交互。你可以理解为其他副本只是 leader 副本的拷贝，它们的存在只是为了保证消息存储的安全性。
+Kafka 为分区（Partition）引入了多副本（Replica）机制。生产者向分区 leader 写入，follower 主动从 leader 拉取并同步。常规消费者从 leader 读取；配置优选副本读取时也可从合适的 follower 读取，因此不能把“消费者只与 leader 交互”当成绝对规则。
 
 **试想一种情况：假如 leader 副本所在的 broker 突然挂掉，那么就要从 follower 副本重新选出一个 leader ，但是 leader 的数据还有一些没有被 follower 副本的同步的话，就会造成消息丢失。**
 
@@ -214,7 +216,7 @@ if (sendResult.getRecordMetadata() != null) {
 
 解决办法就是我们设置 **acks = all**。acks 是 Kafka 生产者(Producer) 很重要的一个参数。
 
-acks 的默认值即为 1，代表我们的消息被 leader 副本接收之后就算被成功发送。当我们配置 **acks = all** 表示只有所有 ISR 列表的副本全部收到消息时，生产者才会接收到来自服务器的响应. 这种模式是最高级别的，也是最安全的，可以确保不止一个 Broker 接收到了消息. 该模式的延迟会很高.
+在 Kafka 4.1 的 Java Producer 中，`acks` 默认值为 `all`，不能继续套用旧版本默认值为 1 的结论。`acks=1` 在 leader 本地追加后确认；`acks=all` 等待 ISR 复制与最低同步副本要求满足。它不代表所有配置副本都在线，也不等于每个副本都已物理刷盘。若 ISR 只剩 leader 且 min ISR 为 1，仅配置 `acks=all` 也不能保证多副本保存。参见 [官方 Producer 配置](https://kafka.apache.org/41/configuration/producer-configs/#acks)。
 
 **设置 replication.factor >= 3**
 
@@ -222,9 +224,9 @@ acks 的默认值即为 1，代表我们的消息被 leader 副本接收之后�
 
 **设置 min.insync.replicas > 1**
 
-一般情况下我们还需要设置 **min.insync.replicas> 1** ，这样配置代表消息至少要被写入到 2 个副本才算是被成功发送。**min.insync.replicas** 的默认值为 1 ，在实际生产中应尽量避免默认值 1。
+关键消息通常将 `acks=all` 与 `min.insync.replicas>1` 一起设置，例如副本数 3、min ISR 为 2。min ISR 是最低同步副本要求，不是任意挑两个副本确认；`acks=1` 也不会因此自动获得相同的发送确认语义。
 
-但是，为了保证整个 Kafka 服务的高可用性，你需要确保 **replication.factor > min.insync.replicas** 。为什么呢？设想一下假如两者相等的话，只要是有一个副本挂掉，整个分区就无法正常工作了。这明显违反高可用性！一般推荐设置成 **replication.factor = min.insync.replicas + 1**。
+让副本数高于 min ISR，可以在部分副本故障时仍满足写入要求；二者相等时，少一个同步副本就可能阻止符合该要求的写入，但不意味着已有消息也完全无法读取。副本数 3、min ISR 为 2 是常见取舍，仍需结合故障域、容量和业务可靠性目标。Kafka 4.1 的 HW 推进还有 strict min ISR 约束，具体过程见 [日志写入与读取详解](./kafka-log-write-and-search.md)。
 
 **设置 unclean.leader.election.enable = false**
 

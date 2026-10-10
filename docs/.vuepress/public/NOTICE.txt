@@ -9,3 +9,4 @@ External image hosts and external linked services remain outside this repository
 
 2026-10-09 guide study edition: public article clipping removed; independently authored educational supplements added at previously promotional routes. Advertising, membership pitches, promotional QR blocks and selected personal/marketing pages removed; study navigation and review checklists simplified. The original commercial course bodies are not reproduced.
 Original source-reading articles cover DeepSeek Harness at d743267388641bc76f17c45ce8b4c231aed1d32c and the TypeSafe Jev Python SDK at c743d814166a1bb5c47ea9929c020f467c923f0d. These are static analyses of public source, not claims of runtime validation or access to private model/product internals.
+2026-10-11: Added an original Kafka log write and lookup walkthrough based on Apache Kafka 4.1.0 source and 4.1 API documentation; updated related Kafka acknowledgement and replica explanations and study navigation.

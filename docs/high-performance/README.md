@@ -78,6 +78,7 @@ head:
 - [消息队列面试题总结](./message-queue/message-queue-interview-questions.md)：按消息生命周期复习可靠性、消费语义、主流产品和项目追问。
 - [消息队列基础知识总结](./message-queue/message-queue.md)：理解应用场景、消息模型、消息可靠性、顺序性、幂等和积压处理。
 - [Kafka 常见问题总结](./message-queue/kafka-questions-01.md)：掌握 Kafka 架构、高性能原理、消息可靠性、顺序性和 Rebalance。
+- [Kafka 日志写入与日志搜索过程详解](./message-queue/kafka-log-write-and-search.md)：理解消息如何追加到日志，以及如何按 offset、时间戳定位和读取。
 - [RocketMQ 常见问题总结](./message-queue/rocketmq-questions.md)：理解 RocketMQ 架构、消息类型、存储机制、可靠性和 5.x 新特性。
 - [RabbitMQ 常见问题总结](./message-queue/rabbitmq-questions.md)：理解 AMQP、Exchange 类型、确认机制、死信队列、延迟队列、Quorum Queue 和 Streams。
 - [Disruptor 常见问题总结](./message-queue/disruptor-questions.md)：理解 RingBuffer、Sequencer、WaitStrategy、无锁设计和缓存行填充。

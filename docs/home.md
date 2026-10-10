@@ -370,6 +370,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8](https://docs.oracle.
 - [RabbitMQ 常见知识点&面试题总结](./high-performance/message-queue/rabbitmq-questions.md)
 - [RocketMQ 常见知识点&面试题总结](./high-performance/message-queue/rocketmq-questions.md)
 - [Kafka 常见知识点&面试题总结](./high-performance/message-queue/kafka-questions-01.md)
+- [Kafka 日志写入与日志搜索过程详解](./high-performance/message-queue/kafka-log-write-and-search.md)
 
 ## 高可用
 

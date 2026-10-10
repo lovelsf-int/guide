@@ -650,6 +650,7 @@ export default sidebar({
             "message-queue",
             "disruptor-questions",
             "kafka-questions-01",
+            "kafka-log-write-and-search",
             "rocketmq-questions",
             "rabbitmq-questions",
           ],

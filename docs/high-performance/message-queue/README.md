@@ -39,6 +39,7 @@ head:
 1. [消息队列面试题总结](./message-queue-interview-questions.md)：先建立可靠性、幂等、顺序、积压和选型的问题清单。
 2. [消息队列基础知识总结](./message-queue.md)：理解 MQ 的通用模型、应用场景和常见问题。
 3. [Kafka 常见问题总结](./kafka-questions-01.md)：理解高吞吐日志流、分区、副本、Consumer Group 和 Rebalance。
+   继续阅读 [Kafka 日志写入与日志搜索过程详解](./kafka-log-write-and-search.md)，沿消息写入、索引定位与读取可见性走完一条链路。
 4. [RocketMQ 常见问题总结](./rocketmq-questions.md)：理解业务消息场景、事务消息、定时消息、顺序消息和消息存储。
 5. [RabbitMQ 常见问题总结](./rabbitmq-questions.md)：理解 AMQP、Exchange、消息确认、死信队列和延迟队列。
 6. [Disruptor 常见问题总结](./disruptor-questions.md)：理解高性能内存队列、无锁设计和低延迟场景。
@@ -48,6 +49,7 @@ head:
 - [消息队列面试题总结](./message-queue-interview-questions.md)：按消息生命周期串联通用高频题、主流中间件原理、技术选型和项目追问。
 - [消息队列基础知识总结](./message-queue.md)：系统讲解应用场景、消息模型、消息可靠性、幂等性、顺序性、积压处理和技术选型。
 - [Kafka 常见问题总结](./kafka-questions-01.md)：覆盖 Broker、Topic、Partition、Consumer Group、零拷贝、顺序写、ACK、ISR 和 Rebalance。
+- [Kafka 日志写入与日志搜索过程详解](./kafka-log-write-and-search.md)：通过图解与 offset 示例掌握批次写入、刷盘、副本确认、时间索引和消费可见性。
 - [RocketMQ 常见问题总结](./rocketmq-questions.md)：覆盖 NameServer、Broker、Proxy、普通消息、顺序消息、事务消息、定时消息和存储机制。
 - [RabbitMQ 常见问题总结](./rabbitmq-questions.md)：覆盖 AMQP、Exchange 类型、确认机制、死信队列、延迟队列、优先级队列和高可用集群。
 - [Disruptor 常见问题总结](./disruptor-questions.md)：覆盖 RingBuffer、Sequencer、WaitStrategy、无锁设计、缓存行填充和预分配内存。
