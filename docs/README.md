@@ -34,6 +34,8 @@ footer: |-
 
 ## 核心入口
 
+- **支付订阅**：[海外游戏 SDK 支付订阅专题](./payment-subscriptions/)：Apple／Google 表结构与流水关系、恢复购买、账户归属、幂等补偿、日本／台湾容灾和 40 道面试题。
+
 - **专题复习**：[专题复习目录](./reading/)：Redis 集群、Elasticsearch、Netty、Spring Boot、PriorityQueue、系统设计、设计模式、面试自测与实战教程。按原理、示例与自测组织复习。
 
 - **后端面试主线**：[后端面试指南](./home.md)（⭐网站核心）：系统整理 Java 面试八股文和后端高频面试题，覆盖 Java 基础、集合、并发、JVM、Spring、MySQL、Redis、分布式、高并发、高可用和系统设计。

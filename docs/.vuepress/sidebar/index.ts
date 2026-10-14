@@ -6,6 +6,7 @@ import { books } from "./books.js";
 import { csBasics } from "./cs-basics.js";
 import { highQualityTechnicalArticles } from "./high-quality-technical-articles.js";
 import { openSourceProject } from "./open-source-project.js";
+import { paymentSubscriptions } from "./payment-subscriptions.js";
 import { roadmap } from "./roadmap.js";
 import { zhuanlan } from "./zhuanlan.js";
 import {
@@ -16,6 +17,7 @@ import {
 
 export default sidebar({
   // 应该把更精确的路径放置在前边
+  "/payment-subscriptions/": paymentSubscriptions,
   "/ai-coding/": aiCoding,
   "/ai/": ai,
   "/roadmap/": roadmap,
@@ -28,6 +30,14 @@ export default sidebar({
   "/reading/": [""],
   // 必须放在最后面
   "/": [
+    {
+      text: "支付订阅",
+      icon: "mdi:credit-card-outline",
+      link: "/payment-subscriptions/",
+      collapsible: true,
+      prefix: "payment-subscriptions/",
+      children: ["data-model", "restore-purchases", "lifecycle-consistency", "reliability", "interview"],
+    },
     {
       text: "复习指南",
       icon: ICONS.STAR,

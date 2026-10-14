@@ -52,6 +52,8 @@ head:
 
 ### 系统设计与工程基础
 
+- [海外游戏 SDK 支付订阅专题](../payment-subscriptions/)：围绕 Apple／Google 购买，串起用户归属、交易账单、权益、Outbox、恢复购买与跨区容灾。
+
 - [系统设计常见面试题总结](./system-design-questions.md)：覆盖短链系统、秒杀系统、海量数据处理等系统设计场景题。
 - [系统设计基础专题](./basis/)：从 RESTful API、软件工程讲到代码命名、代码重构和单元测试。
 - [RestFul API 简明教程](./basis/RESTfulAPI.md)：理解资源建模、HTTP 方法、状态码和接口设计规范。

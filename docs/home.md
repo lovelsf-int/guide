@@ -33,6 +33,8 @@ JavaGuide 是一份系统化的 **Java 面试指南** 和**后端通用面试复
 
 ## 面试准备
 
+- [支付订阅项目专题](./payment-subscriptions/)：Apple／Google、表结构、恢复购买、幂等与容灾，以及 40 道参考回答和追问。
+
 - [⭐Java 后端面试通关计划（涵盖后端通用体系）](./interview-preparation/backend-interview-plan.md) (一定要看 :+1:)
 - [如何高效准备 Java 面试？](./interview-preparation/teach-you-how-to-prepare-for-the-interview-hand-in-hand.md)
 - [Java 后端面试重点总结](./interview-preparation/key-points-of-interview.md)

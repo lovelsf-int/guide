@@ -6,6 +6,11 @@ export default navbar([
   { text: "AI应用开发", icon: "mdi:robot-outline", link: "/ai/" },
   { text: "AI编程", icon: "mdi:code-tags", link: "/ai-coding/" },
   {
+    text: "支付订阅",
+    icon: "mdi:credit-card-outline",
+    link: "/payment-subscriptions/",
+  },
+  {
     text: "学习导航",
     icon: "mdi:book-open-page-variant-outline",
     children: [

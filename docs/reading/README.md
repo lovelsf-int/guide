@@ -21,6 +21,8 @@ category: 学习指南
 
 ## 场景题与面试训练
 
+- [海外游戏 SDK 支付订阅](../payment-subscriptions/)：从表结构、用户交易查询和恢复购买，讲到生命周期、事务边界、幂等补偿与跨区容灾，附 40 道完整面试题。
+
 - [系统设计场景题](../system-design/system-design-questions.md)：先确定业务不变量，再讲数据模型、失败重试、容量和验证。
 - [带答案的面试自测](../interview-preparation/self-test-of-common-interview-questions.md)：先自己回答，再按关键点打分和回看知识点。
 - [模拟面试与复盘](../interview-preparation/interview-experience.md)：明确标注为训练情境，练习追问、取舍与项目证据表达。
